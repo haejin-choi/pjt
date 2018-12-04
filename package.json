@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
-  "dependencies": {},
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sourcemaps": "^2.6.4"
+  },
   "devDependencies": {
     "gulp-autoprefixer": "^6.0.0",
     "gulp-postcss": "^8.0.0",

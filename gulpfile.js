@@ -17,10 +17,9 @@ var sass = require('gulp-sass');
 // var md5 = require('gulp-md5-plus');
 // var csssort = require('gulp-nts-css-formatter');
 var postcss = require('gulp-postcss');
-// var sourcemap = require('gulp-sourcemaps');
+var sourcemap = require('gulp-sourcemaps');
 var autoprefixer = require('autoprefixer');
 // var replace = require('gulp-replace');
-// var merge = require('merge-stream');
 // var buffer = require('vinyl-buffer');
 // var localImgPath = '../im/';
 // var staticImgPath = 'https://ssl.pstatic.net/static/weather/m/';
@@ -37,14 +36,14 @@ var autoprefixer = require('autoprefixer');
 // 	notify: true
 // }
 //
-// var paths = {
-// 	html_path: 'src/**/',
-// 	sprite_src: 'src/im/sprite/',
-// 	sprite_dest: 'src/im/',
-// 	css_src: 'src/scss/',
-// 	css_dest: 'src/css/',
-// 	img_dest: 'src/im/',
-// };
+var paths = {
+	html_path: 'src/**/',
+	sprite_src: 'src/im/sprite/',
+	sprite_dest: 'src/im/',
+	css_src: 'src/scss/',
+	css_dest: 'src/css/',
+	img_dest: 'src/im/',
+};
 //
 // var globalOptions = {
 // 	notify: !config.notify ? {} : {
@@ -193,23 +192,23 @@ gulp.task('sass', function() {
 		.pipe(postcss([autoprefixer({ browsers: ['iOS >= 6', 'Android >= 4'] })]))
 		.pipe(sourcemap.write('./'))
 		.pipe(gulp.dest('./src/css/'))
-		.pipe(browserSync.stream());
+		// .pipe(browserSync.stream());
 });
 
 // task.sass
-gulp.task('sass-build', ['sprite-build', 'md5-sprite'], function() {
-	return Promise.all([
-		del(path.join('**/*.css.map')),
-		new Promise(function(resolve) {
-			gulp.src("src/scss/**/*.scss")
-			  .pipe(sass.sync({outputStyle: 'compressed'}).on('error', sass.logError))
-			  // .pipe(csssort())
-			  .pipe(postcss([autoprefixer({ browsers: ['iOS >= 6', 'Android >= 4'] })]))
-			  .pipe(gulp.dest('src/css/'))
-			  .on('end',resolve);
-		})
-	]);
-});
+// gulp.task('sass-build', ['sprite-build', 'md5-sprite'], function() {
+// 	return Promise.all([
+// 		del(path.join('**/*.css.map')),
+// 		new Promise(function(resolve) {
+// 			gulp.src("src/scss/**/*.scss")
+// 			  .pipe(sass.sync({outputStyle: 'compressed'}).on('error', sass.logError))
+// 			  // .pipe(csssort())
+// 			  .pipe(postcss([autoprefixer({ browsers: ['iOS >= 6', 'Android >= 4'] })]))
+// 			  .pipe(gulp.dest('src/css/'))
+// 			  .on('end',resolve);
+// 		})
+// 	]);
+// });
 //
 // gulp.task('replace-build', ['sass-build'], function() {
 // 	gulp.src('./src/css/w.css')
@@ -231,14 +230,14 @@ gulp.task('sass-build', ['sprite-build', 'md5-sprite'], function() {
 // 		.pipe(gulp.dest('./src/css/', {overwrite:true}));
 // });
 //
-// // 로컬 확인용
-// gulp.task('serve', ['sprite', 'sass'], function() {
-// 	gulp.watch('src/scss/**/*.scss', ['sass']);
-// 	gulp.watch('src/im/sprites/**/*', ['sprite']);
-// });
+// 로컬 확인용
+gulp.task('serve', [/*'sprite'*/, 'sass'], function() {
+	gulp.watch('src/scss/**/*.scss', ['sass']);
+	// gulp.watch('src/im/sprites/**/*', ['sprite']);
+});
 //
 // // 배포용
 // gulp.task('serve-build', ['sass-build', 'sprite-build', 'md5-sprite', 'replace-build']);
 //
-// gulp.task('default', ['serve']); // 로컬확인용
+gulp.task('default', ['serve']); // 로컬확인용
 // gulp.task('build', ['serve-build']); // 베포용, 사스 변경 + 이미지 버전관리
