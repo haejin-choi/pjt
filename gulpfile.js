@@ -231,7 +231,7 @@ gulp.task('sass', function() {
 // });
 //
 // 로컬 확인용
-gulp.task('serve', [/*'sprite'*/, 'sass'], function() {
+gulp.task('serve', [/*'sprite',*/ 'sass'], function() {
 	gulp.watch('src/scss/**/*.scss', ['sass']);
 	// gulp.watch('src/im/sprites/**/*', ['sprite']);
 });
