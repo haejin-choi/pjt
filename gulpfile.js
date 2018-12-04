@@ -1,243 +1,165 @@
-var gulp = require('gulp');
-gulp.task('default', function(){
-    console.log('테스트지롱');
-});
-var sass = require('gulp-sass');
+'use strict';
 
-// var browserSync = require('browser-sync').create();
-// const vfb = require('vinyl-ftp-branch');
-// const ftp = require('vinyl-ftp');
-// const plumber = require('gulp-plumber');
-// const notify = require("gulp-notify");
-//
-// var fs = require('fs');
-// var path = require('path');
-// var del = require('del');
-// var spritesmith = require('gulp.spritesmith');
-// var md5 = require('gulp-md5-plus');
-// var csssort = require('gulp-nts-css-formatter');
-var postcss = require('gulp-postcss');
-var sourcemap = require('gulp-sourcemaps');
-var autoprefixer = require('autoprefixer');
-// var replace = require('gulp-replace');
-// var buffer = require('vinyl-buffer');
-// var localImgPath = '../im/';
-// var staticImgPath = 'https://ssl.pstatic.net/static/weather/m/';
-// var staticImgPath_icon= 'https://ssl.pstatic.net/static/weather/m/icon/';
-// var staticImgPath_animation = 'https://ssl.pstatic.net/static/weather/m/animation/';
-//
-// var getFolders = function(dir){
-// 	return fs.readdirSync(dir).filter(function(file){
-// 		return fs.statSync(path.join(dir, file)).isDirectory();
-// 	});
-// };
-//
-// var config = {
-// 	notify: true
-// }
-//
+// node modules
+const fs = require('fs');
+const path = require('path');
+const gulp = require('gulp');
+const lazypipe = require('lazypipe');
+const runSequence = require('run-sequence');
+
+// gulp modules
+const sass = require('gulp-sass');
+const postcss = require('gulp-postcss');
+const sourcemaps = require('gulp-sourcemaps');
+const autoprefixer = require('autoprefixer');
+const handlebars = require('gulp-compile-handlebars');
+const rename = require('gulp-rename');
+const spritesmith = require('gulp.spritesmith');
+const plumber = require('gulp-plumber');
+const gulpSort = require('gulp-sort');
+
+// notification
+const notify = require("gulp-notify");
+
 var paths = {
-	html_path: 'src/**/',
-	sprite_src: 'src/im/sprite/',
-	sprite_dest: 'src/im/',
+	root: './',
+	html_src: 'src/',
+	sprite_src: 'src/sprite/',
+	sprite_dest: 'src/img/sprite/',
 	css_src: 'src/scss/',
 	css_dest: 'src/css/',
-	img_dest: 'src/im/',
+	img_dest: 'src/img/',
+	build_img: 'dest/img/',
+	build_css: 'dest/css/'
 };
-//
-// var globalOptions = {
-// 	notify: !config.notify ? {} : {
-// 		errorHandler: notify.onError({
-// 			title: '<%= error.relativePath %>',
-// 			message: '<%= error.line %> line - <%= error.messageOriginal %>',
-// 			sound: "Pop",
-// 		})
-// 	}
-// }
-//
-//
-// gulp.task('ftp', function() {
-// 	var options = {
-// 		ftp: {
-// 			host: 'view.ui.naver.com',
-// 			port: '2001',
-// 			userKeyFile: '.ftppass', //[TODO].ftppass 처리 방법
-// 			userKey: 'key1',
-// 			parallel: 10, //병렬 전송 갯수 (기본값 3, 10이상 효과 미비)
-// 			remotePath: '/weather/mobile', //[TODO]각 서비스 업로드 경로 설정 필요
-// 			log: true,
-// 		},
-// 		targetGlob: [path.join(paths.html_path,'**/*'), '!'+paths.sprite_src, '!'+path.join(paths.sprite_src, '**/*'), '!'+paths.css_src, '!'+path.join(paths.css_src, '**/*'), '!node_modules/'], // glob 문법으로 대상 지정
-// 	};
-//
-// 	try {
-// 		var chkFtppass = fs.accessSync('.ftppass', 'r'); // .ftppass 파일 존재 여부 확인
-// 	} catch(e) {
-// 		console.log('Not Exist .ftppass file. Please make .ftppass'); // .ftppass 파일이 없을 경우 에러
-// 		return;
-// 	}
-// 	if(!options.ftp.remotePath || options.ftp.remotePath === '/') {  // remotePath 설정이 비어 있거나 '/'인지 확인.
-// 		console.log('remotePath not set or set root');
-// 		return;
-// 	}
-//
-// 	var conn = ftp.create(vfb(options.ftp));
-//
-// 	return gulp.src(options.targetGlob, {buffer: false})
-// 		.pipe(plumber(globalOptions.notify))
-// 		.pipe(conn.newer(conn.config.finalRemotePath))
-// 		.pipe(conn.dest(conn.config.finalRemotePath));
-// });
-//
-// gulp.task('sprite', function(){
-// 	var spriteDir= 'src/im/sprites/';
-// 	var folders = getFolders(spriteDir);
-//
-// 	folders.map(function(folder){
-// 		// 이미지 스프라이트
-// 		var spriteData = gulp.src(spriteDir+ folder + '/*.png').pipe(spritesmith({
-// 			imgPath: localImgPath + 'sp_' + folder + '.png', //로컬
-// 			imgName: 'sp_' + folder + '.png',
-// 			cssName:   '_sp_' + folder + '.scss',
-// 			cssFormat: 'scss',
-// 			cssTemplate: 'src/scss/lib/spritesmith/sprite.mustache',
-// 			cssSpritesheetName: 'sp_' + folder,
-// 			padding: 10,
-// 			cssVarMap: function(sprite) {
-// 				sprite.name = sprite.name;
-// 			}
-// 		}));
-// 		spriteData.img.pipe(gulp.dest('src/im/'));
-// 		spriteData.css.pipe(gulp.dest('src/scss/import/sprite/'));
-// 	});
-// });
-//
-// gulp.task('sprite-build', function(){
-// 	var spriteDir = 'src/im/sprites/';
-// 	var folders = getFolders(spriteDir);
-//
-// 	var streamArr = [];
-// 	folders.map(function(folder){
-// 		// 이미지 스프라이트
-// 		var spriteData = gulp.src(spriteDir+ folder + '/*.png')
-// 			.pipe(spritesmith({
-// 				imgPath: localImgPath + 'sp_' + folder + '.png', //로컬
-// 				imgName: 'sp_' + folder + '.png',
-// 				// imgPath: localImgPath + 'sp_' + folder + '_' + datetime + '.png', //로컬
-// 				// imgName: 'sp_' + folder + '_' + datetime + '.png',
-// 				cssName:   '_sp_' + folder + '.scss',
-// 				cssFormat: 'scss',
-// 				cssTemplate: 'src/scss/lib/spritesmith/sprite.mustache',
-// 				cssSpritesheetName: 'sp_' + folder,
-// 				padding: 10,
-// 				cssVarMap: function(sprite) {
-// 					sprite.name = sprite.name;
-// 				}
-// 			}));
-//
-// 		streamArr.push(new Promise(function(resolve){
-// 			spriteData.img
-// 				.pipe(gulp.dest('src/im/'))
-// 				.on('end', resolve);
-// 		}));
-// 		streamArr.push(new Promise(function(resolve){
-// 			spriteData.css
-// 				.pipe(gulp.dest('src/scss/import/sprite/'))
-// 				.on('end', resolve);
-// 		}));
-// 	});
-// 	return Promise.all(streamArr);
-// });
-//
-// gulp.task('md5-sprite', ['sprite-build'], function() {
-// 	var options = {
-// 		md5: {
-// 			cssSrc: './src/scss/import/sprite/*.scss', //이름 변경 대상 css(scss) 파일
-// 			srcDel: false // sprite 이름 변경전 파일 삭제 여부
-// 		}
-// 	};
-// 	var spriteDir = 'src/im/sprites/';
-// 	var del_sprite = [];
-// 	var sprite_list = getFolders(spriteDir);
-//
-// 	for(var i=0,imax=sprite_list.length;i<imax;i++) {
-// 		del_sprite.push(path.join('src/im/', 'sp_' + sprite_list[i] + '_????????.png'));
-// 		sprite_list[i] = path.join('src/im/', 'sp_' + sprite_list[i] + '.png');
-// 	}
-//
-// 	return del(del_sprite)
-// 	  .then(function(){
-// 		  return new Promise(function(resolve) {
-// 			  gulp.src(sprite_list)
-// 				.pipe(md5(8,options.md5.cssSrc))
-// 				.pipe(gulp.dest('src/im/'))
-// 				.on('end',resolve);
-// 		  });
-// 	  }).then(function() {
-// 		  //console.log(fs.readFileSync('./src/scss/import/sprite/_sp_animation_wt1.scss', 'utf8'));
-// 		  if(options.md5.srcDel) {
-// 			  return del(sprite_list);
-// 		  }
-// 	  });
-// });
-//
-//
+var config = {
+	notify: true,
+    sprite_ratio: {
+		png: 2,
+		svg: 2,
+	},
+}
+
+function getFolders(dir) {
+	return fs.readdirSync(dir)
+		.filter(function (file) {
+			if(file === 'scss'){
+				return;
+			}
+			return fs.statSync(path.join(dir, file)).isDirectory();
+		});
+};
+var globalOptions = {
+	notify: !config.notify ? {} : {
+		errorHandler: notify.onError({
+			title: '<%= error.relativePath %>',
+			message: '<%= error.line %> line - <%= error.messageOriginal %>',
+			sound: "Pop",
+		})
+	}
+};
 
 // task.sass
+gulp.task('default', ['watch']);
 gulp.task('sass', function() {
-	return gulp.src("./src/scss/**/*.scss")
-		.pipe(sourcemap.init())
-		.pipe(sass.sync({outputStyle: 'compact'}).on('error', sass.logError))
-		// .pipe(csssort())
-		.pipe(postcss([autoprefixer({ browsers: ['iOS >= 6', 'Android >= 4'] })]))
-		.pipe(sourcemap.write('./'))
-		.pipe(gulp.dest('./src/css/'))
-		// .pipe(browserSync.stream());
+	return gulp.src(path.posix.join(paths.css_src, '**/*.scss'))
+		.pipe(plumber(globalOptions.notify))
+		.pipe(sourcemaps.init())
+		.pipe(sassPipe())
+		.pipe(sourcemaps.write('./'))
+		.pipe(gulp.dest(paths.css_dest))
+});
+gulp.task('dev', function(cb) {
+	runSequence('sprite', 'sass', cb);
+});
+gulp.task('watch', ['dev'], function () {
+	var options = {};
+	gulp.watch([path.posix.join(paths.css_src, '/**/*')], ['sass']);
+	gulp.watch([path.posix.join(paths.sprite_src, '/**/*')], ['sprite']);
 });
 
-// task.sass
-// gulp.task('sass-build', ['sprite-build', 'md5-sprite'], function() {
-// 	return Promise.all([
-// 		del(path.join('**/*.css.map')),
-// 		new Promise(function(resolve) {
-// 			gulp.src("src/scss/**/*.scss")
-// 			  .pipe(sass.sync({outputStyle: 'compressed'}).on('error', sass.logError))
-// 			  // .pipe(csssort())
-// 			  .pipe(postcss([autoprefixer({ browsers: ['iOS >= 6', 'Android >= 4'] })]))
-// 			  .pipe(gulp.dest('src/css/'))
-// 			  .on('end',resolve);
-// 		})
-// 	]);
-// });
-//
-// gulp.task('replace-build', ['sass-build'], function() {
-// 	gulp.src('./src/css/w.css')
-// 		.pipe(replace( /(?:\.\.\/im\/)(.*?)(?:\.)/gm, function(str){
-// 			if(str.includes('sp_animation')) {
-// 				// 애니메이션 폴더
-// 				str = str.replace(localImgPath, staticImgPath_animation);
-// 				return str;
-// 			} else if(str.includes('sp_icon')) {
-// 				// 아이콘 폴더
-// 				str = str.replace(localImgPath, staticImgPath_icon);
-// 				return str;
-// 			} else {
-// 				// 기본 폴더
-// 				str =  str.replace(localImgPath, staticImgPath);
-// 				return str;
-// 			}
-// 		}))
-// 		.pipe(gulp.dest('./src/css/', {overwrite:true}));
-// });
-//
-// 로컬 확인용
-gulp.task('serve', [/*'sprite',*/ 'sass'], function() {
-	gulp.watch('src/scss/**/*.scss', ['sass']);
-	// gulp.watch('src/im/sprites/**/*', ['sprite']);
+gulp.task('sprite',['makeSpriteMap']);
+gulp.task('makeSprite', function () {
+	var stream_arr = [];
+	var folders = getFolders(paths.sprite_src);
+	var options = {
+		spritesmith: function(folder) {
+			return {
+				imgPath: path.posix.relative(paths.css_dest, path.posix.join(paths.sprite_dest, 'sp_' + folder + '.png')),
+				imgName: 'sp_' + folder + '.png',
+				cssName: '_sp_' + folder + '.scss',
+				cssFormat: 'scss',
+				padding: 4,
+				cssTemplate: './gulpconf/sprite_template.hbs',
+				cssSpritesheetName: 'sp_' + folder,
+				cssHandlebarsHelpers: {
+					sprite_ratio: config.sprite_ratio.png
+				}
+			}
+		},
+	};
+
+
+
+	if (folders) {
+		folders.map(function(folder) {
+			var spriteData = gulp.src(path.join(paths.sprite_src, folder, '*.png'))
+				.pipe(plumber(globalOptions.notify))
+				.pipe(gulpSort())
+				.pipe(spritesmith(options.spritesmith(folder)));
+			stream_arr.push(new Promise(function(resolve) {
+				spriteData.img
+					.pipe(gulp.dest(paths.sprite_dest))
+					.on('end',resolve);
+			}));
+			stream_arr.push(new Promise(function(resolve) {
+				spriteData.css
+					.pipe(gulp.dest(path.join(paths.css_src, 'sprite')))
+					.on('end', resolve);
+			}));
+		});
+	}
+	return Promise.all(stream_arr);
 });
-//
-// // 배포용
-// gulp.task('serve-build', ['sass-build', 'sprite-build', 'md5-sprite', 'replace-build']);
-//
-gulp.task('default', ['serve']); // 로컬확인용
-// gulp.task('build', ['serve-build']); // 베포용, 사스 변경 + 이미지 버전관리
+
+gulp.task('makeSpriteMap', ['makeSprite'], function() {
+	var folders = getFolders(paths.sprite_src);
+	if (!folders) return;
+
+	var options = {
+		maps: {
+			handlebars: {
+				prefix: 'sp_',
+				exe: 'scss',
+				path: path.posix.join(paths.css_src, 'sprite'),
+				import: folders,
+			}
+		},
+	};
+
+	return gulp.src('gulpconf/sprite_maps_template.hbs')
+		.pipe(plumber(globalOptions.notify))
+		.pipe(handlebars(options.maps.handlebars))
+		.pipe(rename('_sprite_maps.scss'))
+		.pipe(gulp.dest(path.posix.join(paths.css_src, 'common')));
+});
+
+function sassPipe(build) {
+	var options = {
+		postcss: [
+			autoprefixer({
+				browsers: config.pc ?
+    				['last 2 versions', "Edge > 0", "ie >= 8"] : //PC옵션
+    				["Android > 0","iOS > 0","FirefoxAndroid > 0"] //모바일옵션
+			}),
+		]
+	};
+
+	return lazypipe()
+		.pipe(sass, {
+				outputStyle: 'expanded',
+				indentType: 'tab',
+				indentWidth: 1
+			})
+		.pipe(postcss,options.postcss)();
+}

@@ -4,8 +4,17 @@
   "description": "",
   "main": "gulpfile.js",
   "dependencies": {
+    "fs": "0.0.1-security",
     "gulp": "^3.9.1",
-    "gulp-sourcemaps": "^2.6.4"
+    "gulp-compile-handlebars": "^0.6.1",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-sort": "^2.0.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp.spritesmith": "^6.9.0",
+    "lazypipe": "^1.0.1",
+    "run-sequence": "^2.2.1"
   },
   "devDependencies": {
     "gulp-autoprefixer": "^6.0.0",

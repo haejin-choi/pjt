@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+@import "./common/base";
+@import "./common/variable";
+//@import "common/placeholders";
+@import "./common/mixin";
+@import "./common/sprite_maps";
+//
+//
+// @import "lib/spritesmith/mixins";
+//
+// @import "import/sprite/sp_weather";
+body{
+	background: blue;
+	border: 1px solid lime;
+}
+.sptest{@include get-sprite($sp_test)}
+.ico_close{@include get-icon-sprite(ico_close, $sp_test)}
+.ico_beta{@include get-icon-sprite(ico_beta, $sp_test)}

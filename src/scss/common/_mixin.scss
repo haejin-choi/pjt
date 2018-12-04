@@ -1,0 +1,80 @@
+@charset "utf-8";
+
+@function map-deep-get($map, $keys...) {
+    @each $key in $keys {
+        $map: map-get($map, $key);
+    }
+    @return $map;
+}
+// Sprite Getter
+// @param {String} 폴더명
+@mixin get-sprite($sprite-map) {
+    display: inline-block;
+    overflow: hidden;
+    color: transparent;
+    background: url(map-get($sprite-map,image)) 0 0 no-repeat;
+    -webkit-background-size: round(map-get($sprite-map,width)/$ratio) round(map-get($sprite-map,height)/$ratio);
+    background-size: round(map-get($sprite-map,width)/$ratio) round(map-get($sprite-map,height)/$ratio);
+    vertical-align: 0;
+    white-space: nowrap;
+}
+// Sprite Getter
+// @param {String} 파일명
+// @param {String} 폴더명
+@mixin get-icon-sprite($filename, $sprite-map) {
+    $icon-width : map-deep-get($sprite-map, 'sprites', $filename, 'width');
+    $icon-height : map-deep-get($sprite-map, 'sprites', $filename, 'height');
+    $offsetX : map-deep-get($sprite-map, 'sprites', $filename, 'offset-x');
+    $offsetY : map-deep-get($sprite-map, 'sprites', $filename, 'offset-y');
+    width: round($icon-width/$ratio);
+    height: round($icon-height/$ratio);
+    background-position: round($offsetX/$ratio) round($offsetY/$ratio);
+}
+//한줄말줄임
+@mixin elss{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+}
+//여러줄 말줄임
+@mixin line-ellipsis($line-height, $line-clamp, $break-point:all){
+    display:block;
+    display:-webkit-box;
+    overflow:hidden;
+    max-height:$line-height * $line-clamp;
+    -webkit-line-clamp:$line-clamp;
+    -webkit-box-orient:vertical;
+    line-height:$line-height;
+    word-wrap: break-word;
+    @if($break-point=='word') {
+        word-break: keep-all;
+    }@else {
+        word-break: break-all;
+    }
+}
+//플롯 해제
+@mixin clear{
+    content:'';
+    display:block;
+    clear:both;
+}
+//마스크
+@mixin mask{
+    position:absolute;
+    left:0;
+    top:0;
+    right:0;
+    bottom:0;
+}
+//이미지 middle정렬
+@mixin img_align{
+    content:'';
+    display:inline-block;
+    height:100%;
+    vertical-align:middle;
+}
+@mixin composite{
+    .api_animation & {
+        transform:translateZ(0);
+    }
+}
