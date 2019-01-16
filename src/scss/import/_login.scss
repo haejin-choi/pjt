@@ -1,0 +1,67 @@
+// 로그인페이지
+
+.login{
+    .logo{
+        width: 100px;
+        border:1px solid red;
+        margin: 0 auto;
+    }
+    .content{
+        overflow: hidden;
+        width: 710px;
+        margin: 0 auto;
+        border:1px solid red;
+    
+        .fl{
+            float: left;
+            width: 300px;
+            background: gray;
+        }
+        .fr{
+            float: left;
+            width: 400px;
+            border:1px solid lime;
+    
+        }
+        .img_doctor{
+            width: 50px;
+            margin: 0 auto;
+            border:1px solid gold;
+        }
+        .section_form{
+            width: 200px;
+            margin: 0 auto;
+            .wrap_input{
+                border-radius: 10px;
+                background: lightgray;
+                input{
+                    background: transparent;
+                }
+            }
+            .btn_submit{
+                display: block;
+                border-radius: 10px;
+                text-align: center;
+                color: #fff;
+                font-weight: bold;
+                background: $colorBlue;
+            }
+        }
+        .section_id{
+            overflow: hidden;
+            width: 200px;
+            margin: 0 auto;
+            .btn_join{
+                float: left;
+            }
+            .btn_remember{
+                float: right;
+            }
+        }
+        
+    
+    }
+    .login_txt{
+        text-align: center;
+    }
+}

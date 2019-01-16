@@ -80,9 +80,78 @@ mark {
 	text-overflow: ellipsis;
 }
 
-body {
-	background: blue;
+.login .logo {
+	width: 100px;
+	border: 1px solid red;
+	margin: 0 auto;
+}
+
+.login .content {
+	overflow: hidden;
+	width: 710px;
+	margin: 0 auto;
+	border: 1px solid red;
+}
+
+.login .content .fl {
+	float: left;
+	width: 300px;
+	background: gray;
+}
+
+.login .content .fr {
+	float: left;
+	width: 400px;
 	border: 1px solid lime;
+}
+
+.login .content .img_doctor {
+	width: 50px;
+	margin: 0 auto;
+	border: 1px solid gold;
+}
+
+.login .content .section_form {
+	width: 200px;
+	margin: 0 auto;
+}
+
+.login .content .section_form .wrap_input {
+	-webkit-border-radius: 10px;
+	        border-radius: 10px;
+	background: lightgray;
+}
+
+.login .content .section_form .wrap_input input {
+	background: transparent;
+}
+
+.login .content .section_form .btn_submit {
+	display: block;
+	-webkit-border-radius: 10px;
+	        border-radius: 10px;
+	text-align: center;
+	color: #fff;
+	font-weight: bold;
+	background: blue;
+}
+
+.login .content .section_id {
+	overflow: hidden;
+	width: 200px;
+	margin: 0 auto;
+}
+
+.login .content .section_id .btn_join {
+	float: left;
+}
+
+.login .content .section_id .btn_remember {
+	float: right;
+}
+
+.login .login_txt {
+	text-align: center;
 }
 
 .sptest {
@@ -108,4 +177,4 @@ body {
 	background-position: 0px 0px;
 }
 
-/*# sourceMappingURL=test.css.map */
+/*# sourceMappingURL=hepahealth.css.map */
