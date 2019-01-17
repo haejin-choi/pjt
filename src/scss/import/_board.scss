@@ -1,0 +1,47 @@
+// 게시판
+
+.board{
+    .list{
+        overflow: hidden;
+    }
+    .listItem{
+        float: left;
+        width: 150px;
+        border: 1px solid red;
+        .listItemLink{
+            display: block;
+            &:hover{
+                .title{
+                    color: red;
+                }
+            }
+        }
+        .wrap_thumb{
+            text-align: center;
+            background: gray;
+        }
+        .wrap_meta{
+            overflow: hidden;
+        }
+        .title{
+            overflow: hidden;
+            display: block;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .iconfile{
+            float: right;
+        }
+    }
+    .paginate{
+        text-align: center;
+        .paginate_number{
+            display: inline-block;
+            vertical-align: top;
+            .active{
+                color: red;
+                text-decoration: underline;
+            }
+        }
+    }
+}

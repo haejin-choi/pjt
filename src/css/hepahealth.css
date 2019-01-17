@@ -154,6 +154,58 @@ mark {
 	text-align: center;
 }
 
+.board .list {
+	overflow: hidden;
+}
+
+.board .listItem {
+	float: left;
+	width: 150px;
+	border: 1px solid red;
+}
+
+.board .listItem .listItemLink {
+	display: block;
+}
+
+.board .listItem .listItemLink:hover .title {
+	color: red;
+}
+
+.board .listItem .wrap_thumb {
+	text-align: center;
+	background: gray;
+}
+
+.board .listItem .wrap_meta {
+	overflow: hidden;
+}
+
+.board .listItem .title {
+	overflow: hidden;
+	display: block;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.board .listItem .iconfile {
+	float: right;
+}
+
+.board .paginate {
+	text-align: center;
+}
+
+.board .paginate .paginate_number {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.board .paginate .paginate_number .active {
+	color: red;
+	text-decoration: underline;
+}
+
 .sptest {
 	display: inline-block;
 	overflow: hidden;

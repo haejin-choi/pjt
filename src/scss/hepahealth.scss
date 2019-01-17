@@ -9,7 +9,8 @@
 //
 // @import "lib/spritesmith/mixins";
 //
-@import "import/_login";
+@import "import/_login"; // 로그인
+@import "import/_board"; // 게시판
 
 .sptest{@include get-sprite($sp_test)}
 .ico_close{@include get-icon-sprite(ico_close, $sp_test)}
