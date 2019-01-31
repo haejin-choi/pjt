@@ -39,7 +39,7 @@
             display: inline-block;
             vertical-align: top;
             .active{
-                color: red;
+                color: $colorRed;
                 text-decoration: underline;
             }
         }
