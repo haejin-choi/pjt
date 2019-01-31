@@ -150,22 +150,135 @@ mark {
 	text-align: center;
 }
 
-#home .section_spot .wrap_cont {
-	width: 1600px;
-	margin: 0 auto;
-	padding: 80px 0;
+#home .header {
+	position: relative;
+	height: 100px;
+	margin-bottom: -101px;
+	border-bottom: 1px solid rgba(68, 68, 68, 0.5);
 }
 
-#home .section_spot h3 {
+#home .header .logo {
+	float: left;
+}
+
+#home .header .fr {
+	float: right;
+}
+
+#home .header .wrap_cont {
+	position: relative;
+	width: 1600px;
+	margin: 0 auto;
+}
+
+#home .header .gnb {
+	overflow: hidden;
+	margin-top: 50px;
+}
+
+#home .header .gnb .gnb_item {
+	float: left;
+	margin-left: 55px;
+	font-size: 24px;
+	font-weight: bold;
+	color: #fff;
+}
+
+#home .header .header_search {
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-size: 13px;
+	color: rgba(255, 255, 255, 0.5);
+}
+
+#home .header .header_search .item_search {
+	display: inline-block;
+}
+
+#home .header .header_search .item_search .label_sch {
+	margin-right: 5px;
+}
+
+#home .header .header_search .item_search .input_label_sch {
+	width: 90px;
+	margin-right: 15px;
+	background: none;
+	border: none;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+#home .header .header_search .item_link {
+	display: inline-block;
+	margin-right: 15px;
+}
+
+#home .header .layer_setting {
+	position: absolute;
+	top: 52px;
+	right: -32px;
+}
+
+#home .header .layer_setting .wrap_setting {
+	overflow: hidden;
+	height: 70px;
+	-webkit-border-radius: 10px;
+	        border-radius: 10px;
+	background: #fff;
+}
+
+#home .header .layer_setting .item_setting {
+	position: relative;
+	float: left;
+	width: 65px;
+	margin: 15px 0 0 0;
+	-webkit-align-content: center;
+	        align-content: center;
+	color: #014592;
+	font-size: 11px;
+	text-align: center;
+}
+
+#home .header .layer_setting .item_setting + .item_setting:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 39px;
+	border-left: 1px solid #efefef;
+}
+
+#home .section_spot .wrap_cont {
+	position: relative;
+	width: 1600px;
+	margin: 0 auto;
+}
+
+#home .section_spot .spot {
+	height: 1000px;
+}
+
+#home .section_spot .title_area {
+	position: absolute;
+	top: 75px;
+	left: 0;
+}
+
+#home .section_spot .title_area h3 {
 	font-size: 36px;
 	font-weight: bold;
 	color: #fff;
 }
 
-#home .section_spot .sub_title {
+#home .section_spot .title_area .sub_title {
 	margin-top: 33px;
 	font-size: 20px;
 	color: #fff;
+}
+
+#home .section_spot .video_area {
+	height: 870px;
 }
 
 #home .section_home {
