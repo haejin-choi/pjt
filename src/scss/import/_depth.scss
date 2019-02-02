@@ -23,7 +23,7 @@
 }
 .container .content{
     width: 1160px;
-    padding: 0 50px 120px;
+    padding: 40px 50px 120px;
     margin: 0 auto;
     background: #fff;
 }
@@ -65,6 +65,7 @@
     display: table;
     table-layout: fixed;
     width: 100%;
+    margin-bottom: 50px;
     border:1px solid #e0e0e0;
     background: #fbfbfb;
     a{
@@ -83,7 +84,6 @@
 .section_pi{
     .btn_area{
         overflow: hidden;
-        margin-top: 40px;
         .fl{
             float: left;
         }
@@ -132,6 +132,31 @@
             + p{
                 margin-top: 10px;
             }
+        }
+    }
+}
+
+.section_faq{
+    .faq_list{
+        border-top: 1px solid #000;
+        .item_q{
+            display: block;
+            border-bottom: 1px solid #e8e8e8;
+            font-size: 18px;
+            color: #333;
+            .cate{
+                display: inline-block;
+                font-weight: normal;
+
+            }
+            .title{
+                display: inline-block;
+            }
+
+        }
+        .item_a{
+            padding: 0 124px;
+            background: #faf9f7;
         }
     }
 }

@@ -233,6 +233,10 @@ mark {
 	color: #101a34;
 }
 
+#header .lnb .lnb_menu .item_menu_wrap .item_menu:hover {
+	color: #1764ae;
+}
+
 #header .snb {
 	position: absolute;
 	top: 100px;
@@ -324,7 +328,7 @@ mark {
 
 .container .content {
 	width: 1160px;
-	padding: 0 50px 120px;
+	padding: 40px 50px 120px;
 	margin: 0 auto;
 	background: #fff;
 }
@@ -369,6 +373,7 @@ mark {
 	display: table;
 	table-layout: fixed;
 	width: 100%;
+	margin-bottom: 50px;
 	border: 1px solid #e0e0e0;
 	background: #fbfbfb;
 }
@@ -389,7 +394,6 @@ mark {
 
 .section_pi .btn_area {
 	overflow: hidden;
-	margin-top: 40px;
 }
 
 .section_pi .btn_area .fl {
@@ -449,6 +453,31 @@ mark {
 
 .section_pi .pi_txt p + p {
 	margin-top: 10px;
+}
+
+.section_faq .faq_list {
+	border-top: 1px solid #000;
+}
+
+.section_faq .faq_list .item_q {
+	display: block;
+	border-bottom: 1px solid #e8e8e8;
+	font-size: 18px;
+	color: #333;
+}
+
+.section_faq .faq_list .item_q .cate {
+	display: inline-block;
+	font-weight: normal;
+}
+
+.section_faq .faq_list .item_q .title {
+	display: inline-block;
+}
+
+.section_faq .faq_list .item_a {
+	padding: 0 124px;
+	background: #faf9f7;
 }
 
 .login {
@@ -831,16 +860,18 @@ mark {
 	float: right;
 }
 
-.board .paginate {
+.paginate {
 	text-align: center;
 }
 
-.board .paginate .paginate_number {
+.paginate .paginate_number {
 	display: inline-block;
 	vertical-align: top;
+	font-size: 20px;
+	color: #888;
 }
 
-.board .paginate .paginate_number .active {
+.paginate .paginate_number .active {
 	color: #cb2e3c;
 	text-decoration: underline;
 }

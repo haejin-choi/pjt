@@ -137,6 +137,9 @@
                     font-weight: bold;
                     line-height: 50px;
                     color: #101a34;
+                    &:hover{
+                        color: $colorBlue;
+                    }
                 }
             }
         }
