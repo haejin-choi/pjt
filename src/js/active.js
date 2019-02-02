@@ -1,11 +1,3 @@
-/* NTS JMJ KYJ OSH KDH */
-/*크게보기
-$(document).ready(function() {
-	$d.sMenu = '<a href="#" onclick="$(\'html\').toggleClass(\'font_big\');$(this).find(\'span\').toggle();return false;" style="display:block;overflow:hidden;padding:9px 10px 5px;border:1px solid #000;background-color:#ddd;font-size:13px;line-height:24px;letter-spacing:-1px;text-align:center;font-weight:bold;font-family:sans-serif;">폰트 <span>크게보기</span><span style="display:none">작게보기</span></a>';
-	$('body').prepend($d.sMenu);
-	window.scrollTo(0, 40);
-});
-*/
 var
 	doc = document.documentElement,
 	ua = window.navigator.userAgent.toLowerCase(),
@@ -15,13 +7,66 @@ doc.setAttribute('data-useragent', ua);
 doc.setAttribute('data-platform', up );
 
 if(ua.search('mobile') == '-1'){
-	$('body').removeClass('animation');
+	console.log("PC");
 }
-//font-size테스트용
-$('.sch_w .sch_btn.sch_submit').attr('type','button').click(function(){
-	var sSize=$('.sch_inp').val();
-	$('html').css('font-size',sSize+'px');
+
+$(document).ready(function(e) {
+
+//header
+var gnbLayer = $('.layer_setting');
+$('.header_search .item_setting').on('click',function(e){
+	gnbLayer.toggle();
+	e.preventDefault();
 });
+var header = $('#header');
+var gnb = $('.gnb');
+var lnb = $('.lnb');
+function slideDown(){
+	lnb.show();
+	lnb.stop().animate({
+		opacity:1,
+		height:250
+	},{
+		duration: 200,
+		easing: "linear"
+	})
+}
+function slideUp(){
+	lnb.stop().animate({
+		opacity:0,
+		height:0
+	},{
+		duration: 200,
+		easing: "linear",
+		done:function(){
+			lnb.hide();
+		}
+	})
+}
+function slideEvt(sw){
+	if(sw == 1){
+		slideDown();
+	}else{
+		slideUp();
+	}
+}
+$('.gnb .gnb_item').on('mouseover',function(e){
+	sw = 1;
+	slideEvt(sw);
+});
+
+});
+
+
+
+
+
+
+
+
+
+
+
 //반응형
 $(document).ready(function(e) {
 	var viewport = $(document).width();

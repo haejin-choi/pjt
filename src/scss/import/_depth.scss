@@ -1,4 +1,4 @@
-// 
+//
 
 .section_top{
     .visual_area{
@@ -22,10 +22,26 @@
     }
 }
 .container .content{
+    position: relative;
     width: 1160px;
     padding: 40px 50px 120px;
     margin: 0 auto;
     background: #fff;
+    &:before,&:after{
+        content: '';
+        position: absolute;
+        top: 22px;
+        width: 32px;
+        height: 34px;
+        background: url(../img/bg_sub_gr.png) no-repeat 0 0;
+    }
+    &:before{
+        right: 100%;
+        transform: scaleX(-1);
+    }
+    &:after{
+        left: 100%;
+    }
 }
 
 .path_area{
@@ -35,23 +51,20 @@
     text-align: right;
     a{
         display: inline-block;
-        padding-left: 11px;
+        margin-left: 11px;
         font-size: 12px;
         line-height: 15px;
         color: #989898;
         vertical-align: top;
         &::after{
-            content: '';
-            display: inline-block;
-            width: 3px;
-            height: 5px;
-            margin: 5px 0 0 11px;
-            background: red;
+            @include get-icon-sprite(ico_path_arr, $sp_hepa);
+            margin: 4px 0 0 11px;
             vertical-align: top;
         }
     }
     strong{
         display: inline-block;
+        margin-left: 11px;
         border-bottom: 2px solid #d4d4d4;
         font-size: 12px;
         line-height: 15px;

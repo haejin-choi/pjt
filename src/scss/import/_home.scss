@@ -10,7 +10,6 @@
             width: $contentWidth;
             margin: 0 auto;
         }
-
         .spot{
             height: 1000px;
         }
@@ -168,7 +167,6 @@
                 width:0;
                 height: 13px;
                 margin: 1px 15px 0 16px;
-
                 border-left: 1px solid #fff;
             }
         }
@@ -181,5 +179,8 @@
         position: absolute;
         top:0;
         right:0;
+        .ico_footer_logo{
+            @include get-icon-sprite(ico_footer_logo, $sp_hepa);
+        }
     }
 }
