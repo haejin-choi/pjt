@@ -91,7 +91,7 @@ mark {
 
 #header .fr {
 	position: absolute;
-	top: 0;
+	bottom: 0;
 	right: 0;
 }
 
@@ -99,6 +99,7 @@ mark {
 	z-index: 10;
 	position: relative;
 	width: 1600px;
+	height: 100px;
 	margin: 0 auto;
 }
 
@@ -116,6 +117,10 @@ mark {
 	font-weight: bold;
 	color: #fff;
 	text-align: center;
+}
+
+#header .gnb .gnb_item:hover {
+	color: #1764ae;
 }
 
 #header .header_search {
@@ -491,6 +496,93 @@ mark {
 
 .section_pi .pi_txt p + p {
 	margin-top: 10px;
+}
+
+.section_faq .search_area {
+	margin-bottom: 55px;
+}
+
+.section_faq .search_area:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.section_faq .search_area .search_form {
+	float: left;
+	width: 810px;
+	height: 70px;
+	border: 1px solid #e0e0e0;
+}
+
+.section_faq .search_area .search_form .search_select {
+	float: left;
+	position: relative;
+	width: 208px;
+}
+
+.section_faq .search_area .search_form .search_select .select_btn {
+	position: relative;
+	display: block;
+	padding: 0 0 0 38px;
+	border-right: 1px solid #e0e0e0;
+	font-size: 16px;
+	color: #666;
+	line-height: 70px;
+	background: #fbfbfb;
+}
+
+.section_faq .search_area .search_form .search_select .select_btn::after {
+	content: '';
+	position: absolute;
+	top: 4px;
+	right: 10px;
+	width: 5px;
+	height: 5px;
+	background: red;
+}
+
+.section_faq .search_area .search_form .search_select .select_layer {
+	position: absolute;
+	top: 70px;
+	left: -1px;
+	right: 0;
+	border: 1px solid #e0e0e0;
+	background: #fff;
+}
+
+.section_faq .search_area .search_form .search_select .select_layer .select_layer_opt {
+	display: block;
+	padding: 0 0 0 38px;
+}
+
+.section_faq .search_area .search_form .search_input {
+	float: left;
+}
+
+.section_faq .search_area .btn_colored {
+	float: left;
+	overflow: hidden;
+	width: 170px;
+	height: 72px;
+	margin-left: 5px;
+	background: #40abd8;
+	color: #fff;
+	text-align: center;
+	line-height: 72px;
+}
+
+.section_faq .search_area .btn_border {
+	float: left;
+	overflow: hidden;
+	width: 166px;
+	height: 70px;
+	margin-left: 5px;
+	border: 1px solid #40abd8;
+	color: #40abd8;
+	background: #fff;
+	text-align: center;
+	line-height: 70px;
 }
 
 .section_faq .faq_list {
