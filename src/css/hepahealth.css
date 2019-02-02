@@ -153,6 +153,15 @@ mark {
 	right: -32px;
 }
 
+#header .layer_setting:before {
+	width: 20px;
+	height: 11px;
+	background-position: 0px -169px;
+	position: absolute;
+	top: -11px;
+	right: 40px;
+}
+
 #header .layer_setting .wrap_setting {
 	overflow: hidden;
 	height: 70px;
@@ -181,6 +190,35 @@ mark {
 	width: 0;
 	height: 39px;
 	border-left: 1px solid #efefef;
+}
+
+#header .layer_setting .item_setting [class^=spim] {
+	display: block;
+	margin: 0 auto;
+}
+
+#header .layer_setting .item_setting .ico_archive {
+	width: 23px;
+	height: 23px;
+	background-position: -200px -120px;
+}
+
+#header .layer_setting .item_setting .ico_library {
+	width: 26px;
+	height: 22px;
+	background-position: -200px -67px;
+}
+
+#header .layer_setting .item_setting .ico_phone {
+	width: 22px;
+	height: 23px;
+	background-position: -172px -91px;
+}
+
+#header .layer_setting .item_setting .ico_product {
+	width: 24px;
+	height: 23px;
+	background-position: -200px -93px;
 }
 
 #header .lnb {
@@ -544,9 +582,14 @@ mark {
 }
 
 .login .content .img_doctor {
-	width: 50px;
-	margin: 0 auto;
-	border: 1px solid gold;
+	padding: 75px 0 65px;
+	text-align: center;
+}
+
+.login .content .img_doctor .ico_login_tit {
+	width: 196px;
+	height: 87px;
+	background-position: 0px 0px;
 }
 
 .login .content .section_form {
@@ -758,6 +801,23 @@ mark {
 	overflow: hidden;
 }
 
+#home .cont_guide .list_guide {
+	float: left;
+	margin-top: 35px;
+}
+
+#home .cont_guide .list_guide li {
+	float: left;
+	margin-right: 72px;
+	font-size: 20px;
+	line-height: 30px;
+	text-align: center;
+}
+
+#home .cont_guide .list_guide li p {
+	padding: 25px 0;
+}
+
 #home .cont_guide .list_banner {
 	float: right;
 	width: 540px;
@@ -895,6 +955,12 @@ mark {
 	width: 168px;
 	height: 36px;
 	background-position: 0px -91px;
+}
+
+.ico_setting {
+	width: 17px;
+	height: 17px;
+	background-position: -200px -147px;
 }
 
 .ico_footer_logo {

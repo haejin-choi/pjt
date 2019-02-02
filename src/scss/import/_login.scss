@@ -12,7 +12,7 @@
         margin: 0 auto;
         border-radius: 10px;
         background: #fff;
-    
+
         .fl{
             float: left;
             width: 315px;
@@ -50,12 +50,14 @@
         .fr{
             float: left;
             width: 530px;
-    
+
         }
         .img_doctor{
-            width: 50px;
-            margin: 0 auto;
-            border:1px solid gold;
+            padding: 75px 0 65px;
+            text-align: center;
+            .ico_login_tit{
+                @include get-icon-sprite(ico_login_tit, $sp_hepa);
+            }
         }
         .section_form{
             width: 370px;
@@ -98,8 +100,8 @@
                 float: right;
             }
         }
-        
-    
+
+
     }
     .login_txt{
         margin-top: 35px;
