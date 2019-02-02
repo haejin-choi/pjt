@@ -1,5 +1,6 @@
 // Sprites Map import
+	@import "src/scss/sprite/sp_hepa";
 	@import "src/scss/sprite/sp_test";
 
 // Sprites Map List
-$map_list: $sp_test, ;
+$map_list: $sp_hepa, $sp_test, ;

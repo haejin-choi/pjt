@@ -323,14 +323,15 @@ mark {
 }
 
 .container .content {
-	width: 1260px;
+	width: 1160px;
+	padding: 0 50px 120px;
 	margin: 0 auto;
 	background: #fff;
 }
 
 .path_area {
 	padding: 40px 0 23px 0;
-	margin: 0 50px;
+	margin-bottom: 80px;
 	border-bottom: 1px solid #dedede;
 	text-align: right;
 }
@@ -362,6 +363,92 @@ mark {
 	color: #000;
 	font-weight: normal;
 	vertical-align: top;
+}
+
+.tab {
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+	border: 1px solid #e0e0e0;
+	background: #fbfbfb;
+}
+
+.tab a {
+	display: table-cell;
+	height: 58px;
+	text-align: center;
+	font-size: 18px;
+	color: #666;
+	vertical-align: middle;
+}
+
+.tab a.on {
+	color: #fff;
+	background: #cb2e3c;
+}
+
+.section_pi .btn_area {
+	overflow: hidden;
+	margin-top: 40px;
+}
+
+.section_pi .btn_area .fl {
+	float: left;
+}
+
+.section_pi .btn_area .fr {
+	float: right;
+}
+
+.section_pi .btn_area .btn_border {
+	overflow: hidden;
+	display: inline-block;
+	height: 38px;
+	padding: 0 10px;
+	border: 1px solid #40abd8;
+	-webkit-border-radius: 3px;
+	        border-radius: 3px;
+	vertical-align: top;
+	color: #0d8dc3;
+	font-size: 14px;
+	line-height: 38px;
+}
+
+.section_pi .btn_area .btn_colored {
+	overflow: hidden;
+	display: inline-block;
+	height: 40px;
+	padding: 0 10px;
+	-webkit-border-radius: 3px;
+	        border-radius: 3px;
+	vertical-align: top;
+	color: #fff;
+	background: #1764ae;
+	font-size: 14px;
+	line-height: 38px;
+}
+
+.section_pi h3 {
+	margin-top: 48px;
+	font-size: 24px;
+	color: #000;
+	font-weight: normal;
+}
+
+.section_pi .pi_txt {
+	margin-top: 23px;
+	padding: 30px 59px;
+	font-size: 16px;
+	color: #666;
+	background: #faf9f7;
+}
+
+.section_pi .pi_txt p {
+	line-height: 29px;
+}
+
+.section_pi .pi_txt p + p {
+	margin-top: 10px;
 }
 
 .login {
