@@ -64,13 +64,18 @@
             margin-right: 15px;
         }
         .item_setting{
-
         }
     }
     .layer_setting{
         position: absolute;
         top:52px;
         right: -32px;
+        &:before{
+            @include get-icon-sprite(ico_gnb_arr, $sp_hepa);
+            position: absolute;
+            top: -11px;
+            right: 40px;
+        }
         .wrap_setting{
             overflow: hidden;
             height: 70px;
@@ -94,6 +99,22 @@
                 width:0;
                 height: 39px;
                 border-left: 1px solid #efefef;
+            }
+            [class^=spim]{
+                display: block;
+                margin:0 auto;
+            }
+            .ico_archive{
+                @include get-icon-sprite(ico_gnb_archive, $sp_hepa);
+            }
+            .ico_library{
+                @include get-icon-sprite(ico_gnb_library, $sp_hepa);
+            }
+            .ico_phone{
+                @include get-icon-sprite(ico_gnb_phone, $sp_hepa);
+            }
+            .ico_product{
+                @include get-icon-sprite(ico_gnb_product, $sp_hepa);
             }
         }
     }

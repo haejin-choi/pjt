@@ -19,4 +19,5 @@
 .spim,.spim_bf:before,.spim_af:after{@include get-sprite($sp_hepa)}
 .spim_bf:before,.spim_af:after{content:''}
 .ico_logo{@include get-icon-sprite(ico_home_logo, $sp_hepa)}
+.ico_setting{@include get-icon-sprite(ico_home_setting, $sp_hepa)}
 .ico_footer_logo{@include get-icon-sprite(ico_footer_logo, $sp_hepa)}
