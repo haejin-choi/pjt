@@ -150,6 +150,86 @@
 }
 
 .section_faq{
+    .search_area{
+        margin-bottom: 55px;
+        
+        &:after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .search_form{
+            float: left;
+            width: 810px;
+            height: 70px;
+            border: 1px solid #e0e0e0;
+            .search_select{
+                float: left;
+                position: relative;
+                width: 208px;
+                .select_btn{
+                    position: relative;
+                    display: block;
+                    padding: 0 0 0 38px;
+                    border-right: 1px solid #e0e0e0;
+                    font-size: 16px;
+                    color: #666;
+                    line-height: 70px;
+                    background: #fbfbfb;
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        top: 4px;
+                        right: 10px;
+                        width: 5px;
+                        height: 5px;
+                        background: red;
+                    }
+                }
+                .select_layer{
+                    position: absolute;
+                    top: 70px;
+                    left: -1px;
+                    right: 0;
+                    border: 1px solid #e0e0e0;
+                    background: #fff;
+                    .select_layer_opt{
+                        display: block;
+                        padding: 0 0 0 38px;
+                    }
+                    
+                }
+            }
+            .search_input{
+                float: left;
+            }
+        }
+        .btn_colored{
+            float: left;
+            overflow: hidden;
+            width: 170px;
+            height: 72px;
+            margin-left: 5px;
+            background: $colorSkyblue;
+            color: #fff;
+            text-align: center;
+            line-height: 72px;
+        }
+        .btn_border{
+            float: left;
+            overflow: hidden;
+            width: 166px;
+            height: 70px;
+            margin-left: 5px;
+            border:1px solid $colorSkyblue;
+            color: $colorSkyblue;
+            background: #fff;
+            text-align: center;
+            line-height: 70px;
+        }
+        
+
+    }
     .faq_list{
         border-top: 1px solid #000;
         .item_q{
