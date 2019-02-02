@@ -16,6 +16,7 @@
 @import "import/_home"; // 홈
 @import "import/_board"; // 게시판
 
-.sptest{@include get-sprite($sp_test)}
-.ico_close{@include get-icon-sprite(ico_close, $sp_test)}
-.ico_beta{@include get-icon-sprite(ico_beta, $sp_test)}
+.spim,.spim_bf:before,.spim_af:after{@include get-sprite($sp_hepa)}
+.spim_bf:before,.spim_af:after{content:''}
+.ico_logo{@include get-icon-sprite(ico_home_logo, $sp_hepa)}
+.ico_footer_logo{@include get-icon-sprite(ico_footer_logo, $sp_hepa)}

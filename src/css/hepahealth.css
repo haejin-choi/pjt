@@ -758,27 +758,31 @@ mark {
 	text-decoration: underline;
 }
 
-.sptest {
+.spim, .spim_bf:before, .spim_af:after {
 	display: inline-block;
 	overflow: hidden;
 	color: transparent;
-	background: url("../img/sprite/sp_test.png") 0 0 no-repeat;
-	-webkit-background-size: 60px 74px;
-	background-size: 60px 74px;
+	background: url("../img/sprite/sp_hepa.png") 0 0 no-repeat;
+	-webkit-background-size: 237px 180px;
+	background-size: 237px 180px;
 	vertical-align: 0;
 	white-space: nowrap;
 }
 
-.ico_close {
-	width: 40px;
-	height: 40px;
-	background-position: 0px -34px;
+.spim_bf:before, .spim_af:after {
+	content: '';
 }
 
-.ico_beta {
-	width: 60px;
-	height: 30px;
-	background-position: 0px 0px;
+.ico_logo {
+	width: 168px;
+	height: 36px;
+	background-position: 0px -91px;
+}
+
+.ico_footer_logo {
+	width: 122px;
+	height: 34px;
+	background-position: 0px -131px;
 }
 
 /*# sourceMappingURL=hepahealth.css.map */
