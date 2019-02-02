@@ -553,9 +553,14 @@ mark {
 }
 
 .login .content .img_doctor {
-	width: 50px;
-	margin: 0 auto;
-	border: 1px solid gold;
+	padding: 75px 0 65px;
+	text-align: center;
+}
+
+.login .content .img_doctor .ico_login_tit {
+	width: 196px;
+	height: 87px;
+	background-position: 0px 0px;
 }
 
 .login .content .section_form {
