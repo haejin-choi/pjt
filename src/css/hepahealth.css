@@ -102,12 +102,14 @@ mark {
 
 #header .fr {
 	position: absolute;
+	top: 0;
 	bottom: 0;
 	right: 0;
+	vertical-align: bottom;
 }
 
 #header .wrap_cont {
-	z-index: 10;
+	z-index: 20;
 	position: relative;
 	width: 1600px;
 	height: 100px;
@@ -139,35 +141,42 @@ mark {
 	position: absolute;
 	top: 13px;
 	right: 0;
-	font-size: 13px;
-	line-height: 25px;
+	line-height: 23px;
 	color: rgba(255, 255, 255, 0.5);
 }
 
 #header .header_search .item_search {
 	display: inline-block;
+	vertical-align: top;
 }
 
 #header .header_search .item_search .label_sch {
 	margin-right: 5px;
+	font-size: 13px;
+	vertical-align: top;
 }
 
 #header .header_search .item_search .input_label_sch {
 	width: 90px;
 	margin-right: 15px;
 	border: none;
-	border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+	border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+	line-height: 15px;
 	color: #fff;
 	background: none;
+	vertical-align: top;
 }
 
 #header .header_search .item_link {
 	display: inline-block;
 	margin-right: 15px;
+	font-size: 12px;
+	vertical-align: top;
 }
 
 #header .header_search .item_setting {
 	display: inline-block;
+	vertical-align: top;
 }
 
 #header .header_search .item_setting .ico_setting {
@@ -181,7 +190,7 @@ mark {
 #header .layer_setting {
 	display: none;
 	position: absolute;
-	top: 53px;
+	top: 50px;
 	right: -32px;
 }
 
@@ -255,6 +264,7 @@ mark {
 
 #header .lnb {
 	display: none;
+	z-index: 10;
 	position: absolute;
 	top: 100px;
 	left: 0;
@@ -637,24 +647,67 @@ mark {
 }
 
 .section_faq .faq_list .item_q {
+	position: relative;
+	overflow: hidden;
 	display: block;
+	padding: 50px 75px 47px 124px;
 	border-bottom: 1px solid #e8e8e8;
 	font-size: 18px;
 	color: #333;
 }
 
+.section_faq .faq_list .item_q:after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	right: 20px;
+	width: 10px;
+	height: 10px;
+	margin-top: -5px;
+	background: red;
+}
+
 .section_faq .faq_list .item_q .cate {
-	display: inline-block;
+	float: left;
+	position: relative;
+	width: 102px;
 	font-weight: normal;
 }
 
+.section_faq .faq_list .item_q .cate:after {
+	content: '';
+	position: absolute;
+	top: 4px;
+	right: 0;
+	width: 0;
+	height: 16px;
+	border-left: 1px solid #e8e8e8;
+	vertical-align: top;
+}
+
 .section_faq .faq_list .item_q .title {
-	display: inline-block;
+	overflow: hidden;
+	padding: 0 0 0 30px;
 }
 
 .section_faq .faq_list .item_a {
-	padding: 0 124px;
+	padding: 50px 100px 50px 124px;
 	background: #faf9f7;
+}
+
+.section_faq .faq_list .item_a p {
+	font-size: 16px;
+	line-height: 30px;
+	color: #707070;
+}
+
+.section_faq .faq_list .item_a p + p {
+	margin-top: 32px;
+}
+
+.section_faq .faq_list .item_a p .txt_link {
+	text-decoration: underline;
+	color: #1e78e8;
 }
 
 .login {
@@ -1066,14 +1119,21 @@ mark {
 }
 
 .paginate {
+	margin: 65px 0 0 0;
 	text-align: center;
 }
 
 .paginate .paginate_number {
 	display: inline-block;
 	vertical-align: top;
+}
+
+.paginate .paginate_number a {
+	display: inline-block;
+	margin: 0 13px;
 	font-size: 20px;
 	color: #888;
+	vertical-align: top;
 }
 
 .paginate .paginate_number .active {

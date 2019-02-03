@@ -94,6 +94,8 @@
         }
     }
 }
+
+// 제품정보
 .section_pi{
     .btn_area{
         overflow: hidden;
@@ -149,10 +151,11 @@
     }
 }
 
+// FAQ
 .section_faq{
     .search_area{
         margin-bottom: 55px;
-        
+
         &:after{
             content: '';
             display: block;
@@ -233,23 +236,62 @@
     .faq_list{
         border-top: 1px solid #000;
         .item_q{
+            position: relative;
+            overflow: hidden;
             display: block;
+            padding: 50px 75px 47px 124px;
             border-bottom: 1px solid #e8e8e8;
             font-size: 18px;
             color: #333;
+            &:after{
+                content: '';
+                position: absolute;
+                top: 50%;
+                right: 20px;
+                width: 10px;
+                height: 10px;
+                margin-top: -5px;
+                background: red;
+            }
             .cate{
-                display: inline-block;
+                float: left;
+                position: relative;
+                width: 102px;
                 font-weight: normal;
+                &:after{
+                    content: '';
+                    position: absolute;
+                    top: 4px;
+                    right:0;
+                    width: 0;
+                    height: 16px;
+                    border-left: 1px solid #e8e8e8;
+                    vertical-align: top;
+                }
 
             }
             .title{
-                display: inline-block;
+                overflow: hidden;
+                
+                padding: 0 0 0 30px;
             }
 
         }
         .item_a{
-            padding: 0 124px;
+            padding: 50px 100px 50px 124px;
             background: #faf9f7;
+            p{
+                font-size: 16px;
+                line-height: 30px;
+                color: #707070;
+                + p{
+                    margin-top: 32px;
+                }
+                .txt_link{
+                    text-decoration: underline;
+                    color: #1e78e8;
+                }
+            }
         }
     }
 }
