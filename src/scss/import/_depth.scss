@@ -142,6 +142,82 @@
     }
 }
 
+// 
+.section_video{
+    margin-top: -80px;
+    .wrap_video{
+        overflow: hidden;
+    }
+    .player_area{
+
+    }
+    .video_area{
+        float: right;
+        width: 262px;
+        height: 683px;
+        padding:0 0 0 38px;
+        
+        background: #faf9f7;
+        .video_tab{
+            overflow: hidden;
+            margin-top: 42px;
+            margin-right: 60px;
+            .video_tab_btn{
+                float: left;
+                width: 50%;
+                height: 48px;
+                padding-top: 7px;
+                padding-left: 14px;
+                box-sizing: border-box;
+                border:1px solid #b7b7b7;
+                border-bottom: none;
+                font-size: 15px;
+                color: #b7b7b7;
+                line-height: 18px;
+                &.on{
+                    position: relative;
+                    border-color: $colorSkyblue;
+                    font-weight: bold;
+                    color: $colorSkyblue;
+                }
+                + .video_tab_btn{
+                    margin-left: -1px;
+                }
+            }
+        }
+        .scroll{
+            overflow: hidden;
+            overflow-y: auto;
+            height: 516px;
+            margin-top: 26px;
+            padding-right: 60px;
+        }
+        .video_list{
+            li + li{
+                margin-top: 36px;
+            }
+            a{
+                display: block;
+            }
+            .title{
+                overflow: hidden;
+                margin-top: 15px;
+                font-size: 14px;
+                line-height: 16px;
+                color: #666;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+            .time{
+                display: block;
+                font-size: 12px;
+                line-height: 15px;
+                color: #989898;
+            }
+        }
+    }
+}
+
 // FAQ
 .section_faq{
     .search_area{
@@ -453,3 +529,4 @@
     }
     
 }
+

@@ -555,6 +555,87 @@ mark {
 	margin-top: 10px;
 }
 
+.section_video {
+	margin-top: -80px;
+}
+
+.section_video .wrap_video {
+	overflow: hidden;
+}
+
+.section_video .video_area {
+	float: right;
+	width: 262px;
+	height: 683px;
+	padding: 0 0 0 38px;
+	background: #faf9f7;
+}
+
+.section_video .video_area .video_tab {
+	overflow: hidden;
+	margin-top: 42px;
+	margin-right: 60px;
+}
+
+.section_video .video_area .video_tab .video_tab_btn {
+	float: left;
+	width: 50%;
+	height: 48px;
+	padding-top: 7px;
+	padding-left: 14px;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	border: 1px solid #b7b7b7;
+	border-bottom: none;
+	font-size: 15px;
+	color: #b7b7b7;
+	line-height: 18px;
+}
+
+.section_video .video_area .video_tab .video_tab_btn.on {
+	position: relative;
+	border-color: #40abd8;
+	font-weight: bold;
+	color: #40abd8;
+}
+
+.section_video .video_area .video_tab .video_tab_btn + .video_tab_btn {
+	margin-left: -1px;
+}
+
+.section_video .video_area .scroll {
+	overflow: hidden;
+	overflow-y: auto;
+	height: 516px;
+	margin-top: 26px;
+	padding-right: 60px;
+}
+
+.section_video .video_area .video_list li + li {
+	margin-top: 36px;
+}
+
+.section_video .video_area .video_list a {
+	display: block;
+}
+
+.section_video .video_area .video_list .title {
+	overflow: hidden;
+	margin-top: 15px;
+	font-size: 14px;
+	line-height: 16px;
+	color: #666;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.section_video .video_area .video_list .time {
+	display: block;
+	font-size: 12px;
+	line-height: 15px;
+	color: #989898;
+}
+
 .section_faq .search_area {
 	margin-bottom: 55px;
 }
