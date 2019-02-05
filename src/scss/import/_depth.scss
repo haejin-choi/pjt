@@ -584,6 +584,14 @@
 // contact
 .section_contact{
     text-align: center;
+    .tit{
+        display: block;
+        margin: 30px 0;
+        font-size: 40px;
+        line-height: 50px;
+        color: $colorRed;
+        font-weight: normal;
+    }
     .info_area{
         position: relative;
         margin: 0 auto 81px;
@@ -599,6 +607,17 @@
             content: '';
             border-top: 3px solid $colorRed;
             height: 0;
+        }
+        &:after{
+            content: '';
+            position: absolute;
+            top: 100%;
+            right: 0;
+            left: 0;
+            width: 720px;
+            height: 72px;
+            margin-top: 1px;
+            background: url(../img/bg_contact_bottom.png) no-repeat 0 0;
         }
 
         ul{
@@ -688,11 +707,8 @@
             background: #fff;
             .visual_obj{
                 position: absolute;
-                top: -50px;
+                top: -75px;
                 right: 20px;
-                width: 145px;
-                height: 160px;
-                background:red;
             }
         }
     }

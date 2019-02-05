@@ -1170,6 +1170,15 @@ mark {
 	text-align: center;
 }
 
+.section_contact .tit {
+	display: block;
+	margin: 30px 0;
+	font-size: 40px;
+	line-height: 50px;
+	color: #cb2e3c;
+	font-weight: normal;
+}
+
 .section_contact .info_area {
 	position: relative;
 	margin: 0 auto 81px;
@@ -1187,6 +1196,18 @@ mark {
 	content: '';
 	border-top: 3px solid #cb2e3c;
 	height: 0;
+}
+
+.section_contact .info_area:after {
+	content: '';
+	position: absolute;
+	top: 100%;
+	right: 0;
+	left: 0;
+	width: 720px;
+	height: 72px;
+	margin-top: 1px;
+	background: url(../img/bg_contact_bottom.png) no-repeat 0 0;
 }
 
 .section_contact .info_area ul {
@@ -1290,11 +1311,8 @@ mark {
 
 .section_request .request_area .cont .visual_obj {
 	position: absolute;
-	top: -50px;
+	top: -75px;
 	right: 20px;
-	width: 145px;
-	height: 160px;
-	background: red;
 }
 
 .section_request .btn_request {

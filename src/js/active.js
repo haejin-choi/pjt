@@ -54,15 +54,12 @@ $(document).ready(function(e) {
 		snb.show();
 	}
 	$('.gnb_item').hover(
-
-
 		function() {
 		  slideDown();
 		},
 		function() {
 		  slideUp();
 		},
-
 	);
 	$('.lnb').hover(
 		function() {
