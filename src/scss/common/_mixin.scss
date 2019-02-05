@@ -78,3 +78,16 @@
         transform:translateZ(0);
     }
 }
+
+@mixin btn_border{
+    overflow: hidden;
+    display: inline-block;
+    height: 38px;
+    padding: 0 10px;
+    border: 1px solid $colorSkyblue;
+    border-radius: 3px;
+    vertical-align: top;
+    color: #0d8dc3;
+    font-size: 14px;
+    line-height: 38px;
+}
