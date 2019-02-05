@@ -138,6 +138,7 @@ mark {
 	display: inline-block;
 	overflow: hidden;
 	margin-top: 40px;
+	font-family: Titillium Web,sans-serif;
 }
 
 #header .gnb .gnb_item {
@@ -1177,6 +1178,13 @@ mark {
 	padding: 0 0 0 74px;
 	border-right: 1px dashed #bababa;
 	background: #f6f6f6;
+}
+
+.login .content .fl .tit {
+	font-family: Titillium Web,sans-serif;
+	font-size: 48px;
+	line-height: 60px;
+	color: #1876d0;
 }
 
 .login .content .fl .welcome_txt {
