@@ -33,6 +33,7 @@ function slideDown(){
 	})
 }
 function slideUp(){
+	header.removeAttr('style');
 	lnb.stop().animate({
 		opacity:0,
 		height:0
@@ -45,15 +46,24 @@ function slideUp(){
 	})
 }
 $('.gnb_item').hover(
+
+
 	function() {
 	  slideDown();
-	}
+	},
+	function() {
+	  slideUp();
+	},
+
 );
 $('.lnb').hover(
 	function() {
-	  slideDown();
+		slideDown();
 	}
 );
+$('#header').on('mouseleave',function(){
+	slideUp();
+})
 
 //TOWN
 $('.section_faq .search_select .select_btn').on('click',function(e){
