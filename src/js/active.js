@@ -105,12 +105,12 @@ $(document).ready(function(e) {
 			});
 		}
 		if (tTop >= 70) {
-			header.addClass('active');
             header.css({
                 'background-color' : 'rgba(255,255,255,.2)'
             });
         }
         if (tTop >= 140) {
+			header.addClass('active');
             header.css({
                 'background-color' : 'rgba(255,255,255,.4)'
             });

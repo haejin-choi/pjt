@@ -238,7 +238,7 @@ mark {
 #header .header_search .item_setting .ico_setting {
 	width: 17px;
 	height: 17px;
-	background-position: -242px -105px;
+	background-position: -263px -105px;
 	margin: -1px 0 1px;
 }
 
@@ -920,7 +920,7 @@ mark {
 .section_faq .search_area .ico_search {
 	width: 17px;
 	height: 17px;
-	background-position: -263px -105px;
+	background-position: -242px -105px;
 	margin: -1px 7px 1px 0;
 }
 
@@ -1157,6 +1157,13 @@ mark {
 	font-size: 14px;
 	line-height: 38px;
 	padding: 0 24px;
+}
+
+.section_usefullink .usefullink_list .btn_border:after {
+	width: 7px;
+	height: 12px;
+	background-position: -308px -105px;
+	margin: -2px 0 2px 7px;
 }
 
 .section_contact {

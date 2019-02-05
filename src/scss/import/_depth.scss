@@ -111,7 +111,7 @@
 .section_pi{
     .btn_area{
         overflow: hidden;
-        
+
         .fl{
             float: left;
         }
@@ -155,7 +155,7 @@
     }
 }
 
-// 
+//
 .section_video{
     margin-top: -80px;
     .wrap_video{
@@ -166,7 +166,7 @@
         .btn_border{
             @include btn_border;
         }
-    }   
+    }
     .player_area{
         width: 824px;
         margin-top: 29px;
@@ -191,7 +191,7 @@
         width: 262px;
         height: 683px;
         padding:0 0 0 38px;
-        
+
         background: #faf9f7;
         .video_tab{
             overflow: hidden;
@@ -269,7 +269,7 @@
                 font-size: 16px;
                 color: #666;
                 line-height: 55px;
-                
+
                 &:after{
                     content: '';
                     position: absolute;
@@ -315,7 +315,7 @@
            .title{
                margin-right: 40px;
             }
-       } 
+       }
        .thumb_area{
            width: 230px;
            height: 270px;
@@ -355,7 +355,7 @@
            font-size: 14px;
            color: #989898;
        }
-   } 
+   }
    .paginate{
        margin-top: 0
    }
@@ -573,6 +573,10 @@
         .btn_border{
             @include btn_border;
             padding: 0 24px;
+            &:after{
+                @include get-icon-sprite(ico_town_arr2, $sp_hepa);
+                margin: -2px 0 2px 7px;
+            }
         }
     }
 }
@@ -703,4 +707,3 @@
         vertical-align: top;
     }
 }
-
