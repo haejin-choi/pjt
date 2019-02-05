@@ -44,12 +44,15 @@ function slideUp(){
 	})
 }
 $('.gnb_item').hover(
+	
+	
 	function() {
 	  slideDown();
 	},
 	function() {
 	  slideUp();
-	}
+	},
+	
 );
 $('.lnb').hover(
 	function() {
