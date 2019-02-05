@@ -63,7 +63,29 @@ $('.lnb').hover(
 );
 $('#header').on('mouseleave',function(){
 	slideUp();
-})
+});
+
+//HOME
+var doc = $(document);
+doc.on('scroll',function(e){
+	var t = $(e.target);
+	var tTop = t.scrollTop();
+	console.log(tTop);
+	if(tTop >= 300){
+		header.addClass('active');
+	}else if(tTop == 0){
+		header.removeAttr('class');
+	}else if(tTop > 50 && tTop <300){
+		console.log("aa");
+		header.stop().animate({
+			background:'rgba(255,255,255,1)'
+		},{
+			duration: 200,
+			easing: "linear"
+		});
+	}
+});
+
 
 //TOWN
 $('.section_faq .search_select .select_btn').on('click',function(e){
