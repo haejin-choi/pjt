@@ -22,6 +22,7 @@ var header = $('#header');
 var gnb = $('.gnb');
 var lnb = $('.lnb');
 function slideDown(){
+	header.css('overflow-x','auto');
 	lnb.show();
 	lnb.stop().animate({
 		opacity:1,
@@ -44,22 +45,13 @@ function slideUp(){
 	})
 }
 $('.gnb_item').hover(
-	
-	
 	function() {
 	  slideDown();
-	},
-	function() {
-	  slideUp();
-	},
-	
+	}
 );
 $('.lnb').hover(
 	function() {
 	  slideDown();
-	},
-	function() {
-	  slideUp();
 	}
 );
 

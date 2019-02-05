@@ -129,7 +129,7 @@ mark {
 #header .wrap_cont {
 	z-index: 20;
 	position: relative;
-	width: 1720px;
+	min-width: 1720px;
 	height: 100px;
 	margin: 0 auto;
 }
@@ -288,7 +288,7 @@ mark {
 
 #header .lnb .wrap_lnb_cont {
 	overflow: hidden;
-	width: 1720px;
+	min-width: 1720px;
 	margin: 0 auto;
 	background: rgba(255, 255, 255, 0.5);
 }
@@ -342,7 +342,7 @@ mark {
 
 #header .snb .wrap_snb_cont {
 	overflow: hidden;
-	width: 1840px;
+	min-width: 1840px;
 	margin: 0 auto;
 }
 

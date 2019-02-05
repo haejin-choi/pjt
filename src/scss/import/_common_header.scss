@@ -28,7 +28,7 @@
     .wrap_cont{
         z-index: 20;
         position: relative;
-        width: $contentWidth;
+        min-width: $contentWidth;
         height: 100px;
         margin: 0 auto;
     }
@@ -150,7 +150,7 @@
         opacity: 0;
         .wrap_lnb_cont{
             overflow: hidden;
-            width: $contentWidth;
+            min-width: $contentWidth;
             margin: 0 auto;
             background: rgba(255,255,255,.5);
         }
@@ -196,7 +196,7 @@
         background: rgba(255,255,255,.5);
         .wrap_snb_cont{
             overflow: hidden;
-            width: ($contentWidth)+ 120px;
+            min-width: ($contentWidth)+ 120px;
             margin: 0 auto;
         }
         .snb_menu{
