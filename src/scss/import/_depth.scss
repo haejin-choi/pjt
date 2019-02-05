@@ -94,23 +94,24 @@
         }
     }
 }
+.ico_download{
+    @include get-icon-sprite(ico_bridge_down, $sp_hepa);
+    margin: -2px 6px 2px 0;
+}
+.ico_favorite{
+    @include get-icon-sprite(ico_bridge_fav, $sp_hepa);
+    margin: -2px 6px 2px 0;
+}
+.ico_email{
+    @include get-icon-sprite(ico_bridge_email, $sp_hepa);
+    margin: -2px 6px 2px 0;
+}
 
 // 제품정보
 .section_pi{
     .btn_area{
         overflow: hidden;
-        .ico_download{
-            @include get-icon-sprite(ico_bridge_down, $sp_hepa);
-            margin: -2px 6px 2px 0;
-        }
-        .ico_favorite{
-            @include get-icon-sprite(ico_bridge_fav, $sp_hepa);
-            margin: -2px 6px 2px 0;
-        }
-        .ico_email{
-            @include get-icon-sprite(ico_bridge_email, $sp_hepa);
-            margin: -2px 6px 2px 0;
-        }
+        
         .fl{
             float: left;
         }
@@ -160,8 +161,30 @@
     .wrap_video{
         overflow: hidden;
     }
+    .btn_area{
+        padding-top: 50px;
+        .btn_border{
+            @include btn_border;
+        }
+    }   
     .player_area{
-
+        width: 824px;
+        margin-top: 29px;
+        .player_meta{
+            height: 75px;
+            padding: 25px 0 0 40px;
+            line-height: 23px;
+            border-top: 1px solid #e4e4e2;
+            background: #faf9f7;
+            .title{
+                font-size: 16px;
+                color: #333;
+            }
+            .date{
+                font-size: 14px;
+                color: #989898;
+            }
+        }
     }
     .video_area{
         float: right;
@@ -225,6 +248,37 @@
                 font-size: 12px;
                 line-height: 15px;
                 color: #989898;
+            }
+        }
+    }
+    .section_cont{
+        padding-top: 70px;
+        .select_area{
+            text-align: right;
+            padding-bottom: 30px;
+        }
+        .dropdown{
+            display: inline-block;
+            width: 300px;
+            border-bottom: 1px solid #000;
+            text-align: left;
+            white-space: nowrap;
+            .btn_dropdown{
+                position: relative;
+                display: block;
+                font-size: 16px;
+                color: #666;
+                line-height: 55px;
+                
+                &:after{
+                    content: '';
+                    position: absolute;
+                    top: 20px;
+                    right: 8px;
+                    width: 5px;
+                    height: 5px;
+                    background: red;
+                }
             }
         }
     }

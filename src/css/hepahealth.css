@@ -75,8 +75,27 @@ mark {
 	text-overflow: ellipsis;
 }
 
+.spim,
+.spim_bf:before,
+.spim_af:after {
+	display: inline-block;
+	overflow: hidden;
+	color: transparent;
+	background: url("../img/sprite/sp_hepa.png") 0 0 no-repeat;
+	-webkit-background-size: 237px 210px;
+	background-size: 237px 210px;
+	vertical-align: middle;
+	white-space: nowrap;
+}
+
+.spim_bf:before,
+.spim_af:after {
+	content: '';
+}
+
 #header {
-	position: relative;
+	position: fixed;
+	width: 100%;
 	height: 100px;
 	margin-bottom: -101px;
 	border-bottom: 1px solid rgba(68, 68, 68, 0.5);
@@ -111,7 +130,8 @@ mark {
 #header .wrap_cont {
 	z-index: 20;
 	position: relative;
-	width: 1600px;
+	max-width: 1600px;
+	width: 100%;
 	height: 100px;
 	margin: 0 auto;
 }
@@ -504,29 +524,29 @@ mark {
 	background: #cb2e3c;
 }
 
-.section_pi .btn_area {
-	overflow: hidden;
-}
-
-.section_pi .btn_area .ico_download {
+.ico_download {
 	width: 14px;
 	height: 18px;
 	background-position: -221px -147px;
 	margin: -2px 6px 2px 0;
 }
 
-.section_pi .btn_area .ico_favorite {
+.ico_favorite {
 	width: 14px;
 	height: 14px;
 	background-position: -36px -190px;
 	margin: -2px 6px 2px 0;
 }
 
-.section_pi .btn_area .ico_email {
+.ico_email {
 	width: 20px;
 	height: 13px;
 	background-position: -21px -169px;
 	margin: -2px 6px 2px 0;
+}
+
+.section_pi .btn_area {
+	overflow: hidden;
 }
 
 .section_pi .btn_area .fl {
@@ -594,6 +614,47 @@ mark {
 
 .section_video .wrap_video {
 	overflow: hidden;
+}
+
+.section_video .btn_area {
+	padding-top: 50px;
+}
+
+.section_video .btn_area .btn_border {
+	overflow: hidden;
+	display: inline-block;
+	height: 38px;
+	padding: 0 10px;
+	border: 1px solid #40abd8;
+	-webkit-border-radius: 3px;
+	        border-radius: 3px;
+	vertical-align: top;
+	color: #0d8dc3;
+	font-size: 14px;
+	line-height: 38px;
+}
+
+.section_video .player_area {
+	width: 824px;
+	margin-top: 29px;
+}
+
+.section_video .player_area .player_meta {
+	height: 75px;
+	padding: 25px 0 0 40px;
+	line-height: 23px;
+	border-top: 1px solid #e4e4e2;
+	background: #faf9f7;
+}
+
+.section_video .player_area .player_meta .title {
+	font-size: 16px;
+	color: #333;
+}
+
+.section_video .player_area .player_meta .date {
+	font-size: 14px;
+	color: #989898;
 }
 
 .section_video .video_area {
@@ -667,6 +728,41 @@ mark {
 	font-size: 12px;
 	line-height: 15px;
 	color: #989898;
+}
+
+.section_video .section_cont {
+	padding-top: 70px;
+}
+
+.section_video .section_cont .select_area {
+	text-align: right;
+	padding-bottom: 30px;
+}
+
+.section_video .section_cont .dropdown {
+	display: inline-block;
+	width: 300px;
+	border-bottom: 1px solid #000;
+	text-align: left;
+	white-space: nowrap;
+}
+
+.section_video .section_cont .dropdown .btn_dropdown {
+	position: relative;
+	display: block;
+	font-size: 16px;
+	color: #666;
+	line-height: 55px;
+}
+
+.section_video .section_cont .dropdown .btn_dropdown:after {
+	content: '';
+	position: absolute;
+	top: 20px;
+	right: 8px;
+	width: 5px;
+	height: 5px;
+	background: red;
 }
 
 .section_faq .search_area {
@@ -1217,6 +1313,12 @@ mark {
 	margin-top: 6px;
 }
 
+#home {
+	min-width: 1600px;
+	width: 100%;
+	position: relative;
+}
+
 #home .section_spot .wrap_cont {
 	position: relative;
 	width: 1600px;
@@ -1536,21 +1638,6 @@ mark {
 .paginate .paginate_number .active {
 	color: #cb2e3c;
 	text-decoration: underline;
-}
-
-.spim, .spim_bf:before, .spim_af:after {
-	display: inline-block;
-	overflow: hidden;
-	color: transparent;
-	background: url("../img/sprite/sp_hepa.png") 0 0 no-repeat;
-	-webkit-background-size: 237px 210px;
-	background-size: 237px 210px;
-	vertical-align: middle;
-	white-space: nowrap;
-}
-
-.spim_bf:before, .spim_af:after {
-	content: '';
 }
 
 /*# sourceMappingURL=hepahealth.css.map */

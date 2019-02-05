@@ -1,5 +1,6 @@
 @charset "utf-8";
 
+
 @import "./common/base";
 @import "./common/variable";
 //@import "common/placeholders";
@@ -9,6 +10,13 @@
 //
 // @import "lib/spritesmith/mixins";
 //
+
+.spim,
+.spim_bf:before,
+.spim_af:after{@include get-sprite($sp_hepa)}
+.spim_bf:before,
+.spim_af:after{content:''}
+
 @import "import/_common_header"; // 공통헤더
 
 @import "import/_depth"; // 로그인
@@ -16,5 +24,4 @@
 @import "import/_home"; // 홈
 @import "import/_board"; // 게시판
 
-.spim,.spim_bf:before,.spim_af:after{@include get-sprite($sp_hepa)}
-.spim_bf:before,.spim_af:after{content:''}
+
