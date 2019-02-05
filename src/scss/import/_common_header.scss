@@ -10,13 +10,13 @@
     z-index: 1000;
     width: 100%;
     border-bottom: 1px solid rgba(68,68,68,.5);
+    transition: all 0.3s linear;
     &:after{
         content: '';
         display: block;
         clear: both;
     }
     &.active{
-        background-color: #fff;
         .logo{
             .ico_logo{
                 @include get-icon-sprite(ico_home_logo_dark, $sp_hepa);
@@ -29,6 +29,10 @@
         }
         .header_search{
             color:#000;
+            .item_search .input_label_sch{
+                border-color: rgba(0, 0, 0, 0.5);
+                color: #000;
+            }
             .item_setting{
                 .ico_setting{
                     @include get-icon-sprite(ico_home_setting_dark, $sp_hepa);

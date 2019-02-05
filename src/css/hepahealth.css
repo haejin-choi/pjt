@@ -105,16 +105,14 @@ mark {
 	z-index: 1000;
 	width: 100%;
 	border-bottom: 1px solid rgba(68, 68, 68, 0.5);
+	-webkit-transition: all 0.3s linear;
+	transition: all 0.3s linear;
 }
 
 #header:after {
 	content: '';
 	display: block;
 	clear: both;
-}
-
-#header.active {
-	background-color: #fff;
 }
 
 #header.active .logo .ico_logo {
@@ -128,6 +126,11 @@ mark {
 }
 
 #header.active .header_search {
+	color: #000;
+}
+
+#header.active .header_search .item_search .input_label_sch {
+	border-color: rgba(0, 0, 0, 0.5);
 	color: #000;
 }
 
