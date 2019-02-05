@@ -182,9 +182,8 @@ mark {
 #header .header_search .item_setting .ico_setting {
 	width: 17px;
 	height: 17px;
-	background-position: -200px -147px;
+	background-position: -178px -131px;
 	margin: -1px 0 1px;
-	vertical-align: middle;
 }
 
 #header .layer_setting {
@@ -197,7 +196,7 @@ mark {
 #header .layer_setting:before {
 	width: 20px;
 	height: 11px;
-	background-position: 0px -169px;
+	background-position: -45px -169px;
 	position: absolute;
 	top: -11px;
 	right: 30px;
@@ -358,6 +357,19 @@ mark {
 	color: #1764ae;
 }
 
+#header .snb .item_menu_wrap .item_menu_link:hover:after, #header .snb .item_menu_wrap .item_menu_link.on:after {
+	width: 14px;
+	height: 9px;
+	background-position: -69px -169px;
+}
+
+#header .snb .item_menu_wrap .item_menu_link:after {
+	width: 14px;
+	height: 9px;
+	background-position: -172px -118px;
+	margin: -2px 0 2px 10px;
+}
+
 #header .snb .item_menu_wrap .item_menu {
 	display: block;
 	text-align: center;
@@ -496,6 +508,27 @@ mark {
 	overflow: hidden;
 }
 
+.section_pi .btn_area .ico_download {
+	width: 14px;
+	height: 18px;
+	background-position: -221px -147px;
+	margin: -2px 6px 2px 0;
+}
+
+.section_pi .btn_area .ico_favorite {
+	width: 14px;
+	height: 14px;
+	background-position: -36px -190px;
+	margin: -2px 6px 2px 0;
+}
+
+.section_pi .btn_area .ico_email {
+	width: 20px;
+	height: 13px;
+	background-position: -21px -169px;
+	margin: -2px 6px 2px 0;
+}
+
 .section_pi .btn_area .fl {
 	float: left;
 }
@@ -522,7 +555,7 @@ mark {
 	overflow: hidden;
 	display: inline-block;
 	height: 40px;
-	padding: 0 10px;
+	padding: 0 15px;
 	-webkit-border-radius: 3px;
 	        border-radius: 3px;
 	vertical-align: top;
@@ -565,6 +598,20 @@ mark {
 	clear: both;
 }
 
+.section_faq .search_area .ico_search {
+	width: 17px;
+	height: 17px;
+	background-position: 0px -169px;
+	margin: -1px 7px 1px 0;
+}
+
+.section_faq .search_area .ico_reply {
+	width: 17px;
+	height: 18px;
+	background-position: -200px -147px;
+	margin: -1px 7px 1px 0;
+}
+
 .section_faq .search_area .search_form {
 	float: left;
 	width: 810px;
@@ -591,16 +638,18 @@ mark {
 }
 
 .section_faq .search_area .search_form .search_select .select_btn::after {
-	content: '';
-	position: absolute;
-	top: 4px;
-	right: 10px;
-	width: 5px;
+	width: 8px;
 	height: 5px;
-	background: red;
+	background-position: -228px -93px;
+	position: absolute;
+	top: 0;
+	right: 40px;
+	bottom: 0;
+	margin: auto;
 }
 
 .section_faq .search_area .search_form .search_select .select_layer {
+	display: none;
 	position: absolute;
 	top: 70px;
 	left: -1px;
@@ -663,15 +712,26 @@ mark {
 	color: #333;
 }
 
+.section_faq .faq_list .item_q:before {
+	width: 14px;
+	height: 20px;
+	background-position: -18px -190px;
+	position: absolute;
+	top: 50px;
+	left: 60px;
+}
+
 .section_faq .faq_list .item_q:after {
 	content: '';
 	position: absolute;
-	top: 50%;
+	top: 50px;
 	right: 20px;
 	width: 10px;
 	height: 10px;
-	margin-top: -5px;
-	background: red;
+	border: 2px solid #ccc;
+	border-width: 2px 2px 0 0;
+	-webkit-transform: rotate(-45deg) scale(-1);
+	        transform: rotate(-45deg) scale(-1);
 }
 
 .section_faq .faq_list .item_q .cate {
@@ -698,6 +758,7 @@ mark {
 }
 
 .section_faq .faq_list .item_a {
+	display: none;
 	padding: 50px 100px 50px 124px;
 	background: #faf9f7;
 }
@@ -715,6 +776,24 @@ mark {
 .section_faq .faq_list .item_a p .txt_link {
 	text-decoration: underline;
 	color: #1e78e8;
+}
+
+.section_faq .faq_list .open .item_q:before {
+	width: 14px;
+	height: 20px;
+	background-position: 0px -190px;
+}
+
+.section_faq .faq_list .open .item_q:after {
+	top: 55px;
+	border-color: #cb2e3c;
+	border-width: 2px 2px 0 0;
+	-webkit-transform: rotate(-45deg) scale(1);
+	        transform: rotate(-45deg) scale(1);
+}
+
+.section_faq .faq_list .open .item_a {
+	display: block;
 }
 
 .section_usefullink .usefullink_list {
@@ -1246,6 +1325,49 @@ mark {
 .paginate {
 	margin: 65px 0 0 0;
 	text-align: center;
+	line-height: 25px;
+}
+
+.paginate [class^=btn_] {
+	display: inline-block;
+	padding: 6px;
+	vertical-align: top;
+}
+
+.paginate .ico_arr {
+	display: block;
+	overflow: hidden;
+	width: 10px;
+	height: 10px;
+	border: 2px solid #aaa;
+	border-width: 2px 2px 0 0;
+	-webkit-transform: rotate(45deg);
+	        transform: rotate(45deg);
+	color: transparent;
+}
+
+.paginate .btn_prev .ico_arr, .paginate .btn_front .ico_arr {
+	-webkit-transform: rotate(45deg) scale(-1);
+	        transform: rotate(45deg) scale(-1);
+}
+
+.paginate .btn_front:before, .paginate .btn_end:before {
+	content: '';
+	display: block;
+	overflow: hidden;
+	float: left;
+	width: 10px;
+	height: 10px;
+	border: 2px solid #aaa;
+	border-width: 2px 2px 0 0;
+	-webkit-transform: rotate(45deg) scale(-1);
+	        transform: rotate(45deg) scale(-1);
+	color: transparent;
+}
+
+.paginate .btn_end:before {
+	-webkit-transform: rotate(45deg);
+	        transform: rotate(45deg);
 }
 
 .paginate .paginate_number {
@@ -1271,9 +1393,9 @@ mark {
 	overflow: hidden;
 	color: transparent;
 	background: url("../img/sprite/sp_hepa.png") 0 0 no-repeat;
-	-webkit-background-size: 237px 180px;
-	background-size: 237px 180px;
-	vertical-align: 0;
+	-webkit-background-size: 237px 210px;
+	background-size: 237px 210px;
+	vertical-align: middle;
 	white-space: nowrap;
 }
 
