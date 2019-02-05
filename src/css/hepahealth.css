@@ -82,8 +82,8 @@ mark {
 	overflow: hidden;
 	color: transparent;
 	background: url("../img/sprite/sp_hepa.png") 0 0 no-repeat;
-	-webkit-background-size: 237px 210px;
-	background-size: 237px 210px;
+	-webkit-background-size: 322px 167px;
+	background-size: 322px 167px;
 	vertical-align: middle;
 	white-space: nowrap;
 }
@@ -97,6 +97,7 @@ mark {
 	z-index: 100;
 	overflow: hidden;
 	position: fixed;
+	z-index: 1000;
 	width: 100%;
 	border-bottom: 1px solid rgba(68, 68, 68, 0.5);
 }
@@ -105,6 +106,30 @@ mark {
 	content: '';
 	display: block;
 	clear: both;
+}
+
+#header.active {
+	background-color: #fff;
+}
+
+#header.active .logo .ico_logo {
+	width: 168px;
+	height: 36px;
+	background-position: 0px -131px;
+}
+
+#header.active .gnb .gnb_item {
+	color: #000;
+}
+
+#header.active .header_search {
+	color: #000;
+}
+
+#header.active .header_search .item_setting .ico_setting {
+	width: 17px;
+	height: 17px;
+	background-position: -221px -105px;
 }
 
 #header .logo {
@@ -201,7 +226,7 @@ mark {
 #header .header_search .item_setting .ico_setting {
 	width: 17px;
 	height: 17px;
-	background-position: -178px -131px;
+	background-position: -242px -105px;
 	margin: -1px 0 1px;
 }
 
@@ -215,7 +240,7 @@ mark {
 #header .layer_setting:before {
 	width: 20px;
 	height: 11px;
-	background-position: -45px -169px;
+	background-position: -254px -127px;
 	position: absolute;
 	top: -11px;
 	right: 30px;
@@ -259,25 +284,25 @@ mark {
 #header .layer_setting .item_setting .ico_archive {
 	width: 23px;
 	height: 23px;
-	background-position: -200px -120px;
+	background-position: -269px -64px;
 }
 
 #header .layer_setting .item_setting .ico_library {
 	width: 26px;
 	height: 22px;
-	background-position: -200px -67px;
+	background-position: -241px -38px;
 }
 
 #header .layer_setting .item_setting .ico_phone {
 	width: 22px;
 	height: 23px;
-	background-position: -172px -91px;
+	background-position: -296px -64px;
 }
 
 #header .layer_setting .item_setting .ico_product {
 	width: 24px;
 	height: 23px;
-	background-position: -200px -93px;
+	background-position: -241px -64px;
 }
 
 #header .lnb {
@@ -286,6 +311,7 @@ mark {
 	background: #fff;
 	opacity: 0;
 	min-width: 1720px;
+	border-top: 1px solid #ebebeb;
 }
 
 #header .lnb .wrap_lnb_cont {
@@ -374,13 +400,13 @@ mark {
 #header .snb .item_menu_wrap .item_menu_link:hover:after, #header .snb .item_menu_wrap .item_menu_link.on:after {
 	width: 14px;
 	height: 9px;
-	background-position: -69px -169px;
+	background-position: -259px -91px;
 }
 
 #header .snb .item_menu_wrap .item_menu_link:after {
 	width: 14px;
 	height: 9px;
-	background-position: -172px -118px;
+	background-position: -241px -91px;
 	margin: -2px 0 2px 10px;
 }
 
@@ -479,7 +505,7 @@ mark {
 .path_area a::after {
 	width: 3px;
 	height: 5px;
-	background-position: -230px -67px;
+	background-position: -289px -91px;
 	margin: 4px 0 0 11px;
 	vertical-align: top;
 }
@@ -521,21 +547,21 @@ mark {
 .ico_download {
 	width: 14px;
 	height: 18px;
-	background-position: -221px -147px;
+	background-position: -236px -127px;
 	margin: -2px 6px 2px 0;
 }
 
 .ico_favorite {
 	width: 14px;
 	height: 14px;
-	background-position: -36px -190px;
+	background-position: -200px -151px;
 	margin: -2px 6px 2px 0;
 }
 
 .ico_email {
 	width: 20px;
 	height: 13px;
-	background-position: -21px -169px;
+	background-position: -284px -105px;
 	margin: -2px 6px 2px 0;
 }
 
@@ -856,14 +882,14 @@ mark {
 .section_faq .search_area .ico_search {
 	width: 17px;
 	height: 17px;
-	background-position: 0px -169px;
+	background-position: -263px -105px;
 	margin: -1px 7px 1px 0;
 }
 
 .section_faq .search_area .ico_reply {
 	width: 17px;
 	height: 18px;
-	background-position: -200px -147px;
+	background-position: -200px -105px;
 	margin: -1px 7px 1px 0;
 }
 
@@ -895,7 +921,7 @@ mark {
 .section_faq .search_area .search_form .search_select .select_btn::after {
 	width: 8px;
 	height: 5px;
-	background-position: -228px -93px;
+	background-position: -277px -91px;
 	position: absolute;
 	top: 0;
 	right: 40px;
@@ -970,7 +996,7 @@ mark {
 .section_faq .faq_list .item_q:before {
 	width: 14px;
 	height: 20px;
-	background-position: -18px -190px;
+	background-position: -200px -127px;
 	position: absolute;
 	top: 50px;
 	left: 60px;
@@ -1036,7 +1062,7 @@ mark {
 .section_faq .faq_list .open .item_q:before {
 	width: 14px;
 	height: 20px;
-	background-position: 0px -190px;
+	background-position: -218px -127px;
 }
 
 .section_faq .faq_list .open .item_q:after {
@@ -1619,7 +1645,7 @@ mark {
 #footer .footer_logo .ico_footer_logo {
 	width: 122px;
 	height: 34px;
-	background-position: 0px -131px;
+	background-position: -200px 0px;
 }
 
 .board .list {

@@ -4,12 +4,34 @@
     z-index: 100;
     overflow: hidden;
     position: fixed;
+    z-index: 1000;
     width: 100%;
     border-bottom: 1px solid rgba(68,68,68,.5);
     &:after{
         content: '';
         display: block;
         clear: both;
+    }
+    &.active{
+        background-color: #fff;
+        .logo{
+            .ico_logo{
+                @include get-icon-sprite(ico_home_logo_dark, $sp_hepa);
+            }
+        }
+        .gnb{
+            .gnb_item{
+                color: #000;
+            }
+        }
+        .header_search{
+            color:#000;
+            .item_setting{
+                .ico_setting{
+                    @include get-icon-sprite(ico_home_setting_dark, $sp_hepa);
+                }
+            }
+        }
     }
     .logo{
         float: left;
@@ -150,6 +172,7 @@
         background: #fff;
         opacity: 0;
         min-width: $contentWidth;
+        border-top: 1px solid #ebebeb;
         .wrap_lnb_cont{
             overflow: hidden;
             width: $contentWidth;
