@@ -74,20 +74,20 @@ $('#header').on('mouseleave',function(){
 $('.snb .item_menu_wrap .item_menu_link').on('mouseover',function(){
 	var self = $(this);
 	var subLayer = self.next('.item_menu_sub');
-	subLayer.stop().slideDown();
+	subLayer.stop().slideDown(100);
 });
 $('.snb .item_menu_wrap .item_menu_link').on('mouseleave',function(){
 	var self = $(this);
 	var subLayer = self.next('.item_menu_sub');
-	subLayer.stop().slideUp();
+	subLayer.stop().slideUp(100);
 });
 $('.snb .item_menu_wrap .item_menu_sub').on('mouseover',function(){
 	var self = $(this);
-	self.stop().slideDown();
+	self.stop().slideDown(100);
 });
 $('.snb .item_menu_wrap .item_menu_sub').on('mouseleave',function(){
 	var self = $(this);
-	self.stop().slideUp();
+	self.stop().slideUp(100);
 });
 
 //HOME
