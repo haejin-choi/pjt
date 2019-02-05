@@ -28,7 +28,7 @@
     .wrap_cont{
         z-index: 20;
         position: relative;
-        min-width: $contentWidth;
+        width: $contentWidth;
         height: 100px;
         margin: 0 auto;
     }
@@ -150,9 +150,9 @@
         opacity: 0;
         .wrap_lnb_cont{
             overflow: hidden;
-            min-width: $contentWidth;
+            width: $contentWidth;
             margin: 0 auto;
-            background: rgba(255,255,255,.5);
+            background: #fff;
         }
         .lnb_item{
             float: left;
