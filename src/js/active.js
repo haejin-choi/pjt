@@ -43,17 +43,22 @@ function slideUp(){
 		}
 	})
 }
-function slideEvt(sw){
-	if(sw == 1){
-		slideDown();
-	}else{
-		slideUp();
+$('.gnb_item').hover(
+	function() {
+	  slideDown();
+	},
+	function() {
+	  slideUp();
 	}
-}
-$('.gnb .gnb_item').on('mouseover',function(e){
-	sw = 1;
-	slideEvt(sw);
-});
+);
+$('.lnb').hover(
+	function() {
+	  slideDown();
+	},
+	function() {
+	  slideUp();
+	}
+);
 
 //TOWN
 $('.section_faq .search_select .select_btn').on('click',function(e){

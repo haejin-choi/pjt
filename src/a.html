@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<title> 2차메뉴 Jquery</title>
+
+<style type="text/css">
+ body{font-size:11px; margin:0px; padding:0px; }
+ ul{list-style:none;}
+ li{display:inline; padding-left:10px;}
+ .menu_sub{padding-top:10px;}
+ .menu{ font-weight:bold;}
+ #menu1_sub{ border-top:2px solid #c9c9c9; width:500px; height:30px; background:#eeeeee;}
+ #menu2_sub{ border-top:2px solid #faaa32; width:500px; height:30px; background:#feebcf; }
+ #menu3_sub{ border-top:2px solid #84c1ff; width:500px; height:30px; background:#d7ebff; }
+</style>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+</head>
+
+<body>
+<div style="border:1px solid #cccccc; width:540px;">
+<ul class="menu" id="top_menu">
+ <li id="menu1">영화</li>
+ <li id="menu2">드라마</li>
+ <li id="menu3">게임</li>
+ <li id="menu4">메뉴4</li>
+ <li id="menu5">메뉴5</li>
+</ul>
+<ul class="menu_sub" id="menu1_sub">
+  <li><a href="#">그냥영화</a></li>
+        <li><a href="#">최신영화</a></li>
+        <li><a href="#">공포/스릴러</a></li>
+        <li><a href="#">코메디</a></li>
+        <li><a href="#">성인</a></li>
+    </ul>
+    <ul class="menu_sub" id="menu2_sub">
+  <li><a href="#">미니시리즈</a></li>
+        <li><a href="#">단편</a></li>
+        <li><a href="#">미드</a></li>
+        <li><a href="#">일드</a></li>
+        <li><a href="#">일반</a></li>
+    </ul>
+ <ul class="menu_sub" id="menu3_sub">
+  <li><a href="#">아케이드</a></li>
+        <li><a href="#">액션</a></li>
+        <li><a href="#">스포츠</a></li>
+        <li><a href="#">레이싱</a></li>
+        <li><a href="#">일반</a></li>
+    </ul>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+<!--
+$(document).ready(function(e) {
+ $(".menu_sub").hide();
+ $("#<?=$mainMenu?>_sub").show();
+
+ //1차 메뉴 오버시 서브메뉴 보이게 하고, 아웃시 사라지게 하기.
+ $("#top_menu > li").css("cursor","pointer");
+ $("#top_menu > li").hover(
+
+  function() {
+   $(".menu_sub").hide();
+   var main_id = $(this).attr("id");
+   $("#"+main_id+"_sub").show();
+  },
+  function() {
+   var main_id = $(this).attr("id");
+   $("#"+main_id+"_sub").hover(
+    function() { //서브에 오버 되었을 경우 그대로 둠.
+
+    },
+    function() {
+     $(".menu_sub").hide();
+     //$("#<?=$mainMenu?>_sub").show(); //마우스 아웃시 지정된메뉴표시시
+     $("#"+main_id+"_sub").show();  //마우스 아웃시 마지막 오버된 메뉴 표시
+    }
+   );
+  }
+ );
+});
+//-->
+</script>
