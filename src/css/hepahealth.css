@@ -94,6 +94,7 @@ mark {
 }
 
 #header {
+	z-index: 100;
 	overflow: hidden;
 	position: fixed;
 	width: 100%;
@@ -758,6 +759,90 @@ mark {
 	background: red;
 }
 
+.section_library .library_list {
+	overflow: hidden;
+	margin-left: -80px;
+}
+
+.section_library .library_list li {
+	position: relative;
+	float: left;
+	width: 230px;
+	margin-bottom: 70px;
+	margin-left: 80px;
+}
+
+.section_library .library_list a {
+	display: block;
+}
+
+.section_library .library_list a:hover .title {
+	color: #cb2e3c;
+}
+
+.section_library .library_list li.has_icon:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 20px;
+	height: 40px;
+	background: red;
+}
+
+.section_library .library_list li.has_icon .title {
+	margin-right: 40px;
+}
+
+.section_library .library_list .thumb_area {
+	width: 230px;
+	height: 270px;
+	padding: 47px 0 0 0;
+	margin-bottom: 30px;
+	text-align: center;
+	background: #f2f2f2;
+}
+
+.section_library .library_list .thumb_area .thumb_wrap {
+	display: inline-block;
+	position: relative;
+}
+
+.section_library .library_list .thumb_area .thumb_wrap:after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 6px;
+	top: 9px;
+	background: #fff;
+}
+
+.section_library .library_list .thumb_area img {
+	z-index: 5;
+	position: relative;
+	vertical-align: top;
+	background: pink;
+}
+
+.section_library .library_list .title {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	font-size: 16px;
+	line-height: 20px;
+	color: #333;
+}
+
+.section_library .library_list .date {
+	font-size: 14px;
+	color: #989898;
+}
+
+.section_library .paginate {
+	margin-top: 0;
+}
+
 .section_faq .search_area {
 	margin-bottom: 55px;
 }
@@ -1349,10 +1434,6 @@ mark {
 
 #home .section_spot .video_area {
 	height: 870px;
-}
-
-#home .section_home {
-	border: 1px solid red;
 }
 
 #home .section_home.type_colored {
