@@ -15,7 +15,7 @@
     background: url(map-get($sprite-map,image)) 0 0 no-repeat;
     -webkit-background-size: round(map-get($sprite-map,width)/$ratio) round(map-get($sprite-map,height)/$ratio);
     background-size: round(map-get($sprite-map,width)/$ratio) round(map-get($sprite-map,height)/$ratio);
-    vertical-align: 0;
+    vertical-align: middle;
     white-space: nowrap;
 }
 // Sprite Getter

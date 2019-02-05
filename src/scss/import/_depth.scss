@@ -99,6 +99,18 @@
 .section_pi{
     .btn_area{
         overflow: hidden;
+        .ico_download{
+            @include get-icon-sprite(ico_bridge_down, $sp_hepa);
+            margin: -2px 6px 2px 0;
+        }
+        .ico_favorite{
+            @include get-icon-sprite(ico_bridge_fav, $sp_hepa);
+            margin: -2px 6px 2px 0;
+        }
+        .ico_email{
+            @include get-icon-sprite(ico_bridge_email, $sp_hepa);
+            margin: -2px 6px 2px 0;
+        }
         .fl{
             float: left;
         }
@@ -112,7 +124,7 @@
             overflow: hidden;
             display: inline-block;
             height: 40px;
-            padding: 0 10px;
+            padding: 0 15px;
             border-radius: 3px;
             vertical-align: top;
             color: #fff;
@@ -228,6 +240,14 @@
             display: block;
             clear: both;
         }
+        .ico_search{
+            @include get-icon-sprite(ico_town_faq, $sp_hepa);
+            margin: -1px 7px 1px 0;
+        }
+        .ico_reply{
+            @include get-icon-sprite(ico_town_reply, $sp_hepa);
+            margin: -1px 7px 1px 0;
+        }
         .search_form{
             float: left;
             width: 810px;
@@ -248,16 +268,16 @@
                     line-height: 70px;
                     background: #fbfbfb;
                     &::after{
-                        content: '';
+                        @include get-icon-sprite(ico_town_arr, $sp_hepa);
                         position: absolute;
-                        top: 4px;
-                        right: 10px;
-                        width: 5px;
-                        height: 5px;
-                        background: red;
+                        top: 0;
+                        right: 40px;
+                        bottom: 0;
+                        margin: auto;
                     }
                 }
                 .select_layer{
+                    display: none;
                     position: absolute;
                     top: 70px;
                     left: -1px;
@@ -273,7 +293,7 @@
                             text-decoration: underline;
                         }
                     }
-                    
+
                 }
             }
             .search_input{
@@ -303,7 +323,7 @@
             text-align: center;
             line-height: 70px;
         }
-        
+
 
     }
     .faq_list{
@@ -316,15 +336,22 @@
             border-bottom: 1px solid #e8e8e8;
             font-size: 18px;
             color: #333;
+            &:before{
+                @include get-icon-sprite(ico_town_q, $sp_hepa);
+                position: absolute;
+                top: 50px;
+                left: 60px;
+            }
             &:after{
                 content: '';
                 position: absolute;
-                top: 50%;
+                top: 50px;
                 right: 20px;
                 width: 10px;
                 height: 10px;
-                margin-top: -5px;
-                background: red;
+                border: 2px solid #ccc;
+                border-width: 2px 2px 0 0;
+                transform: rotate(-45deg) scale(-1);
             }
             .cate{
                 float: left;
@@ -345,12 +372,13 @@
             }
             .title{
                 overflow: hidden;
-                
+
                 padding: 0 0 0 30px;
             }
 
         }
         .item_a{
+            display: none;
             padding: 50px 100px 50px 124px;
             background: #faf9f7;
             p{
@@ -366,10 +394,26 @@
                 }
             }
         }
+        .open{
+            .item_q{
+                &:before{
+                    @include get-icon-sprite(ico_town_q_on, $sp_hepa);
+                }
+                &:after{
+                    top: 55px;
+                    border-color: $colorRed;
+                    border-width: 2px 2px 0 0;
+                    transform: rotate(-45deg) scale(1);
+                }
+            }
+            .item_a{
+                display: block;
+            }
+        }
     }
 }
 
-// 
+//
 .section_usefullink{
     .usefullink_list{
         overflow: hidden;
@@ -421,7 +465,7 @@
             border-top: 3px solid $colorRed;
             height: 0;
         }
-        
+
         ul{
             display: inline-block;
         }
@@ -527,6 +571,5 @@
         background: $colorRed;
         vertical-align: top;
     }
-    
 }
 
