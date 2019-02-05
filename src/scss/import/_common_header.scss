@@ -37,7 +37,6 @@
         }
         .snb{
             border-top: 1px solid #ebebeb;
-            background-color: #fff;
         }
     }
     .logo{
@@ -226,7 +225,7 @@
         right:0;
         height: 59px;
         border-bottom: 1px solid #ebebeb;
-        background: rgba(255,255,255,.5);
+        background: #fff;
         .wrap_snb_cont{
             position: relative;
             width: $contentWidth;
@@ -270,7 +269,9 @@
             }
         }
         .item_menu_sub{
+            margin-top: -1px;
             padding: 20px 0;
+            border: 1px solid rgba(0,0,0,0.05);
             background: #fff;
             .item_sub_link{
                 display: block;
