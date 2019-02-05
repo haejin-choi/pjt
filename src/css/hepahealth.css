@@ -284,13 +284,13 @@ mark {
 	height: 0;
 	background: #fff;
 	opacity: 0;
+	min-width: 1720px;
 }
 
 #header .lnb .wrap_lnb_cont {
 	overflow: hidden;
 	width: 1720px;
 	margin: 0 auto;
-	background: #fff;
 }
 
 #header .lnb .lnb_item {
@@ -342,7 +342,7 @@ mark {
 
 #header .snb .wrap_snb_cont {
 	overflow: hidden;
-	min-width: 1840px;
+	width: 1840px;
 	margin: 0 auto;
 }
 
