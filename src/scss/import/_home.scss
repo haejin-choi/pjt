@@ -1,14 +1,11 @@
 // 홈
 
-#home{
-    min-width: $contentWidth;
-    width: 100%;
-    position: relative;
+#wrap.home{
     .content{
 
     }
     .section_spot{
-        
+
         .wrap_cont{
             position: relative;
             width: $contentWidth;

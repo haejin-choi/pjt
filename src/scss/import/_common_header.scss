@@ -1,8 +1,11 @@
 // 홈
-
+#wrap{
+    min-width: $contentWidth;
+    width: 100%;
+    position: relative;
+}
 #header{
     z-index: 100;
-    overflow: hidden;
     position: fixed;
     z-index: 1000;
     width: 100%;
@@ -31,6 +34,10 @@
                     @include get-icon-sprite(ico_home_setting_dark, $sp_hepa);
                 }
             }
+        }
+        .snb{
+            border-top: 1px solid #ebebeb;
+            background-color: #fff;
         }
     }
     .logo{
@@ -167,12 +174,13 @@
         }
     }
     .lnb{
+        position: relative;
         z-index: 10;
         height: 0;
         background: #fff;
         opacity: 0;
         min-width: $contentWidth;
-        border-top: 1px solid #ebebeb;
+        border-top: 1px solid #d6d7d5;
         .wrap_lnb_cont{
             overflow: hidden;
             width: $contentWidth;
@@ -190,6 +198,7 @@
         .lnb_menu{
             overflow:hidden;
             float: right;
+            border-right: 1px solid #d6d7d5;
             .item_menu_wrap{
                 float: left;
                 width: 251px;
@@ -219,14 +228,15 @@
         border-bottom: 1px solid #ebebeb;
         background: rgba(255,255,255,.5);
         .wrap_snb_cont{
-            overflow: hidden;
-            width: ($contentWidth)+ 120px;
+            position: relative;
+            width: $contentWidth;
             margin: 0 auto;
         }
         .snb_menu{
+            display: inline-block;
             overflow:hidden;
-            float: right;
-            width: 1260px;
+            position: absolute;
+            top: 0;
         }
         .item_menu_wrap{
             float: left;
@@ -260,12 +270,13 @@
             }
         }
         .item_menu_sub{
-            padding: 25px 0;
+            padding: 20px 0;
             background: #fff;
             .item_sub_link{
                 display: block;
                 text-align: center;
                 font-size: 16px;
+                line-height: 40px;
                 font-weight: bold;
                 color: #5b5f6a;
                 &:hover,
@@ -275,5 +286,30 @@
                 }
             }
         }
+    }
+}
+#wrap.bridge{
+    #header .snb .snb_menu{
+        left: 445px;
+    }
+}
+#wrap.video{
+    #header .snb .snb_menu{
+        left: 690px;
+    }
+}
+#wrap.cloud{
+    #header .snb .snb_menu{
+        left: 955px;
+    }
+}
+#wrap.town{
+    #header .snb .snb_menu{
+        left: 1210px;
+    }
+}
+#wrap.contact{
+    #header .snb .snb_menu{
+        right: 0;
     }
 }
