@@ -62,8 +62,8 @@ table {
 	overflow: hidden;
 	color: transparent;
 	background: url("../img/sprite/sp_hepa.png") 0 0 no-repeat;
-	-webkit-background-size: 322px 167px;
-	background-size: 322px 167px;
+	-webkit-background-size: 322px 189px;
+	background-size: 322px 189px;
 	vertical-align: middle;
 	white-space: nowrap;
 }
@@ -117,7 +117,7 @@ table {
 #header.active .header_search .item_setting .ico_setting {
 	width: 17px;
 	height: 17px;
-	background-position: -289px -105px;
+	background-position: -200px -132px;
 }
 
 #header.active .snb {
@@ -218,7 +218,7 @@ table {
 #header .header_search .item_setting .ico_setting {
 	width: 17px;
 	height: 17px;
-	background-position: -268px -105px;
+	background-position: -302px -105px;
 	margin: -1px 0 1px;
 }
 
@@ -232,7 +232,7 @@ table {
 #header .layer_setting:before {
 	width: 20px;
 	height: 11px;
-	background-position: -260px -131px;
+	background-position: -245px -132px;
 	position: absolute;
 	top: -11px;
 	right: 30px;
@@ -243,6 +243,8 @@ table {
 	height: 70px;
 	-webkit-border-radius: 10px;
 	        border-radius: 10px;
+	-webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+	        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
 	background: #fff;
 }
 
@@ -276,25 +278,25 @@ table {
 #header .layer_setting .item_setting .ico_archive {
 	width: 23px;
 	height: 23px;
-	background-position: -269px -66px;
+	background-position: -228px -105px;
 }
 
 #header .layer_setting .item_setting .ico_library {
 	width: 26px;
 	height: 22px;
-	background-position: -269px -38px;
+	background-position: -241px -77px;
 }
 
 #header .layer_setting .item_setting .ico_phone {
 	width: 22px;
 	height: 23px;
-	background-position: -296px -66px;
+	background-position: -255px -105px;
 }
 
 #header .layer_setting .item_setting .ico_product {
 	width: 24px;
 	height: 23px;
-	background-position: -241px -66px;
+	background-position: -200px -105px;
 }
 
 #header .lnb {
@@ -395,13 +397,13 @@ table {
 #header .snb .item_menu_wrap .item_menu_link:hover:after, #header .snb .item_menu_wrap .item_menu_link.on:after {
 	width: 14px;
 	height: 9px;
-	background-position: -302px -131px;
+	background-position: -287px -132px;
 }
 
 #header .snb .item_menu_wrap .item_menu_link:after {
 	width: 14px;
 	height: 9px;
-	background-position: -284px -131px;
+	background-position: -269px -132px;
 	margin: -2px 0 2px 10px;
 }
 
@@ -475,6 +477,65 @@ table {
 	background: purple;
 }
 
+.s-hidden {
+	visibility: hidden;
+}
+
+.select {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	border: 1px solid #eaeaea;
+	line-height: 38px;
+	vertical-align: top;
+}
+
+.select .styledSelect {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: #fff;
+	padding: 0 10px;
+}
+
+.select .styledSelect:after {
+	content: "";
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	width: 0;
+	height: 0;
+	border: 5px solid transparent;
+	border-color: #bcbcbc transparent transparent transparent;
+}
+
+.select .styledSelect:active, .select .styledSelect.active {
+	background-color: #eee;
+}
+
+.select .options {
+	display: none;
+	position: absolute;
+	top: 100%;
+	right: 0;
+	left: 0;
+	z-index: 999;
+	border: 1px solid #ccc;
+	background-color: #fff;
+}
+
+.select .options li {
+	padding: 0 10px;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+.select .options li:hover {
+	background-color: #eee;
+}
+
 .path_area {
 	padding: 40px 0 23px 0;
 	margin-bottom: 80px;
@@ -494,7 +555,7 @@ table {
 .path_area a::after {
 	width: 3px;
 	height: 5px;
-	background-position: -253px -93px;
+	background-position: -286px -66px;
 	margin: 4px 0 0 11px;
 	vertical-align: top;
 }
@@ -551,30 +612,36 @@ table {
 	display: none;
 }
 
+.ico_pdf {
+	width: 29px;
+	height: 35px;
+	background-position: -241px -38px;
+}
+
 .ico_video_s {
 	width: 24px;
 	height: 24px;
-	background-position: -241px -38px;
+	background-position: -274px -38px;
 }
 
 .ico_download {
 	width: 14px;
 	height: 18px;
-	background-position: -172px -91px;
+	background-position: 0px -171px;
 	margin: -2px 6px 2px 0;
 }
 
 .ico_favorite {
 	width: 14px;
 	height: 14px;
-	background-position: -172px -113px;
+	background-position: -200px -153px;
 	margin: -2px 6px 2px 0;
 }
 
 .ico_email {
 	width: 20px;
 	height: 13px;
-	background-position: -236px -131px;
+	background-position: -221px -132px;
 	margin: -2px 6px 2px 0;
 }
 
@@ -626,7 +693,7 @@ table {
 .dropdown .btn_dropdown:after {
 	width: 8px;
 	height: 5px;
-	background-position: -241px -93px;
+	background-position: -274px -66px;
 	position: absolute;
 	top: 0;
 	right: 8px;
@@ -978,20 +1045,6 @@ table {
 	color: #cb2e3c;
 }
 
-.section_library .library_list li.has_icon:after {
-	content: '';
-	position: absolute;
-	bottom: 0;
-	right: 0;
-	width: 20px;
-	height: 40px;
-	background: red;
-}
-
-.section_library .library_list li.has_icon .title {
-	margin-right: 40px;
-}
-
 .section_library .library_list .thumb_area {
 	width: 230px;
 	height: 270px;
@@ -1037,6 +1090,16 @@ table {
 	color: #989898;
 }
 
+.section_library .library_list .dsc_area {
+	overflow: hidden;
+}
+
+.section_library .library_list .dsc_area .ico_area {
+	float: right;
+	margin-left: 15px;
+	padding-top: 5px;
+}
+
 .section_library .paginate {
 	margin-top: 0;
 }
@@ -1065,14 +1128,14 @@ table {
 .section_faq .search_area .ico_search {
 	width: 17px;
 	height: 17px;
-	background-position: -247px -105px;
+	background-position: -281px -105px;
 	margin: -1px 7px 1px 0;
 }
 
 .section_faq .search_area .ico_reply {
 	width: 17px;
 	height: 18px;
-	background-position: -226px -105px;
+	background-position: -302px -38px;
 	margin: -1px 7px 1px 0;
 }
 
@@ -1104,7 +1167,7 @@ table {
 .section_faq .search_area .search_form .search_select .select_btn::after {
 	width: 8px;
 	height: 5px;
-	background-position: -241px -93px;
+	background-position: -274px -66px;
 	position: absolute;
 	top: 0;
 	right: 40px;
@@ -1183,7 +1246,7 @@ table {
 .section_faq .faq_list .item_q:before {
 	width: 14px;
 	height: 20px;
-	background-position: -200px -131px;
+	background-position: -172px -91px;
 	position: absolute;
 	top: 50px;
 	left: 60px;
@@ -1249,7 +1312,7 @@ table {
 .section_faq .faq_list .open .item_q:before {
 	width: 14px;
 	height: 20px;
-	background-position: -218px -131px;
+	background-position: -172px -131px;
 }
 
 .section_faq .faq_list .open .item_q:after {
@@ -1300,7 +1363,7 @@ table {
 .section_usefullink .usefullink_list .btn_border:after {
 	width: 7px;
 	height: 12px;
-	background-position: -310px -105px;
+	background-position: -218px -153px;
 	margin: -2px 0 2px 7px;
 }
 
@@ -1418,12 +1481,14 @@ table {
 	text-align: left;
 }
 
-.section_request .request_area li {
+.section_request .request_area .bx {
 	display: table;
 	table-layout: fixed;
 	width: 100%;
 	border-top: 1px solid #fff;
 	border-bottom: 1px solid #e1e1e1;
+	font-size: 16px;
+	color: #333;
 }
 
 .section_request .request_area .title {
@@ -1431,8 +1496,6 @@ table {
 	width: 140px;
 	height: 50px;
 	padding: 27px 0 0 58px;
-	font-size: 16px;
-	color: #333;
 	background: #faf9f7;
 	vertical-align: top;
 }
@@ -1444,13 +1507,51 @@ table {
 .section_request .request_area .cont {
 	display: table-cell;
 	position: relative;
+	padding: 18px 0 0 30px;
 	background: #fff;
 }
 
 .section_request .request_area .cont .visual_obj {
 	position: absolute;
-	top: -75px;
-	right: 20px;
+	top: -68px;
+	right: 100px;
+}
+
+.section_request .request_area .cont .select {
+	min-width: 278px;
+}
+
+.section_request .request_area .cont .text {
+	width: 558px;
+	height: 38px;
+	margin: 0;
+	padding: 0 10px;
+	border: 1px solid #eaeaea;
+	font-size: 16px;
+	line-height: 38px;
+	color: #333;
+	vertical-align: top;
+}
+
+.section_request .request_area .cont .textarea {
+	display: block;
+	width: 842px;
+	height: 264px;
+	margin: 12px 0 20px;
+	padding: 10px;
+	border: 1px solid #eaeaea;
+	font-size: 16px;
+	line-height: 30px;
+	color: #333;
+	vertical-align: top;
+}
+
+.section_request .request_area .cont.type_phone .select {
+	min-width: 98px;
+}
+
+.section_request .request_area .cont.type_phone .text {
+	width: 62px;
 }
 
 .section_request .btn_request {

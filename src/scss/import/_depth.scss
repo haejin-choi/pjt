@@ -215,20 +215,6 @@
                color: $colorRed;
            }
        }
-       li.has_icon{
-           &:after{
-               content: '';
-               position: absolute;
-               bottom:0;
-               right:0;
-               width: 20px;
-               height: 40px;
-               background: red;
-           }
-           .title{
-               margin-right: 40px;
-            }
-       }
        .thumb_area{
            width: 230px;
            height: 270px;
@@ -267,6 +253,14 @@
        .date{
            font-size: 14px;
            color: #989898;
+       }
+       .dsc_area{
+           overflow: hidden;
+           .ico_area{
+               float: right;
+               margin-left: 15px;
+               padding-top: 5px;
+           }
        }
    }
    .paginate{
@@ -604,20 +598,20 @@
         margin-top: 35px;
         margin-bottom: 80px;
         text-align: left;
-        li{
+        .bx{
             display: table;
             table-layout: fixed;
             width: 100%;
             border-top: 1px solid #fff;
             border-bottom: 1px solid #e1e1e1;
+            font-size: 16px;
+            color: #333;
         }
         .title{
             display: table-cell;
             width: 140px;
             height: 50px;
             padding: 27px 0 0 58px;
-            font-size: 16px;
-            color: #333;
             background: #faf9f7;
             vertical-align: top;
             strong{
@@ -627,11 +621,46 @@
         .cont{
             display: table-cell;
             position: relative;
+            padding: 18px 0 0 30px;
             background: #fff;
             .visual_obj{
                 position: absolute;
-                top: -75px;
-                right: 20px;
+                top: -68px;
+                right: 100px;
+            }
+            .select{
+                min-width: 278px;
+            }
+            .text{
+                width: 558px;
+                height: 38px;
+                margin: 0;
+                padding: 0 10px;
+                border: 1px solid #eaeaea;
+                font-size: 16px;
+                line-height: 38px;
+                color: #333;
+                vertical-align: top;
+            }
+            .textarea{
+                display: block;
+                width: 842px;
+                height: 264px;
+                margin: 12px 0 20px;
+                padding: 10px;
+                border: 1px solid #eaeaea;
+                font-size: 16px;
+                line-height: 30px;
+                color: #333;
+                vertical-align: top;
+            }
+            &.type_phone{
+                .select{
+                    min-width: 98px;
+                }
+                .text{
+                    width: 62px;
+                }
             }
         }
     }

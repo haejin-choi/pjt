@@ -1,4 +1,56 @@
 
+// selectbox
+.s-hidden {
+    visibility:hidden;
+}
+.select {
+    cursor:pointer;
+    display:inline-block;
+    position:relative;
+    border:1px solid #eaeaea;
+    line-height: 38px;
+    vertical-align: top;
+    .styledSelect {
+        position:absolute;
+        top:0;
+        right:0;
+        bottom:0;
+        left:0;
+        background-color:#fff;
+        padding:0 10px;
+    }
+    .styledSelect:after {
+        content:"";
+        position:absolute;
+        top:15px;
+        right:15px;
+        width:0;
+        height:0;
+        border:5px solid transparent;
+        border-color:#bcbcbc transparent transparent transparent;
+    }
+    .styledSelect:active, .styledSelect.active {
+        background-color:#eee;
+    }
+    .options {
+        display:none;
+        position:absolute;
+        top:100%;
+        right:0;
+        left:0;
+        z-index:999;
+        border:1px solid #ccc;
+        background-color:#fff;
+    }
+    .options li {
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+    .options li:hover {
+        background-color:#eee;
+    }
+}
+
 
 // 패스
 .path_area{
@@ -68,7 +120,10 @@
     }
 }
 
-// 버튼
+// 아이콘
+.ico_pdf{
+    @include get-icon-sprite(ico_pdf, $sp_hepa);
+}
 .ico_video_s{
     @include get-icon-sprite(ico_video_s, $sp_hepa);
 }
