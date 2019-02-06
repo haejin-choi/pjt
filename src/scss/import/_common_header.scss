@@ -243,9 +243,9 @@
         }
         .item_menu_wrap{
             float: left;
-            width: 251px;
             .item_menu_link{
                 display: block;
+                padding: 0 45px;
                 line-height: 60px;
                 text-align: center;
                 font-size: 18px;
@@ -295,26 +295,42 @@
 }
 #wrap.bridge{
     #header .snb .snb_menu{
-        left: 445px;
+        left: 468px;
+    }
+    .visual_area{
+        background: red;
     }
 }
 #wrap.video{
     #header .snb .snb_menu{
-        left: 690px;
+        left: 727px;
+    }
+    .visual_area{
+        background: orange;
     }
 }
 #wrap.cloud{
     #header .snb .snb_menu{
-        left: 955px;
+        left: 977px;
+    }
+    .visual_area{
+        background: gold;
     }
 }
 #wrap.town{
     #header .snb .snb_menu{
-        left: 1210px;
+        left: 1231px;
+    }
+    .visual_area{
+        background: green;
+
     }
 }
 #wrap.contact{
     #header .snb .snb_menu{
-        right: 0;
+        right: 16px;
+    }
+    .visual_area{
+        background: purple;
     }
 }

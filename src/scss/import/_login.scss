@@ -21,6 +21,8 @@
             border-right: 1px dashed #bababa;
             background: #f6f6f6;
             .tit{
+                display: block;
+                margin-top: 105px;
                 font-family: Titillium Web,sans-serif;
                 font-size: 48px;
                 line-height: 60px;
@@ -50,6 +52,13 @@
                     height: 4px;
                     border-radius: 50%;
                     background: #a7a7a7;
+                }
+                .mail{
+                    display: inline-block;
+                    border-bottom: 2px solid #a7a7a7;
+                    margin-top: 3px;
+                    vertical-align: top;
+                    line-height: 19px;
                 }
             }
         }
@@ -94,7 +103,7 @@
         .section_id{
             overflow: hidden;
             width: 370px;
-            margin: 0 auto;
+            margin: 19px auto 0;
             .btn_join{
                 float: left;
                 font-size: 16px;

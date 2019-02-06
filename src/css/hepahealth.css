@@ -396,11 +396,11 @@ mark {
 
 #header .snb .item_menu_wrap {
 	float: left;
-	width: 251px;
 }
 
 #header .snb .item_menu_wrap .item_menu_link {
 	display: block;
+	padding: 0 45px;
 	line-height: 60px;
 	text-align: center;
 	font-size: 18px;
@@ -456,23 +456,43 @@ mark {
 }
 
 #wrap.bridge #header .snb .snb_menu {
-	left: 445px;
+	left: 468px;
+}
+
+#wrap.bridge .visual_area {
+	background: red;
 }
 
 #wrap.video #header .snb .snb_menu {
-	left: 690px;
+	left: 727px;
+}
+
+#wrap.video .visual_area {
+	background: orange;
 }
 
 #wrap.cloud #header .snb .snb_menu {
-	left: 955px;
+	left: 977px;
+}
+
+#wrap.cloud .visual_area {
+	background: gold;
 }
 
 #wrap.town #header .snb .snb_menu {
-	left: 1210px;
+	left: 1231px;
+}
+
+#wrap.town .visual_area {
+	background: green;
 }
 
 #wrap.contact #header .snb .snb_menu {
-	right: 0;
+	right: 16px;
+}
+
+#wrap.contact .visual_area {
+	background: purple;
 }
 
 .path_area {
@@ -705,7 +725,6 @@ mark {
 .section_top .visual_area {
 	height: 357px;
 	margin-bottom: -22px;
-	background: pink;
 	text-align: center;
 }
 
@@ -1453,6 +1472,8 @@ mark {
 }
 
 .login .content .fl .tit {
+	display: block;
+	margin-top: 105px;
 	font-family: Titillium Web,sans-serif;
 	font-size: 48px;
 	line-height: 60px;
@@ -1488,6 +1509,14 @@ mark {
 	-webkit-border-radius: 50%;
 	        border-radius: 50%;
 	background: #a7a7a7;
+}
+
+.login .content .fl .welcome_list .mail {
+	display: inline-block;
+	border-bottom: 2px solid #a7a7a7;
+	margin-top: 3px;
+	vertical-align: top;
+	line-height: 19px;
 }
 
 .login .content .fr {
@@ -1541,7 +1570,7 @@ mark {
 .login .content .section_id {
 	overflow: hidden;
 	width: 370px;
-	margin: 0 auto;
+	margin: 19px auto 0;
 }
 
 .login .content .section_id .btn_join {
