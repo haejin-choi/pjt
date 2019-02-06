@@ -18,10 +18,11 @@
 .spim_af:after{content:''}
 
 @import "import/_common_header"; // 공통헤더
+@import "import/_common_uio"; // 공통요소(페이징,버튼)
 
 @import "import/_depth"; // 로그인
 @import "import/_login"; // 로그인
 @import "import/_home"; // 홈
-@import "import/_board"; // 게시판
+
 
 

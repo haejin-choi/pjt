@@ -475,6 +475,154 @@ mark {
 	right: 0;
 }
 
+.btn_border {
+	overflow: hidden;
+	display: inline-block;
+	height: 38px;
+	padding: 0 10px;
+	border: 1px solid #40abd8;
+	-webkit-border-radius: 3px;
+	        border-radius: 3px;
+	vertical-align: top;
+	color: #0d8dc3;
+	font-size: 14px;
+	line-height: 38px;
+}
+
+.btn_colored {
+	overflow: hidden;
+	display: inline-block;
+	height: 40px;
+	padding: 0 15px;
+	-webkit-border-radius: 3px;
+	        border-radius: 3px;
+	vertical-align: top;
+	color: #fff;
+	background: #1764ae;
+	font-size: 14px;
+	line-height: 38px;
+}
+
+.dropdown {
+	display: inline-block;
+	width: 300px;
+	border-bottom: 1px solid #000;
+	text-align: left;
+	white-space: nowrap;
+}
+
+.dropdown .btn_dropdown {
+	position: relative;
+	display: block;
+	font-size: 16px;
+	color: #666;
+	line-height: 55px;
+}
+
+.dropdown .btn_dropdown:after {
+	content: '';
+	position: absolute;
+	top: 20px;
+	right: 8px;
+	width: 5px;
+	height: 5px;
+	background: red;
+}
+
+.dropdown .dropdown_layer {
+	position: absolute;
+	top: 56px;
+	left: 0;
+	right: 0;
+	padding: 0 28px;
+	border: 1px solid #eaeaea;
+	border-top: none;
+	background: #fff;
+}
+
+.dropdown .dropdown_layer .dropdown_item {
+	overflow: hidden;
+	display: block;
+	line-height: 54px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.dropdown .dropdown_layer .dropdown_item + .dropdown_item {
+	border-top: 1px dashed #e7e7e7;
+}
+
+.dropdown .dropdown_layer .dropdown_item.on {
+	color: #cb2e3c;
+}
+
+.paginate {
+	margin: 65px 0 0 0;
+	text-align: center;
+	line-height: 25px;
+}
+
+.paginate [class^=btn_] {
+	display: inline-block;
+	padding: 6px;
+	vertical-align: top;
+}
+
+.paginate .ico_arr {
+	display: block;
+	overflow: hidden;
+	width: 10px;
+	height: 10px;
+	border: 2px solid #aaa;
+	border-width: 2px 2px 0 0;
+	-webkit-transform: rotate(45deg);
+	        transform: rotate(45deg);
+	color: transparent;
+}
+
+.paginate .btn_prev .ico_arr, .paginate .btn_front .ico_arr {
+	-webkit-transform: rotate(45deg) scale(-1);
+	        transform: rotate(45deg) scale(-1);
+}
+
+.paginate .btn_front:before, .paginate .btn_end:before {
+	content: '';
+	display: block;
+	overflow: hidden;
+	float: left;
+	width: 10px;
+	height: 10px;
+	margin-right: -7px;
+	border: 2px solid #aaa;
+	border-width: 2px 2px 0 0;
+	-webkit-transform: rotate(45deg) scale(-1);
+	        transform: rotate(45deg) scale(-1);
+	color: transparent;
+}
+
+.paginate .btn_end:before {
+	-webkit-transform: rotate(45deg);
+	        transform: rotate(45deg);
+}
+
+.paginate .paginate_number {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.paginate .paginate_number a {
+	display: inline-block;
+	margin: 0 13px;
+	font-size: 20px;
+	color: #888;
+	vertical-align: top;
+}
+
+.paginate .paginate_number .active {
+	color: #cb2e3c;
+	text-decoration: underline;
+}
+
 .section_top .visual_area {
 	height: 357px;
 	margin-bottom: -22px;
@@ -615,20 +763,6 @@ mark {
 	float: right;
 }
 
-.section_pi .btn_area .btn_border {
-	overflow: hidden;
-	display: inline-block;
-	height: 38px;
-	padding: 0 10px;
-	border: 1px solid #40abd8;
-	-webkit-border-radius: 3px;
-	        border-radius: 3px;
-	vertical-align: top;
-	color: #0d8dc3;
-	font-size: 14px;
-	line-height: 38px;
-}
-
 .section_pi .btn_area .btn_colored {
 	overflow: hidden;
 	display: inline-block;
@@ -676,20 +810,6 @@ mark {
 
 .section_video .btn_area {
 	padding-top: 50px;
-}
-
-.section_video .btn_area .btn_border {
-	overflow: hidden;
-	display: inline-block;
-	height: 38px;
-	padding: 0 10px;
-	border: 1px solid #40abd8;
-	-webkit-border-radius: 3px;
-	        border-radius: 3px;
-	vertical-align: top;
-	color: #0d8dc3;
-	font-size: 14px;
-	line-height: 38px;
 }
 
 .section_video .player_area {
@@ -797,32 +917,6 @@ mark {
 	padding-bottom: 30px;
 }
 
-.section_video .section_cont .dropdown {
-	display: inline-block;
-	width: 300px;
-	border-bottom: 1px solid #000;
-	text-align: left;
-	white-space: nowrap;
-}
-
-.section_video .section_cont .dropdown .btn_dropdown {
-	position: relative;
-	display: block;
-	font-size: 16px;
-	color: #666;
-	line-height: 55px;
-}
-
-.section_video .section_cont .dropdown .btn_dropdown:after {
-	content: '';
-	position: absolute;
-	top: 20px;
-	right: 8px;
-	width: 5px;
-	height: 5px;
-	background: red;
-}
-
 .section_library .library_list {
 	overflow: hidden;
 	margin-left: -80px;
@@ -905,6 +999,17 @@ mark {
 
 .section_library .paginate {
 	margin-top: 0;
+}
+
+.section_library .top_area {
+	position: relative;
+	padding-bottom: 40px;
+}
+
+.section_library .top_area .select_area {
+	position: absolute;
+	top: -15px;
+	right: 0;
 }
 
 .section_faq .search_area {
@@ -997,22 +1102,26 @@ mark {
 	overflow: hidden;
 	width: 170px;
 	height: 72px;
+	padding: 0;
 	margin-left: 5px;
+	-webkit-border-radius: 0;
+	        border-radius: 0;
 	background: #40abd8;
 	color: #fff;
+	font-size: 18px;
 	text-align: center;
 	line-height: 72px;
 }
 
 .section_faq .search_area .btn_border {
 	float: left;
-	overflow: hidden;
 	width: 166px;
 	height: 70px;
+	-webkit-border-radius: 0;
+	        border-radius: 0;
+	padding: 0;
 	margin-left: 5px;
-	border: 1px solid #40abd8;
-	color: #40abd8;
-	background: #fff;
+	font-size: 18px;
 	text-align: center;
 	line-height: 70px;
 }
@@ -1145,17 +1254,6 @@ mark {
 }
 
 .section_usefullink .usefullink_list .btn_border {
-	overflow: hidden;
-	display: inline-block;
-	height: 38px;
-	padding: 0 10px;
-	border: 1px solid #40abd8;
-	-webkit-border-radius: 3px;
-	        border-radius: 3px;
-	vertical-align: top;
-	color: #0d8dc3;
-	font-size: 14px;
-	line-height: 38px;
 	padding: 0 24px;
 }
 
@@ -1703,110 +1801,6 @@ mark {
 	width: 122px;
 	height: 34px;
 	background-position: -200px 0px;
-}
-
-.board .list {
-	overflow: hidden;
-}
-
-.board .listItem {
-	float: left;
-	width: 150px;
-	border: 1px solid red;
-}
-
-.board .listItem .listItemLink {
-	display: block;
-}
-
-.board .listItem .listItemLink:hover .title {
-	color: red;
-}
-
-.board .listItem .wrap_thumb {
-	text-align: center;
-	background: gray;
-}
-
-.board .listItem .wrap_meta {
-	overflow: hidden;
-}
-
-.board .listItem .title {
-	overflow: hidden;
-	display: block;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-}
-
-.board .listItem .iconfile {
-	float: right;
-}
-
-.paginate {
-	margin: 65px 0 0 0;
-	text-align: center;
-	line-height: 25px;
-}
-
-.paginate [class^=btn_] {
-	display: inline-block;
-	padding: 6px;
-	vertical-align: top;
-}
-
-.paginate .ico_arr {
-	display: block;
-	overflow: hidden;
-	width: 10px;
-	height: 10px;
-	border: 2px solid #aaa;
-	border-width: 2px 2px 0 0;
-	-webkit-transform: rotate(45deg);
-	        transform: rotate(45deg);
-	color: transparent;
-}
-
-.paginate .btn_prev .ico_arr, .paginate .btn_front .ico_arr {
-	-webkit-transform: rotate(45deg) scale(-1);
-	        transform: rotate(45deg) scale(-1);
-}
-
-.paginate .btn_front:before, .paginate .btn_end:before {
-	content: '';
-	display: block;
-	overflow: hidden;
-	float: left;
-	width: 10px;
-	height: 10px;
-	border: 2px solid #aaa;
-	border-width: 2px 2px 0 0;
-	-webkit-transform: rotate(45deg) scale(-1);
-	        transform: rotate(45deg) scale(-1);
-	color: transparent;
-}
-
-.paginate .btn_end:before {
-	-webkit-transform: rotate(45deg);
-	        transform: rotate(45deg);
-}
-
-.paginate .paginate_number {
-	display: inline-block;
-	vertical-align: top;
-}
-
-.paginate .paginate_number a {
-	display: inline-block;
-	margin: 0 13px;
-	font-size: 20px;
-	color: #888;
-	vertical-align: top;
-}
-
-.paginate .paginate_number .active {
-	color: #cb2e3c;
-	text-decoration: underline;
 }
 
 /*# sourceMappingURL=hepahealth.css.map */
