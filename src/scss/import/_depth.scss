@@ -90,6 +90,11 @@
 // 2.비디오
 .section_video{
     margin-top: -80px;
+    .ico_video_s{
+        position: absolute;
+        right: 20px;
+        bottom: 10px;
+    }
     .wrap_video{
         overflow: hidden;
     }
@@ -154,14 +159,17 @@
             overflow-y: auto;
             height: 516px;
             margin-top: 26px;
-            padding-right: 60px;
         }
         .video_list{
+            width: 202px;
             li + li{
                 margin-top: 36px;
             }
             a{
                 display: block;
+            }
+            .thumb{
+                position: relative;
             }
             .title{
                 overflow: hidden;
@@ -496,7 +504,7 @@
     }
 }
 
-// 5.contact 
+// 5.contact
 .section_contact{
     text-align: center;
     .tit{

@@ -8,12 +8,7 @@ body, input, textarea, select, table, button, code {
 	line-height: 1.6em;
 }
 
-html {
-	height: 100%;
-}
-
 body {
-	height: 100%;
 	-webkit-text-size-adjust: none;
 }
 
@@ -40,8 +35,6 @@ em, address, cite, i {
 a {
 	color: inherit;
 	text-decoration: none;
-	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
-	-webkit-touch-callout: none;
 }
 
 button {
@@ -60,19 +53,6 @@ table {
 	width: 1px !important;
 	height: 1px !important;
 	margin: -1px !important;
-}
-
-mark {
-	color: inherit;
-	font-weight: normal;
-	background: none;
-}
-
-.elss {
-	display: block;
-	overflow: hidden;
-	white-space: nowrap;
-	text-overflow: ellipsis;
 }
 
 .spim,
@@ -137,7 +117,7 @@ mark {
 #header.active .header_search .item_setting .ico_setting {
 	width: 17px;
 	height: 17px;
-	background-position: -221px -105px;
+	background-position: -289px -105px;
 }
 
 #header.active .snb {
@@ -238,7 +218,7 @@ mark {
 #header .header_search .item_setting .ico_setting {
 	width: 17px;
 	height: 17px;
-	background-position: -263px -105px;
+	background-position: -268px -105px;
 	margin: -1px 0 1px;
 }
 
@@ -252,7 +232,7 @@ mark {
 #header .layer_setting:before {
 	width: 20px;
 	height: 11px;
-	background-position: -254px -127px;
+	background-position: -260px -131px;
 	position: absolute;
 	top: -11px;
 	right: 30px;
@@ -296,25 +276,25 @@ mark {
 #header .layer_setting .item_setting .ico_archive {
 	width: 23px;
 	height: 23px;
-	background-position: -269px -64px;
+	background-position: -269px -66px;
 }
 
 #header .layer_setting .item_setting .ico_library {
 	width: 26px;
 	height: 22px;
-	background-position: -241px -38px;
+	background-position: -269px -38px;
 }
 
 #header .layer_setting .item_setting .ico_phone {
 	width: 22px;
 	height: 23px;
-	background-position: -296px -64px;
+	background-position: -296px -66px;
 }
 
 #header .layer_setting .item_setting .ico_product {
 	width: 24px;
 	height: 23px;
-	background-position: -241px -64px;
+	background-position: -241px -66px;
 }
 
 #header .lnb {
@@ -415,13 +395,13 @@ mark {
 #header .snb .item_menu_wrap .item_menu_link:hover:after, #header .snb .item_menu_wrap .item_menu_link.on:after {
 	width: 14px;
 	height: 9px;
-	background-position: -259px -91px;
+	background-position: -302px -131px;
 }
 
 #header .snb .item_menu_wrap .item_menu_link:after {
 	width: 14px;
 	height: 9px;
-	background-position: -241px -91px;
+	background-position: -284px -131px;
 	margin: -2px 0 2px 10px;
 }
 
@@ -514,7 +494,7 @@ mark {
 .path_area a::after {
 	width: 3px;
 	height: 5px;
-	background-position: -289px -91px;
+	background-position: -253px -93px;
 	margin: 4px 0 0 11px;
 	vertical-align: top;
 }
@@ -536,16 +516,30 @@ mark {
 	width: 100%;
 	margin-bottom: 50px;
 	border: 1px solid #e0e0e0;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 	background: #fbfbfb;
 }
 
 .tab a {
 	display: table-cell;
-	height: 58px;
+	position: relative;
 	text-align: center;
 	font-size: 18px;
+	line-height: 58px;
 	color: #666;
-	vertical-align: middle;
+}
+
+.tab a + a:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 1px;
+	height: 16px;
+	margin: auto;
+	background-color: #e8e8e8;
 }
 
 .tab a.on {
@@ -553,24 +547,34 @@ mark {
 	background: #cb2e3c;
 }
 
+.tab a.on:before {
+	display: none;
+}
+
+.ico_video_s {
+	width: 24px;
+	height: 24px;
+	background-position: -241px -38px;
+}
+
 .ico_download {
 	width: 14px;
 	height: 18px;
-	background-position: -236px -127px;
+	background-position: -172px -91px;
 	margin: -2px 6px 2px 0;
 }
 
 .ico_favorite {
 	width: 14px;
 	height: 14px;
-	background-position: -200px -151px;
+	background-position: -172px -113px;
 	margin: -2px 6px 2px 0;
 }
 
 .ico_email {
 	width: 20px;
 	height: 13px;
-	background-position: -284px -105px;
+	background-position: -236px -131px;
 	margin: -2px 6px 2px 0;
 }
 
@@ -604,6 +608,7 @@ mark {
 
 .dropdown {
 	display: inline-block;
+	position: relative;
 	width: 300px;
 	border-bottom: 1px solid #000;
 	text-align: left;
@@ -619,20 +624,23 @@ mark {
 }
 
 .dropdown .btn_dropdown:after {
-	content: '';
-	position: absolute;
-	top: 20px;
-	right: 8px;
-	width: 5px;
+	width: 8px;
 	height: 5px;
-	background: red;
+	background-position: -241px -93px;
+	position: absolute;
+	top: 0;
+	right: 8px;
+	bottom: 0;
+	margin: auto;
 }
 
 .dropdown .dropdown_layer {
+	display: none;
 	position: absolute;
 	top: 56px;
 	left: 0;
 	right: 0;
+	z-index: 900;
 	padding: 0 28px;
 	border: 1px solid #eaeaea;
 	border-top: none;
@@ -823,6 +831,12 @@ mark {
 	margin-top: -80px;
 }
 
+.section_video .ico_video_s {
+	position: absolute;
+	right: 20px;
+	bottom: 10px;
+}
+
 .section_video .wrap_video {
 	overflow: hidden;
 }
@@ -899,7 +913,10 @@ mark {
 	overflow-y: auto;
 	height: 516px;
 	margin-top: 26px;
-	padding-right: 60px;
+}
+
+.section_video .video_area .video_list {
+	width: 202px;
 }
 
 .section_video .video_area .video_list li + li {
@@ -908,6 +925,10 @@ mark {
 
 .section_video .video_area .video_list a {
 	display: block;
+}
+
+.section_video .video_area .video_list .thumb {
+	position: relative;
 }
 
 .section_video .video_area .video_list .title {
@@ -1044,14 +1065,14 @@ mark {
 .section_faq .search_area .ico_search {
 	width: 17px;
 	height: 17px;
-	background-position: -242px -105px;
+	background-position: -247px -105px;
 	margin: -1px 7px 1px 0;
 }
 
 .section_faq .search_area .ico_reply {
 	width: 17px;
 	height: 18px;
-	background-position: -200px -105px;
+	background-position: -226px -105px;
 	margin: -1px 7px 1px 0;
 }
 
@@ -1083,7 +1104,7 @@ mark {
 .section_faq .search_area .search_form .search_select .select_btn::after {
 	width: 8px;
 	height: 5px;
-	background-position: -277px -91px;
+	background-position: -241px -93px;
 	position: absolute;
 	top: 0;
 	right: 40px;
@@ -1162,7 +1183,7 @@ mark {
 .section_faq .faq_list .item_q:before {
 	width: 14px;
 	height: 20px;
-	background-position: -200px -127px;
+	background-position: -200px -131px;
 	position: absolute;
 	top: 50px;
 	left: 60px;
@@ -1228,7 +1249,7 @@ mark {
 .section_faq .faq_list .open .item_q:before {
 	width: 14px;
 	height: 20px;
-	background-position: -218px -127px;
+	background-position: -218px -131px;
 }
 
 .section_faq .faq_list .open .item_q:after {
@@ -1279,7 +1300,7 @@ mark {
 .section_usefullink .usefullink_list .btn_border:after {
 	width: 7px;
 	height: 12px;
-	background-position: -308px -105px;
+	background-position: -310px -105px;
 	margin: -2px 0 2px 7px;
 }
 

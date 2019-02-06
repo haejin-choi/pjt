@@ -11,6 +11,22 @@ if(ua.search('mobile') == '-1'){
 }
 
 $(document).ready(function(e) {
+	//common
+	function toggleLayer(elm){
+		var self = $(elm);
+		self.next().slideToggle(200);
+	}
+	function tabMenu(elm){
+		var self = $(elm);
+		self.addClass('on').siblings().removeClass('on');
+	}
+
+	//dropdown
+	$('.dropdown .btn_dropdown').on('click',function(e){
+		var self = $(this);
+		toggleLayer(self);
+		e.preventDefault();
+	});
 
 	//header
 	var gnbLayer = $('.layer_setting');
@@ -19,7 +35,6 @@ $(document).ready(function(e) {
 		e.preventDefault();
 	});
 	var header = $('#header');
-	var gnb = $('.gnb');
 	var lnb = $('.lnb');
 	var snb = $('.snb');
 	function slideDown(){
@@ -101,28 +116,28 @@ $(document).ready(function(e) {
 				'background-color' : 'transparent'
 			});
 		}
-		if (tTop >= 70) {
+		if (tTop >= 60) {
             header.css({
                 'background-color' : 'rgba(255,255,255,.2)'
             });
         }
-        if (tTop >= 140) {
-			header.addClass('active');
+        if (tTop >= 120) {
             header.css({
                 'background-color' : 'rgba(255,255,255,.4)'
             });
         }
-        if (tTop >= 210) {
+        if (tTop >= 180) {
+			header.addClass('active');
             header.css({
                 'background-color' : 'rgba(255,255,255,.6)'
             });
         }
-        if (tTop >= 280) {
+        if (tTop >= 240) {
             header.css({
                 'background-color' : 'rgba(255,255,255,.8)'
             });
         }
-        if (tTop >= 350) {
+        if (tTop >= 300) {
             header.css({
                 'background-color' : 'rgba(255,255,255,1)'
             });
@@ -133,7 +148,7 @@ $(document).ready(function(e) {
 	//TOWN
 	$('.section_faq .search_select .select_btn').on('click',function(e){
 		var self = $(this);
-		self.next().toggle();
+		toggleLayer(self);
 		e.preventDefault();
 	});
 	$('.section_faq .search_select .select_layer .select_layer_opt').on('click',function(e){
@@ -151,7 +166,7 @@ $(document).ready(function(e) {
 	});
 	$('.section_faq .tab a').on('click',function(e){
 		var self = $(this);
-		self.addClass('on').siblings().removeClass('on');
+		tabMenu(self);
 		e.preventDefault();
 	});
 
@@ -169,5 +184,18 @@ $(document).ready(function(e) {
 		e.preventDefault();
 	});
 
+	//VIDEO
+	$('.section_video .video_tab .video_tab_btn').on('click',function(e){
+		var self = $(this);
+		tabMenu(self);
+		e.preventDefault();
+	});
+
+	//CLOUD
+	$('.section_library .tab a').on('click',function(e){
+		var self = $(this);
+		tabMenu(self);
+		e.preventDefault();
+	});
 
 });

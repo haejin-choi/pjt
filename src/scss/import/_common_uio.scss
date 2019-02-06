@@ -38,22 +38,40 @@
     width: 100%;
     margin-bottom: 50px;
     border:1px solid #e0e0e0;
+    box-sizing: border-box;
     background: #fbfbfb;
     a{
         display: table-cell;
-        height: 58px;
+        position: relative;
         text-align: center;
         font-size: 18px;
+        line-height: 58px;
         color: #666;
-        vertical-align: middle;
-        &.on{
-            color: #fff;
-            background: $colorRed;
-        }
+    }
+    a+a:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 1px;
+        height: 16px;
+        margin: auto;
+        background-color: #e8e8e8;
+    }
+    a.on{
+        color: #fff;
+        background: $colorRed;
+    }
+    a.on:before{
+        display: none;
     }
 }
 
 // 버튼
+.ico_video_s{
+    @include get-icon-sprite(ico_video_s, $sp_hepa);
+}
 .ico_download{
     @include get-icon-sprite(ico_bridge_down, $sp_hepa);
     margin: -2px 6px 2px 0;
@@ -94,6 +112,7 @@
 // 셀렉트박스
 .dropdown{
     display: inline-block;
+    position: relative;
     width: 300px;
     border-bottom: 1px solid #000;
     text-align: left;
@@ -104,22 +123,22 @@
         font-size: 16px;
         color: #666;
         line-height: 55px;
-
         &:after{
-            content: '';
+            @include get-icon-sprite(ico_town_arr, $sp_hepa);
             position: absolute;
-            top: 20px;
+            top: 0;
             right: 8px;
-            width: 5px;
-            height: 5px;
-            background: red;
+            bottom: 0;
+            margin: auto;
         }
     }
     .dropdown_layer{
+        display: none;
         position: absolute;
         top: 56px;
         left:0;
         right:0;
+        z-index: 900;
         padding: 0 28px;
         border: 1px solid #eaeaea;
         border-top:none;
@@ -172,7 +191,7 @@
         float:left;
         width: 10px;
         height: 10px;
-        margin-right: -7px; 
+        margin-right: -7px;
         border: 2px solid #aaa;
         border-width: 2px 2px 0 0;
         transform: rotate(45deg) scale(-1);
