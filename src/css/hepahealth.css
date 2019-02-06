@@ -475,6 +475,85 @@ mark {
 	right: 0;
 }
 
+.path_area {
+	padding: 40px 0 23px 0;
+	margin-bottom: 80px;
+	border-bottom: 1px solid #dedede;
+	text-align: right;
+}
+
+.path_area a {
+	display: inline-block;
+	margin-left: 11px;
+	font-size: 12px;
+	line-height: 15px;
+	color: #989898;
+	vertical-align: top;
+}
+
+.path_area a::after {
+	width: 3px;
+	height: 5px;
+	background-position: -289px -91px;
+	margin: 4px 0 0 11px;
+	vertical-align: top;
+}
+
+.path_area strong {
+	display: inline-block;
+	margin-left: 11px;
+	border-bottom: 2px solid #d4d4d4;
+	font-size: 12px;
+	line-height: 15px;
+	color: #000;
+	font-weight: normal;
+	vertical-align: top;
+}
+
+.tab {
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+	margin-bottom: 50px;
+	border: 1px solid #e0e0e0;
+	background: #fbfbfb;
+}
+
+.tab a {
+	display: table-cell;
+	height: 58px;
+	text-align: center;
+	font-size: 18px;
+	color: #666;
+	vertical-align: middle;
+}
+
+.tab a.on {
+	color: #fff;
+	background: #cb2e3c;
+}
+
+.ico_download {
+	width: 14px;
+	height: 18px;
+	background-position: -236px -127px;
+	margin: -2px 6px 2px 0;
+}
+
+.ico_favorite {
+	width: 14px;
+	height: 14px;
+	background-position: -200px -151px;
+	margin: -2px 6px 2px 0;
+}
+
+.ico_email {
+	width: 20px;
+	height: 13px;
+	background-position: -284px -105px;
+	margin: -2px 6px 2px 0;
+}
+
 .btn_border {
 	overflow: hidden;
 	display: inline-block;
@@ -670,85 +749,6 @@ mark {
 
 .container .content:after {
 	left: 100%;
-}
-
-.path_area {
-	padding: 40px 0 23px 0;
-	margin-bottom: 80px;
-	border-bottom: 1px solid #dedede;
-	text-align: right;
-}
-
-.path_area a {
-	display: inline-block;
-	margin-left: 11px;
-	font-size: 12px;
-	line-height: 15px;
-	color: #989898;
-	vertical-align: top;
-}
-
-.path_area a::after {
-	width: 3px;
-	height: 5px;
-	background-position: -289px -91px;
-	margin: 4px 0 0 11px;
-	vertical-align: top;
-}
-
-.path_area strong {
-	display: inline-block;
-	margin-left: 11px;
-	border-bottom: 2px solid #d4d4d4;
-	font-size: 12px;
-	line-height: 15px;
-	color: #000;
-	font-weight: normal;
-	vertical-align: top;
-}
-
-.tab {
-	display: table;
-	table-layout: fixed;
-	width: 100%;
-	margin-bottom: 50px;
-	border: 1px solid #e0e0e0;
-	background: #fbfbfb;
-}
-
-.tab a {
-	display: table-cell;
-	height: 58px;
-	text-align: center;
-	font-size: 18px;
-	color: #666;
-	vertical-align: middle;
-}
-
-.tab a.on {
-	color: #fff;
-	background: #cb2e3c;
-}
-
-.ico_download {
-	width: 14px;
-	height: 18px;
-	background-position: -236px -127px;
-	margin: -2px 6px 2px 0;
-}
-
-.ico_favorite {
-	width: 14px;
-	height: 14px;
-	background-position: -200px -151px;
-	margin: -2px 6px 2px 0;
-}
-
-.ico_email {
-	width: 20px;
-	height: 13px;
-	background-position: -284px -105px;
-	margin: -2px 6px 2px 0;
 }
 
 .section_pi .btn_area {

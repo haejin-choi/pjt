@@ -1,6 +1,71 @@
-// 게시판
 
-// 
+
+// 패스
+.path_area{
+    padding: 40px 0 23px 0;
+    margin-bottom: 80px;
+    border-bottom: 1px solid #dedede;
+    text-align: right;
+    a{
+        display: inline-block;
+        margin-left: 11px;
+        font-size: 12px;
+        line-height: 15px;
+        color: #989898;
+        vertical-align: top;
+        &::after{
+            @include get-icon-sprite(ico_path_arr, $sp_hepa);
+            margin: 4px 0 0 11px;
+            vertical-align: top;
+        }
+    }
+    strong{
+        display: inline-block;
+        margin-left: 11px;
+        border-bottom: 2px solid #d4d4d4;
+        font-size: 12px;
+        line-height: 15px;
+        color: #000;
+        font-weight: normal;
+        vertical-align: top;
+    }
+}
+
+// 탭메뉴
+.tab{
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    margin-bottom: 50px;
+    border:1px solid #e0e0e0;
+    background: #fbfbfb;
+    a{
+        display: table-cell;
+        height: 58px;
+        text-align: center;
+        font-size: 18px;
+        color: #666;
+        vertical-align: middle;
+        &.on{
+            color: #fff;
+            background: $colorRed;
+        }
+    }
+}
+
+// 버튼
+.ico_download{
+    @include get-icon-sprite(ico_bridge_down, $sp_hepa);
+    margin: -2px 6px 2px 0;
+}
+.ico_favorite{
+    @include get-icon-sprite(ico_bridge_fav, $sp_hepa);
+    margin: -2px 6px 2px 0;
+}
+.ico_email{
+    @include get-icon-sprite(ico_bridge_email, $sp_hepa);
+    margin: -2px 6px 2px 0;
+}
 .btn_border{
     overflow: hidden;
     display: inline-block;
