@@ -66,6 +66,45 @@ $(document).ready(function(e) {
 		e.preventDefault();
 	});
 
+	//scrollStatus
+	function scrollStatus(){
+		var docTop = doc.scrollTop();
+		if(docTop >= 0){
+			header.removeClass('active');
+			header.css({
+				'background-color':'transparent'
+			})
+		}
+		if(docTop >= 60){
+			header.removeClass('active');
+			header.css({
+				'background-color' : 'rgba(255,255,255,.2)'
+			})
+		}
+		if(docTop >= 120){
+			header.removeClass('active');
+			header.css({
+				'background-color' : 'rgba(255,255,255,.4)'
+			})
+		}
+		if(docTop >= 180){
+			header.addClass('active');
+            header.css({
+                'background-color' : 'rgba(255,255,255,.6)'
+            });
+		}
+		if(docTop >= 240){
+			header.css({
+                'background-color' : 'rgba(255,255,255,.8)'
+            });
+		}
+		if(docTop >= 300){
+			header.css({
+                'background-color' : 'rgba(255,255,255,1)'
+            });
+		}
+	}
+
 	//header
 	var gnbLayer = $('.layer_setting');
 	$('.header_search .item_setting').on('click',function(e){
@@ -76,9 +115,11 @@ $(document).ready(function(e) {
 	var lnb = $('.lnb');
 	var snb = $('.snb');
 	function slideDown(){
+		header.addClass('active');
 		header.css({
 			'overflow-y':'hidden',
-			'overflow-x':'auto'
+			'overflow-x':'auto',
+			'background-color':'#fff'
 		});
 		lnb.show();
 		lnb.stop().animate({
@@ -91,6 +132,7 @@ $(document).ready(function(e) {
 		snb.hide();
 	}
 	function slideUp(){
+		scrollStatus();
 		header.css({
 			'overflow':'visible'
 		});
@@ -144,44 +186,9 @@ $(document).ready(function(e) {
 
 	//HOME
 	var doc = $(document);
-	doc.on('scroll',function(e){
-		var t = $(e.target);
-		var tTop = t.scrollTop();
-
-		if (tTop >= 0) {
-			header.removeClass('active');
-			header.css({
-				'background-color' : 'transparent'
-			});
-		}
-		if (tTop >= 60) {
-            header.css({
-                'background-color' : 'rgba(255,255,255,.2)'
-            });
-        }
-        if (tTop >= 120) {
-            header.css({
-                'background-color' : 'rgba(255,255,255,.4)'
-            });
-        }
-        if (tTop >= 180) {
-			header.addClass('active');
-            header.css({
-                'background-color' : 'rgba(255,255,255,.6)'
-            });
-        }
-        if (tTop >= 240) {
-            header.css({
-                'background-color' : 'rgba(255,255,255,.8)'
-            });
-        }
-        if (tTop >= 300) {
-            header.css({
-                'background-color' : 'rgba(255,255,255,1)'
-            });
-        }
+	doc.on('scroll',function(){
+		scrollStatus();
 	});
-
 
 	//TOWN
 	$('.section_faq .search_select .select_btn').on('click',function(e){

@@ -219,14 +219,15 @@ table {
 	width: 17px;
 	height: 17px;
 	background-position: -302px -105px;
-	margin: -1px 0 1px;
+	margin: -2px 0 2px;
 }
 
 #header .layer_setting {
 	display: none;
 	position: absolute;
-	top: 50px;
+	top: 38px;
 	right: 32px;
+	padding-top: 11px;
 }
 
 #header .layer_setting:before {
@@ -234,8 +235,8 @@ table {
 	height: 11px;
 	background-position: -245px -132px;
 	position: absolute;
-	top: -11px;
-	right: 30px;
+	top: 0;
+	right: 26px;
 }
 
 #header .layer_setting .wrap_setting {
@@ -243,8 +244,8 @@ table {
 	height: 70px;
 	-webkit-border-radius: 10px;
 	        border-radius: 10px;
-	-webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
-	        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+	-webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.13), -1px -1px 1px rgba(0, 0, 0, 0.13);
+	        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.13), -1px -1px 1px rgba(0, 0, 0, 0.13);
 	background: #fff;
 }
 
@@ -343,7 +344,7 @@ table {
 #header .lnb .lnb_menu .item_menu_wrap .item_menu {
 	display: block;
 	text-align: center;
-	font-size: 16px;
+	font-size: 20px;
 	font-weight: bold;
 	line-height: 50px;
 	color: #101a34;

@@ -119,26 +119,27 @@
             vertical-align: top;
             .ico_setting{
                 @include get-icon-sprite(ico_home_setting, $sp_hepa);
-                margin: -1px 0 1px;
+                margin: -2px 0 2px;
             }
         }
     }
     .layer_setting{
         display: none;
         position: absolute;
-        top: 50px;
+        top: 38px;
         right: 32px;
+        padding-top: 11px;
         &:before{
             @include get-icon-sprite(ico_gnb_arr, $sp_hepa);
             position: absolute;
-            top: -11px;
-            right: 30px;
+            top: 0;
+            right: 26px;
         }
         .wrap_setting{
             overflow: hidden;
             height: 70px;
             border-radius: 10px;
-            box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+            box-shadow: 1px 1px 1px rgba(0,0,0,0.13),-1px -1px 1px rgba(0,0,0,0.13);
             background: #fff;
         }
         .item_setting{
@@ -212,7 +213,7 @@
                 .item_menu{
                     display: block;
                     text-align: center;
-                    font-size: 16px;
+                    font-size: 20px;
                     font-weight: bold;
                     line-height: 50px;
                     color: #101a34;
