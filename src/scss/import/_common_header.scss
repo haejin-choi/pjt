@@ -1,8 +1,11 @@
 // 홈
 #wrap{
+    position: relative;
     min-width: $contentWidth;
     width: 100%;
-    position: relative;
+    min-height: 100%;
+    padding-bottom: 100px;
+    box-sizing: border-box;
 }
 #header{
     z-index: 100;
@@ -15,6 +18,11 @@
         content: '';
         display: block;
         clear: both;
+    }
+    &.expanded{
+        overflow: hidden;
+        overflow-x: auto;
+        background-color: #fff !important;
     }
     &.active{
         .logo{
@@ -179,6 +187,7 @@
         }
     }
     .lnb{
+        overflow: hidden;
         position: relative;
         z-index: 10;
         height: 0;
@@ -227,8 +236,8 @@
     .snb{
         position: absolute;
         top: 100px;
-        left:0;
-        right:0;
+        right: 0;
+        left: 0;
         height: 59px;
         border-bottom: 1px solid #ebebeb;
         background: #fff;

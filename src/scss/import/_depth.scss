@@ -632,23 +632,25 @@
                 min-width: 278px;
             }
             .text{
-                width: 558px;
-                height: 38px;
+                width: 580px;
+                height: 40px;
                 margin: 0;
                 padding: 0 10px;
                 border: 1px solid #eaeaea;
+                box-sizing: border-box;
                 font-size: 16px;
-                line-height: 38px;
+                line-height: 40px;
                 color: #333;
                 vertical-align: top;
             }
             .textarea{
                 display: block;
-                width: 842px;
-                height: 264px;
+                width: 864px;
+                height: 286px;
                 margin: 12px 0 20px;
                 padding: 10px;
                 border: 1px solid #eaeaea;
+                box-sizing: border-box;
                 font-size: 16px;
                 line-height: 30px;
                 color: #333;
@@ -659,7 +661,7 @@
                     min-width: 98px;
                 }
                 .text{
-                    width: 62px;
+                    width: 86px;
                 }
             }
         }

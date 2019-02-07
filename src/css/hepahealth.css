@@ -4,11 +4,18 @@ body, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, th, td, form, fi
 }
 
 body, input, textarea, select, table, button, code {
-	font-family: -apple-system,BlinkMacSystemFont,helvetica,Apple SD Gothic Neo,sans-serif;
+	font-family: 'Spoqa Han Sans',-apple-system,BlinkMacSystemFont,helvetica,Apple SD Gothic Neo,sans-serif;
 	line-height: 1.6em;
 }
 
+html {
+	width: 100%;
+	height: 100%;
+}
+
 body {
+	width: 100%;
+	height: 100%;
 	-webkit-text-size-adjust: none;
 }
 
@@ -74,9 +81,13 @@ table {
 }
 
 #wrap {
+	position: relative;
 	min-width: 1720px;
 	width: 100%;
-	position: relative;
+	min-height: 100%;
+	padding-bottom: 100px;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 }
 
 #header {
@@ -93,6 +104,12 @@ table {
 	content: '';
 	display: block;
 	clear: both;
+}
+
+#header.expanded {
+	overflow: hidden;
+	overflow-x: auto;
+	background-color: #fff !important;
 }
 
 #header.active .logo .ico_logo {
@@ -301,6 +318,7 @@ table {
 }
 
 #header .lnb {
+	overflow: hidden;
 	position: relative;
 	z-index: 10;
 	height: 0;
@@ -357,8 +375,8 @@ table {
 #header .snb {
 	position: absolute;
 	top: 100px;
-	left: 0;
 	right: 0;
+	left: 0;
 	height: 59px;
 	border-bottom: 1px solid #ebebeb;
 	background: #fff;
@@ -557,13 +575,14 @@ table {
 	width: 3px;
 	height: 5px;
 	background-position: -286px -66px;
-	margin: 4px 0 0 11px;
-	vertical-align: top;
+	margin: -1px 0 1px 11px;
+	vertical-align: middle;
 }
 
 .path_area strong {
 	display: inline-block;
 	margin-left: 11px;
+	padding: 0;
 	border-bottom: 2px solid #d4d4d4;
 	font-size: 12px;
 	line-height: 15px;
@@ -1523,24 +1542,28 @@ table {
 }
 
 .section_request .request_area .cont .text {
-	width: 558px;
-	height: 38px;
+	width: 580px;
+	height: 40px;
 	margin: 0;
 	padding: 0 10px;
 	border: 1px solid #eaeaea;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 	font-size: 16px;
-	line-height: 38px;
+	line-height: 40px;
 	color: #333;
 	vertical-align: top;
 }
 
 .section_request .request_area .cont .textarea {
 	display: block;
-	width: 842px;
-	height: 264px;
+	width: 864px;
+	height: 286px;
 	margin: 12px 0 20px;
 	padding: 10px;
 	border: 1px solid #eaeaea;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 	font-size: 16px;
 	line-height: 30px;
 	color: #333;
@@ -1552,7 +1575,7 @@ table {
 }
 
 .section_request .request_area .cont.type_phone .text {
-	width: 62px;
+	width: 86px;
 }
 
 .section_request .btn_request {
@@ -1903,6 +1926,10 @@ table {
 
 #footer {
 	overflow: hidden;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
 	height: 105px;
 	background-color: #444;
 }

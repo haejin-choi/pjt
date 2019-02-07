@@ -146,6 +146,10 @@
 
 #footer{
     overflow: hidden;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
     height: 105px;
     background-color: #444;
     .wrap_cont{

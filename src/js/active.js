@@ -42,10 +42,7 @@ $(document).ready(function(e) {
 	    var $listItems = $list.children('li');
 	    $styledSelect.click(function (e) {
 	        e.stopPropagation();
-	        $('div.styledSelect.active').each(function () {
-	            $(this).removeClass('active').next('ul.options').hide();
-	        });
-	        $(this).toggleClass('active').next('ul.options').toggle();
+	        $(this).toggleClass('active').next('ul.options').slideToggle(200);
 	    });
 	    $listItems.click(function (e) {
 	        e.stopPropagation();
@@ -55,15 +52,20 @@ $(document).ready(function(e) {
 	    });
 	    $(document).click(function () {
 	        $styledSelect.removeClass('active');
-	        $list.hide();
+	        $list.slideUp(200);
 	    });
 	});
 
-	//dropdown
-	$('.dropdown .btn_dropdown').on('click',function(e){
+	$('.btn_dropdown').each(function(){
 		var self = $(this);
-		toggleLayer(self);
-		e.preventDefault();
+		self.click(function(e){
+			e.stopPropagation();
+			toggleLayer(self);
+			e.preventDefault();
+		});
+		$(document).click(function () {
+			self.next().slideUp(200);
+	    });
 	});
 
 	//scrollStatus
@@ -115,12 +117,7 @@ $(document).ready(function(e) {
 	var lnb = $('.lnb');
 	var snb = $('.snb');
 	function slideDown(){
-		header.addClass('active');
-		header.css({
-			'overflow-y':'hidden',
-			'overflow-x':'auto',
-			'background-color':'#fff'
-		});
+		header.addClass('active expanded');
 		lnb.show();
 		lnb.stop().animate({
 			opacity:1,
@@ -133,9 +130,7 @@ $(document).ready(function(e) {
 	}
 	function slideUp(){
 		scrollStatus();
-		header.css({
-			'overflow':'visible'
-		});
+		header.removeClass('expanded');
 		lnb.stop().animate({
 			opacity:0,
 			height:0
@@ -191,10 +186,16 @@ $(document).ready(function(e) {
 	});
 
 	//TOWN
-	$('.section_faq .search_select .select_btn').on('click',function(e){
+	$('.select_btn').each(function(){
 		var self = $(this);
-		toggleLayer(self);
-		e.preventDefault();
+		self.click(function(e){
+			e.stopPropagation();
+			toggleLayer(self);
+			e.preventDefault();
+		});
+		$(document).click(function () {
+			self.next().slideUp(200);
+	    });
 	});
 	$('.section_faq .search_select .select_layer .select_layer_opt').on('click',function(e){
 		var self = $(this);
