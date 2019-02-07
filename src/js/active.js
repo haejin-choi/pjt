@@ -143,19 +143,9 @@ $(document).ready(function(e) {
 		});
 		snb.show();
 	}
-	$('.gnb_item').hover(
-		function() {
-		  slideDown();
-		},
-		function() {
-		  slideUp();
-		}
-	);
-	$('.lnb').hover(
-		function() {
-			slideDown();
-		}
-	);
+	$('.gnb_item').on('mouseover',function(){
+		slideDown();
+	});
 	$('#header').on('mouseleave',function(){
 		slideUp();
 	});

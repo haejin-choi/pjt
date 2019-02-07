@@ -53,6 +53,16 @@ table {
 	border-collapse: collapse;
 }
 
+input[type=text], input[type=image], button, input[type=button], input[type=submit], textarea {
+	-webkit-appearance: none;
+	-webkit-text-size-adjust: none;
+	-webkit-border-radius: 0;
+}
+
+input::-ms-clear {
+	display: none;
+}
+
 .blind {
 	overflow: hidden !important;
 	position: absolute !important;
@@ -106,39 +116,39 @@ table {
 	clear: both;
 }
 
-#header.expanded {
-	overflow: hidden;
-	overflow-x: auto;
-	background-color: #fff !important;
-}
-
-#header.active .logo .ico_logo {
+#header.active .logo .ico_logo, #header.expanded .logo .ico_logo {
 	width: 168px;
 	height: 36px;
 	background-position: 0px -131px;
 }
 
-#header.active .gnb .gnb_item {
+#header.active .gnb .gnb_item, #header.expanded .gnb .gnb_item {
 	color: #000;
 }
 
-#header.active .header_search {
+#header.active .header_search, #header.expanded .header_search {
 	color: #000;
 }
 
-#header.active .header_search .item_search .input_label_sch {
+#header.active .header_search .item_search .input_label_sch, #header.expanded .header_search .item_search .input_label_sch {
 	border-color: rgba(0, 0, 0, 0.5);
 	color: #000;
 }
 
-#header.active .header_search .item_setting .ico_setting {
+#header.active .header_search .item_setting .ico_setting, #header.expanded .header_search .item_setting .ico_setting {
 	width: 17px;
 	height: 17px;
 	background-position: -200px -132px;
 }
 
-#header.active .snb {
+#header.active .snb, #header.expanded .snb {
 	border-top: 1px solid #ebebeb;
+}
+
+#header.expanded {
+	overflow: hidden;
+	overflow-x: auto;
+	background-color: #fff !important;
 }
 
 #header .logo {
@@ -211,13 +221,17 @@ table {
 
 #header .header_search .item_search .input_label_sch {
 	width: 90px;
-	margin-right: 15px;
-	border: none;
+	height: 22px;
+	margin: 0 15px 0 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	border: 0;
 	border-bottom: 2px solid rgba(255, 255, 255, 0.5);
 	line-height: 15px;
 	color: #fff;
-	background: none;
 	vertical-align: top;
+	background: none;
 }
 
 #header .header_search .item_link {
