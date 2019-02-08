@@ -11,6 +11,22 @@ if(ua.search('mobile') == '-1'){
 }
 
 $(document).ready(function(e) {
+	// menuIdx = $('#wrap').attr('class');
+	// snb 위치잡기
+	function snbOffset(){
+		var fisrtOffset = ($('.gnb_item span').position().left) - 40;
+		$('.snb_menu').css({
+			'left' : fisrtOffset
+		})
+		// console.log(menuIdx);
+	}
+	snbOffset();
+
+	$(window).resize(function() {
+		snbOffset()
+	})
+
+	
 	//common
 	function toggleLayer(elm){
 		var self = $(elm);
@@ -123,7 +139,7 @@ $(document).ready(function(e) {
 			opacity:1,
 			height:250
 		},{
-			duration: 200,
+			duration: 150,
 			easing: "linear"
 		});
 		snb.hide();
@@ -135,7 +151,7 @@ $(document).ready(function(e) {
 			opacity:0,
 			height:0
 		},{
-			duration: 200,
+			duration: 150,
 			easing: "linear",
 			done:function(){
 				lnb.hide();

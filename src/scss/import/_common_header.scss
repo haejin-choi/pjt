@@ -1,7 +1,7 @@
 // 홈
 #wrap{
     position: relative;
-    min-width: $contentWidth;
+    min-width: 1260px;
     width: 100%;
     min-height: 100%;
     padding-bottom: 100px;
@@ -59,33 +59,36 @@
             @include get-icon-sprite(ico_home_logo, $sp_hepa);
         }
     }
-    .fr{
-        position: absolute;
-        top:0;
-        bottom:0;
-        right:0;
-        vertical-align: bottom;
-    }
     .wrap_cont{
         z-index: 20;
         position: relative;
-        width: $contentWidth;
+        max-width: $contentWidth;
+        min-width: 1200px;
         height: 100px;
         margin: 0 auto;
+        text-align: right;
     }
     .gnb{
-        display: inline-block;
         overflow: hidden;
-        margin-top: 40px;
+        display: table;
+        table-layout: fixed;
+        width: 73.3%;
+        float: right;
+        padding-top: 40px;
         font-family: Titillium Web,sans-serif;
+        vertical-align: top;
+        white-space: nowrap;
+        font-size: 0;
         .gnb_item{
-            float: left;
-            width: 252px;
+            width: 20%;
+            display: table-cell;
             font-size: 24px;
             line-height: 60px;
             font-weight: bold;
             color: #fff;
             text-align: center;
+            vertical-align: top;
+            span{background: forestgreen}
             &:hover{
                 color: $colorBlue;
             }
@@ -93,17 +96,19 @@
     }
     .header_search{
         position: absolute;
-        top: 13px;
+        top: 11px;
         right: 60px;
         line-height: 23px;
         color: rgba(255,255,255,.5);
         .item_search{
             display: inline-block;
-            vertical-align: top;
+            vertical-align: bottom;
             .label_sch{
+                display: inline-block;
                 margin-right: 5px;
                 font-size: 13px;
-                vertical-align: top;
+                line-height: 14px;
+                vertical-align: bottom;
             }
             .input_label_sch{
                 width: 90px;
@@ -115,7 +120,7 @@
                 border-bottom: 2px solid rgba(255,255,255,.5);
                 line-height: 15px;
                 color: #fff;
-                vertical-align: top;
+                vertical-align: bottom;
                 background: none;
             }
         }
@@ -123,14 +128,15 @@
             display: inline-block;
             margin-right: 15px;
             font-size: 12px;
-            vertical-align: top;
+            line-height: 14px;
+            vertical-align: bottom;
         }
         .item_setting{
             display: inline-block;
-            vertical-align: top;
+            vertical-align: bottom;
             .ico_setting{
                 @include get-icon-sprite(ico_home_setting, $sp_hepa);
-                margin: -2px 0 2px;
+                margin: 2px 0 -2px;
             }
         }
     }
@@ -156,7 +162,7 @@
         .item_setting{
             position: relative;
             float: left;
-            width:65px;
+            width: 65px;
             margin: 15px 0 0 0;
             align-content: center;
             color: #014592;
@@ -196,11 +202,11 @@
         height: 0;
         background: #fff;
         opacity: 0;
-        min-width: $contentWidth;
+        min-width: 1200px;
         border-top: 1px solid #d6d7d5;
         .wrap_lnb_cont{
             overflow: hidden;
-            width: $contentWidth;
+            max-width: $contentWidth;
             margin: 0 auto;
         }
         .lnb_item{
@@ -213,12 +219,14 @@
             }
         }
         .lnb_menu{
-            overflow:hidden;
             float: right;
+            display: table;
+            table-layout: fixed;
+            width: 73.3%;
             border-right: 1px solid #d6d7d5;
             .item_menu_wrap{
-                float: left;
-                width: 251px;
+                display: table-cell;
+                width: 20%;
                 height: 220px;
                 padding-top: 30px;
                 border-left: 1px solid #d6d7d5;
@@ -246,9 +254,10 @@
         background: #fff;
         .wrap_snb_cont{
             position: relative;
-            width: $contentWidth;
+            max-width: $contentWidth;
             margin: 0 auto;
         }
+        
         .snb_menu{
             display: inline-block;
             overflow:hidden;
@@ -347,4 +356,12 @@
     .visual_area{
         background: purple;
     }
+}
+
+@media all and (max-width:1274px){
+    #header{
+        .gnb .gnb_item{
+            font-size: 23px;
+        }    
+    } 
 }

@@ -3,7 +3,6 @@
 
 @import "./common/base";
 @import "./common/variable";
-//@import "common/placeholders";
 @import "./common/mixin";
 @import "./common/sprite_maps";
 //
@@ -18,8 +17,8 @@
 .spim_af:after{content:''}
 
 @import "import/_common_header"; // 공통헤더
-@import "import/_common_uio"; // 공통요소(페이징,버튼)
+@import "import/_common_uio"; // 공통요소(페이징,버튼,경로)
 
-@import "import/_depth"; // 로그인
+@import "import/_depth"; // 
 @import "import/_login"; // 로그인
 @import "import/_home"; // 홈

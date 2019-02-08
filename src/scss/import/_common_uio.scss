@@ -200,11 +200,9 @@
         border-top:none;
         background: #fff;
         .dropdown_item{
-            overflow: hidden;
+            @include ells;
             display: block;
             line-height: 54px;
-            text-overflow: ellipsis;
-            white-space: nowrap;
             + .dropdown_item{
                 border-top: 1px dashed #e7e7e7;
             }

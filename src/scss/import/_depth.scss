@@ -20,25 +20,37 @@
     }
 }
 .container .content{
+    z-index: 10;
     position: relative;
     width: 1160px;
     padding: 40px 50px 120px;
     margin: 0 auto;
     background: #fff;
+}
+.bg_content_shadow{
+    overflow: hidden;
+    position: absolute;
+    top: 357px;
+    left:0;
+    right:0;
+    height: 40px;
     &:before,&:after{
         content: '';
         position: absolute;
-        top: 22px;
+        top: 0;
+        left: 50%;
         width: 32px;
         height: 34px;
         background: url(../img/bg_sub_gr.png) no-repeat 0 0;
+        // border: 1px solid blue;
     }
     &:before{
-        right: 100%;
+        margin-left: -662px;
         transform: scaleX(-1);
     }
     &:after{
-        left: 100%;
+        margin-left: 630px;
+        
     }
 }
 
@@ -172,13 +184,11 @@
                 position: relative;
             }
             .title{
-                overflow: hidden;
+                @include ells;
                 margin-top: 15px;
                 font-size: 14px;
                 line-height: 16px;
                 color: #666;
-                white-space: nowrap;
-                text-overflow: ellipsis;
             }
             .time{
                 display: block;
@@ -243,9 +253,7 @@
            }
        }
        .title{
-           overflow: hidden;
-           text-overflow: ellipsis;
-           white-space: nowrap;
+           @include ells;
            font-size: 16px;
            line-height: 20px;
            color: #333;
