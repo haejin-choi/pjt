@@ -79,13 +79,21 @@
             margin: 0 auto;
             .wrap_input{
                 height: 50px;
+                padding: 0 35px;
                 margin-bottom: 15px;
                 border-radius: 25px;
-                background: lightgray;
+                background: #efefef;
                 input{
                     width: 100%;
                     padding: 0;
-                    background: transparent;
+                    margin-top: 13px;
+                    font-size: 14px;
+                    border: none;
+                    background: none;
+                    vertical-align: top;
+                    &::-webkit-input-placeholder{
+                        color: #bebebe;
+                    }
                 }
             }
             .btn_submit{
@@ -111,8 +119,29 @@
                 text-decoration: underline;
                 color: $colorBlue;
             }
-            .btn_remember{
+            .btn_save{
                 float: right;
+                
+                .label_save{
+                    &::before{
+                        @include get-icon-sprite(bg_check, $sp_hepa);
+                        content: '';
+                        display: inline-block;
+                        margin: 0 9px 0 0;
+                        vertical-align: top;
+                    }
+                    display: inline-block;
+                    font-size: 14px;
+                    color: #333;
+                    line-height: 22px;
+                    vertical-align: top;
+                }
+                .check_save{
+                    display: none;
+                    &:checked + .label_save:before{
+                        @include get-icon-sprite(bg_check_on, $sp_hepa);
+                    }
+                }
             }
         }
 

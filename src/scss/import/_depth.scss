@@ -345,6 +345,17 @@
             }
             .search_input{
                 float: left;
+                .search_input_form{
+                    width: 550px;    
+                    border: none;
+                    padding-left: 40px;
+                    margin: 25px 0 0 0;
+                    font-size: 14px;
+                    vertical-align: top;
+                    &::-webkit-input-placeholder{
+                        color: #989898;
+                    }
+                }
             }
         }
         .btn_colored{
