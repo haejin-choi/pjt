@@ -119,7 +119,7 @@ input::-ms-clear {
 	min-width: 1260px;
 	width: 100%;
 	min-height: 100%;
-	padding-bottom: 100px;
+	padding-bottom: 105px;
 	-webkit-box-sizing: border-box;
 	        box-sizing: border-box;
 }
