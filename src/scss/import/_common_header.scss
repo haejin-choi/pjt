@@ -1,8 +1,6 @@
 // 홈
 #wrap{
     position: relative;
-    min-width: $contentWidth;
-    width: 100%;
     min-height: 100%;
     padding-bottom: 100px;
     box-sizing: border-box;
@@ -53,7 +51,7 @@
     }
     .logo{
         float: left;
-        margin-left: 60px;
+        margin-left: 3.5%;
         padding: 30px 0;
         .ico_logo{
             @include get-icon-sprite(ico_home_logo, $sp_hepa);
@@ -69,23 +67,29 @@
     .wrap_cont{
         z-index: 20;
         position: relative;
-        width: $contentWidth;
+        max-width: $contentWidth;
         height: 100px;
         margin: 0 auto;
     }
     .gnb{
-        display: inline-block;
-        overflow: hidden;
+        display: table;
+        table-layout: fixed;
+        float: right;
+        width: 73.3%;
         margin-top: 40px;
         font-family: Titillium Web,sans-serif;
+        vertical-align: top;
+        white-space: nowrap;
+        font-size: 0;
         .gnb_item{
-            float: left;
-            width: 252px;
+            display: table-cell;
+            width: 20%;
             font-size: 24px;
             line-height: 60px;
             font-weight: bold;
             color: #fff;
             text-align: center;
+            vertical-align: top;
             &:hover{
                 color: $colorBlue;
             }
@@ -196,11 +200,10 @@
         height: 0;
         background: #fff;
         opacity: 0;
-        min-width: $contentWidth;
         border-top: 1px solid #d6d7d5;
         .wrap_lnb_cont{
             overflow: hidden;
-            width: $contentWidth;
+            max-width: $contentWidth;
             margin: 0 auto;
         }
         .lnb_item{
@@ -213,12 +216,14 @@
             }
         }
         .lnb_menu{
-            overflow:hidden;
             float: right;
+            display: table;
+            table-layout: fixed;
+            width: 73.3%;
             border-right: 1px solid #d6d7d5;
             .item_menu_wrap{
-                float: left;
-                width: 251px;
+                display: table-cell;
+                width: 20%;
                 height: 220px;
                 padding-top: 30px;
                 border-left: 1px solid #d6d7d5;
@@ -246,7 +251,7 @@
         background: #fff;
         .wrap_snb_cont{
             position: relative;
-            width: $contentWidth;
+            max-width: $contentWidth;
             margin: 0 auto;
         }
         .snb_menu{
