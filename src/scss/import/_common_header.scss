@@ -88,7 +88,6 @@
             color: #fff;
             text-align: center;
             vertical-align: top;
-            span{background: forestgreen}
             &:hover{
                 color: $colorBlue;
             }
@@ -244,115 +243,98 @@
             }
         }
     }
-    .snb{
-        position: absolute;
-        top: 100px;
-        right: 0;
-        left: 0;
-        height: 59px;
-        border-bottom: 1px solid #ebebeb;
-        background: #fff;
-        .wrap_snb_cont{
-            position: relative;
-            max-width: $contentWidth;
-            margin: 0 auto;
-        }
+}
+.snb{
+    position: absolute;
+    top: 100px;
+    right: 0;
+    left: 0;
+    height: 59px;
+    border-bottom: 1px solid #ebebeb;
+    background: #fff;
+    .wrap_snb_cont{
+    }
 
-        .snb_menu{
-            display: inline-block;
-            overflow:hidden;
-            position: absolute;
-            top: 0;
-        }
-        .item_menu_wrap{
-            float: left;
-            .item_menu_link{
-                display: block;
-                padding: 0 45px;
-                line-height: 60px;
-                text-align: center;
-                font-size: 18px;
-                color: #101a34;
-                font-weight: bold;
-                &:hover,
-                &.on{
-                    color: $colorBlue;
-                    &:after{
-                        @include get-icon-sprite(ico_gnb_tab_on, $sp_hepa);
-                    }
-                }
+    .snb_menu{
+        overflow:hidden;
+        position: absolute;
+        top: 0;
+        white-space: nowrap;
+    }
+    .item_menu_wrap{
+        display: inline-block;
+        vertical-align: top;
+        .item_menu_link{
+            display: block;
+            padding: 0 45px;
+            line-height: 60px;
+            text-align: center;
+            font-size: 18px;
+            color: #101a34;
+            font-weight: bold;
+            &:hover,
+            &.on{
+                color: $colorBlue;
                 &:after{
-                    @include get-icon-sprite(ico_gnb_tab, $sp_hepa);
-                    margin: -2px 0 2px 10px;
+                    @include get-icon-sprite(ico_gnb_tab_on, $sp_hepa);
                 }
             }
-            .item_menu{
-                display: block;
-                text-align: center;
-                font-size: 16px;
-                font-weight: bold;
-                line-height: 50px;
-                color: #101a34;
+            &:after{
+                @include get-icon-sprite(ico_gnb_tab, $sp_hepa);
+                margin: -2px 0 2px 10px;
             }
         }
-        .item_menu_sub{
-            margin-top: -1px;
-            padding: 20px 0;
-            border: 1px solid rgba(0,0,0,0.05);
-            background: #fff;
-            .item_sub_link{
-                display: block;
-                text-align: center;
-                font-size: 16px;
-                line-height: 40px;
-                font-weight: bold;
-                color: #5b5f6a;
-                &:hover,
-                &.on{
-                    color: $colorBlue;
-                    text-decoration: underline;
-                }
+        .item_menu{
+            display: block;
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 50px;
+            color: #101a34;
+        }
+    }
+    .item_menu_sub{
+        margin-top: -1px;
+        padding: 20px 0;
+        border: 1px solid rgba(0,0,0,0.05);
+        background: #fff;
+        .item_sub_link{
+            display: block;
+            text-align: center;
+            font-size: 16px;
+            line-height: 40px;
+            font-weight: bold;
+            color: #5b5f6a;
+            &:hover,
+            &.on{
+                color: $colorBlue;
+                text-decoration: underline;
             }
         }
     }
 }
 #wrap.bridge{
-    #header .snb .snb_menu{
-        left: 468px;
-    }
     .visual_area{
         background: red;
     }
 }
 #wrap.video{
-    #header .snb .snb_menu{
-        left: 727px;
-    }
     .visual_area{
         background: orange;
     }
 }
 #wrap.cloud{
-    #header .snb .snb_menu{
-        left: 977px;
-    }
     .visual_area{
         background: gold;
     }
 }
 #wrap.town{
-    #header .snb .snb_menu{
-        left: 1231px;
-    }
     .visual_area{
         background: green;
 
     }
 }
 #wrap.contact{
-    #header .snb .snb_menu{
-        right: 16px;
-    }
     .visual_area{
         background: purple;
     }

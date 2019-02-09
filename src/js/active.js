@@ -11,21 +11,59 @@ if(ua.search('mobile') == '-1'){
 }
 
 $(document).ready(function(e) {
-	// menuIdx = $('#wrap').attr('class');
-	// snb 위치잡기
-	// function snbOffset(){
-	// 	var fisrtOffset = ($('.gnb_item span').position().left) - 40;
-	// 	$('.snb_menu').css({
-	// 		'left' : fisrtOffset
-	// 	})
-	// 	// console.log(menuIdx);
-	// }
-	// snbOffset();
-	//
-	// $(window).resize(function() {
-	// 	snbOffset()
-	// })
+	var win = $(window);
+	var doc = $(document);
 
+	function resize(){
+		win.on('resize',function(e){
+			var idx;
+			var posX;
+			var snbT = $('#wrap').attr('class');
+			var lnbMenu = $('#header .gnb .gnb_item');
+			var snbMenu = $('.snb .snb_menu');
+			switch (snbT) {
+				case 'bridge':
+					idx = 0;
+					posX = Math.floor(lnbMenu.eq(idx).find('span').offset().left-45);
+					snbMenu.css({
+						'left':posX
+					});
+					break;
+				case 'video':
+					idx = 1;
+					posX = Math.floor(lnbMenu.eq(idx).find('span').offset().left-45);
+					snbMenu.css({
+						'left':posX
+					});
+					break;
+				case 'cloud':
+					idx = 2;
+					posX = Math.floor(lnbMenu.eq(idx).find('span').offset().left-45);
+					snbMenu.css({
+						'left':posX
+					});
+					break;
+				case 'town':
+					idx = 3;
+					posX = Math.floor(lnbMenu.eq(idx).find('span').offset().left-45);
+					snbMenu.css({
+						'left':posX
+					});
+					break;
+				case 'contact':
+					idx = 4;
+					posX = Math.floor(lnbMenu.eq(idx).find('span').offset().left-snbMenu.width()+180);
+					snbMenu.css({
+						'left':posX
+					});
+					break;
+				default:
+				break;
+			}
+		});
+	}
+	resize();
+	doc.trigger('resize');
 
 	//common
 	function toggleLayer(elm){
@@ -66,7 +104,7 @@ $(document).ready(function(e) {
 	        $this.val($(this).attr('rel'));
 	        $list.hide();
 	    });
-	    $(document).click(function () {
+	    doc.click(function () {
 	        $styledSelect.removeClass('active');
 	        $list.slideUp(200);
 	    });
@@ -79,7 +117,7 @@ $(document).ready(function(e) {
 			toggleLayer(self);
 			e.preventDefault();
 		});
-		$(document).click(function () {
+		doc.click(function () {
 			self.next().slideUp(200);
 	    });
 	});
@@ -186,7 +224,6 @@ $(document).ready(function(e) {
 	});
 
 	//HOME
-	var doc = $(document);
 	doc.on('scroll',function(){
 		scrollStatus();
 	});
@@ -199,7 +236,7 @@ $(document).ready(function(e) {
 			toggleLayer(self);
 			e.preventDefault();
 		});
-		$(document).click(function () {
+		doc.click(function () {
 			self.next().slideUp(200);
 	    });
 	});
