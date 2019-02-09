@@ -163,9 +163,16 @@ $(document).ready(function(e) {
 
 	//header
 	var gnbLayer = $('.layer_setting');
-	$('.header_search .item_setting').on('click',function(e){
-		gnbLayer.toggle();
-		e.preventDefault();
+	$('.header_search .item_setting').each(function(){
+		var self = $(this);
+		self.click(function(e){
+			e.stopPropagation();
+			gnbLayer.toggle();
+			e.preventDefault();
+		});
+		doc.click(function () {
+			gnbLayer.hide();
+	    });
 	});
 	var header = $('#header');
 	var lnb = $('.lnb');
