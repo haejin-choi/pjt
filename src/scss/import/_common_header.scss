@@ -53,10 +53,13 @@
     }
     .logo{
         float: left;
+        height: 100px;
         margin-left: 60px;
-        padding: 30px 0;
+        padding-top: 34px;
+        box-sizing: border-box;
         .ico_logo{
             @include get-icon-sprite(ico_home_logo, $sp_hepa);
+            vertical-align: top;
         }
     }
     .wrap_cont{

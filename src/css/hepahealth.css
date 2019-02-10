@@ -179,14 +179,18 @@ input::-ms-clear {
 
 #header .logo {
 	float: left;
+	height: 100px;
 	margin-left: 60px;
-	padding: 30px 0;
+	padding-top: 34px;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 }
 
 #header .logo .ico_logo {
 	width: 168px;
 	height: 36px;
 	background-position: 0px -91px;
+	vertical-align: top;
 }
 
 #header .wrap_cont {
