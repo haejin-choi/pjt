@@ -16,54 +16,58 @@ $(document).ready(function(e) {
 
 	function resize(){
 		win.on('resize',function(e){
-			var idx;
-			var posX;
-			var snbT = $('#wrap').attr('class');
-			var lnbMenu = $('#header .gnb .gnb_item');
-			var snbMenu = $('.snb .snb_menu');
-			switch (snbT) {
-				case 'bridge':
-					idx = 0;
-					posX = Math.floor(lnbMenu.eq(idx).find('span').offset().left-45);
-					snbMenu.css({
-						'left':posX
-					});
+			var winW = win.width();
+			if(winW > 812){
+				var idx;
+				var posX;
+				var snbT = $('#wrap').attr('class');
+				var lnbMenu = $('#header .gnb .gnb_item');
+				var snbMenu = $('.snb .snb_menu');
+				switch (snbT) {
+					case 'bridge':
+						idx = 0;
+						posX = Math.floor(lnbMenu.eq(idx).find('span').offset().left-45);
+						snbMenu.css({
+							'left':posX
+						});
+						break;
+					case 'video':
+						idx = 1;
+						posX = Math.floor(lnbMenu.eq(idx).find('span').offset().left-45);
+						snbMenu.css({
+							'left':posX
+						});
+						break;
+					case 'cloud':
+						idx = 2;
+						posX = Math.floor(lnbMenu.eq(idx).find('span').offset().left-45);
+						snbMenu.css({
+							'left':posX
+						});
+						break;
+					case 'town':
+						idx = 3;
+						posX = Math.floor(lnbMenu.eq(idx).find('span').offset().left-45);
+						snbMenu.css({
+							'left':posX
+						});
+						break;
+					case 'contact':
+						idx = 4;
+						posX = Math.floor(lnbMenu.eq(idx).find('span').offset().left-snbMenu.width()+180);
+						snbMenu.css({
+							'left':posX
+						});
+						break;
+					default:
 					break;
-				case 'video':
-					idx = 1;
-					posX = Math.floor(lnbMenu.eq(idx).find('span').offset().left-45);
-					snbMenu.css({
-						'left':posX
-					});
-					break;
-				case 'cloud':
-					idx = 2;
-					posX = Math.floor(lnbMenu.eq(idx).find('span').offset().left-45);
-					snbMenu.css({
-						'left':posX
-					});
-					break;
-				case 'town':
-					idx = 3;
-					posX = Math.floor(lnbMenu.eq(idx).find('span').offset().left-45);
-					snbMenu.css({
-						'left':posX
-					});
-					break;
-				case 'contact':
-					idx = 4;
-					posX = Math.floor(lnbMenu.eq(idx).find('span').offset().left-snbMenu.width()+180);
-					snbMenu.css({
-						'left':posX
-					});
-					break;
-				default:
-				break;
+				}
 			}
 		});
 	}
 	resize();
 	doc.trigger('resize');
+
 
 	//common
 	function toggleLayer(elm){
@@ -239,7 +243,10 @@ $(document).ready(function(e) {
 
 	//HOME
 	doc.on('scroll',function(){
-		scrollStatus();
+		var winW = win.width();
+		if(winW > 812){
+			scrollStatus();
+		}
 	});
 
 	//TOWN
@@ -293,4 +300,22 @@ $(document).ready(function(e) {
 	//CLOUD
 
 
+	//mobile
+	$('#header_m .menu_wrap .menu').on('click',function(e){
+		var self = $(this);
+		self.parents('#header_m').toggleClass('expanded');
+		self.parent().next().slideToggle(300);
+		e.preventDefault();
+	});
+	$('#header_m .layer_menu .list_menu .menu .m').on('click',function(e){
+		var self = $(this);
+		var parent = self.parent();
+		if(self.next().length == 1){
+			self.toggleClass('open');
+			self.next().slideToggle(200);
+			parent.siblings().find('.m').removeClass('open');
+			parent.siblings().find('.sub_menu').hide();
+		}
+		e.preventDefault();
+	});
 });
