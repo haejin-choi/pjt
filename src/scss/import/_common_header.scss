@@ -1,7 +1,7 @@
 // 홈
 #wrap{
     position: relative;
-    min-width: 1260px;
+    min-width: 1200px;
     width: 100%;
     min-height: 100%;
     padding-bottom: 105px;
@@ -117,6 +117,7 @@
                 box-sizing: border-box;
                 border: 0;
                 border-bottom: 2px solid rgba(255,255,255,.5);
+                font-size: 13px;
                 line-height: 15px;
                 color: #fff;
                 vertical-align: bottom;
@@ -341,17 +342,6 @@
 }
 #wrap.mypage{
     .visual_area{
-        background: lime;
-    }
-}
-
-@media all and (max-width:1274px){
-    #header{
-        .gnb .gnb_item{
-            font-size: 22px;
-        }
-        .lnb .lnb_menu .item_menu_wrap .item_menu{
-            font-size: 18px;
-        }
+        background: blue;
     }
 }
