@@ -94,7 +94,6 @@ $(document).ready(function(e) {
 	$('.tab a').on('click',function(e){
 		var self = $(this);
 		tabMenu(self);
-		e.preventDefault();
 	});
 
 	//selectbox
@@ -380,6 +379,13 @@ $(document).ready(function(e) {
 	});
 
 	//CLOUD
+
+	//MYPAGE
+	$('.section_mypage .list_visited .item_visited > a').on('click',function(e){
+		var self = $(this);
+		self.parent().toggleClass("open");
+		e.preventDefault();
+	});
 
 
 	//mobile
