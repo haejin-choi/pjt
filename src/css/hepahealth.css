@@ -941,6 +941,10 @@ textarea.textarea {
 	width: 140px;
 }
 
+.table_area .cont .cmm_select.w278 {
+	width: 278px;
+}
+
 .table_area .cont .textarea {
 	display: block;
 	width: 864px;
@@ -949,7 +953,7 @@ textarea.textarea {
 }
 
 .table_area .cont.type_phone .text {
-	width: 86px;
+	width: 85px;
 }
 
 .btn56 {
@@ -2581,6 +2585,7 @@ textarea.textarea {
 
 #header_m .layer_menu .list_menu .sub_menu {
 	display: none;
+	padding: 10px 0 12px;
 	background-color: #fff;
 }
 

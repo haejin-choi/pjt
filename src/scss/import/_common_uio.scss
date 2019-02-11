@@ -301,7 +301,7 @@ textarea.textarea{
     border-top: 1px solid #333;
     margin-bottom: 80px;
     text-align: left;
-    
+
     .bx{
         display: table;
         table-layout: fixed;
@@ -342,6 +342,7 @@ textarea.textarea{
             &.w100{width:100px} //휴대폰 셀렉트
             &.w120{width:120px} //의사구분
             &.w140{width:140px} //메일주소
+            &.w278{width:278px} //시구,구분선택
         }
         .textarea{
             display: block;
@@ -351,7 +352,7 @@ textarea.textarea{
         }
         &.type_phone{
             .text{
-                width: 86px;
+                width: 85px;
             }
         }
     }
