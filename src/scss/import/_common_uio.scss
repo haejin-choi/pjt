@@ -294,3 +294,83 @@ textarea.textarea{
         }
     }
 }
+
+// 테이블
+.table_area{
+    overflow: hidden;
+    border-top: 1px solid #333;
+    margin-bottom: 80px;
+    text-align: left;
+    
+    .bx{
+        display: table;
+        table-layout: fixed;
+        width: 100%;
+        border-top: 1px solid #fff;
+        border-bottom: 1px solid #e1e1e1;
+        font-size: 16px;
+        color: #333;
+        &.type_half{
+            width: 50%;
+            float: left;
+        }
+    }
+    .title{
+        display: table-cell;
+        width: 140px;
+        height: 50px;
+        padding: 27px 0 0 58px;
+        background: #faf9f7;
+        vertical-align: top;
+        strong{
+            font-weight: normal;
+        }
+    }
+    .cont{
+        display: table-cell;
+        position: relative;
+        padding: 18px 0 0 30px;
+        background: #fff;
+        .txt_msg{
+            font-size: 13px;
+            color: $colorRed;
+        }
+        input.text{
+            &.w140{width:140px} //메일주소
+        }
+        .cmm_select{
+            &.w100{width:100px} //휴대폰 셀렉트
+            &.w120{width:120px} //의사구분
+            &.w140{width:140px} //메일주소
+        }
+        .textarea{
+            display: block;
+            width: 864px;
+            height: 286px;
+            margin: 12px 0 20px;
+        }
+        &.type_phone{
+            .text{
+                width: 86px;
+            }
+        }
+    }
+}
+
+//button
+.btn56{
+    display: inline-block;
+    min-width: 88px;
+    padding: 0 53px;
+    border-radius: 3px;
+    line-height: 54px;
+    color: #fff;
+    text-align: center;
+    vertical-align: top;
+    &.btn_submit{
+        background: $colorRed;
+    }
+    &.btn_cancel{
+        background: #666;
+    }
+}

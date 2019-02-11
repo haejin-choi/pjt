@@ -90,47 +90,43 @@
 					<a class="spim_af" href="#">MAIN</a>
 					<strong>MYPAGE</strong>
 				</div>
-				<div class="section_request">
-					<p>
-						*** 선생님 환영합니다.<br>
-						선생님의 총 로그인 횟수는 32회, 차료 신청 수는 4건, 최종 접속일시는 2019년 4월 29일 오전 9:30입니다.
+				<div class="section_mypage">
+					<p class="txt_mypage">
+						<strong>신수지 선생님 환영합니다!</strong><br>
+						선생님의 총 로그인 횟수는 <em>32</em>회, 차료 신청 수는 <em>4</em>건, 최종 접속일시는 <em>2019년 4월 29일 오전 9:30</em>입니다.
 					</p>
 					<!-- 탭영역 -->
 					<div class="tab">
-						<a href="#" class="on">회원정보수정</a>
-						<a href="#">최근 방문 이력</a>
+						<a href="03_mypage.html" class="on">회원정보수정</a>
+						<a href="03_2_mypage_visited.html">최근 방문 이력</a>
 						<a href="#">북마크</a>
 						<a href="#">자료요청</a>
 					</div>
-					<p>
-						회원님의 정보 중 변경된 내용이 있는 경우, 아래에서 수정해 주세요.<br>
-						회원정보는 개인정보취급방침에 따라 안전하게 보호되며, 회원님의 명백한 동의 없이 공개 또는 제 3자에게 제공되지 않습니다.
-					</p>
 
-					<div class="request_area">
-						<ul>
+					<div class="mypage_area">
+						<ul class="table_area">
 							<!-- 아이디 -->
-							<li class="bx">
+							<li class="bx type_half">
 								<div class="title">
 									<strong>성명(아이디)</strong>
 								</div>
 								<div class="cont">
 									<input type="text" value="바른마음병원" class="text">
-									<p>*  성명은 웹사이트의 아이디로 사용됩니다.</p>
+									<p class="txt_msg">* 성명은 웹사이트의 아이디로 사용됩니다.</p>
 								</div>
 							</li>
 							<!-- 현비번 -->
-							<li class="bx">
+							<li class="bx type_half">
 								<div class="title">
 									<strong>현재 비밀번호</strong>
 								</div>
 								<div class="cont">
 									<input type="password" class="text">
-									<p>*  현재 비밀번호 확인이 되면 새 비밀번호로 변경 가능 합니다.</p>
+									<p class="txt_msg">* 현재 비밀번호 확인이 되면 새 비밀번호로 변경 가능 합니다.</p>
 								</div>
 							</li>
 							<!-- 새비번 -->
-							<li class="bx">
+							<li class="bx type_half">
 								<div class="title">
 									<strong>새 비밀번호</strong>
 								</div>
@@ -139,7 +135,7 @@
 								</div>
 							</li>
 							<!-- 비번확인 -->
-							<li class="bx">
+							<li class="bx type_half">
 								<div class="title">
 									<strong>비밀번호 확인</strong>
 								</div>
@@ -148,23 +144,23 @@
 								</div>
 							</li>
 							<!-- 면허번호 -->
-							<li class="bx">
+							<li class="bx type_half">
 								<div class="title">
 									<strong>면허번호</strong>
 								</div>
 								<div class="cont">
-									<input type="password" class="text">
+									<input type="text" class="text" value="1234456">
 								</div>
 							</li>
 							<!-- 가입구분 -->
-							<li class="bx">
+							<li class="bx type_half">
 								<div class="title">
 									<strong>가입구분</strong>
 								</div>
 								<div class="cont">
 									<input type="radio" id='radio1'>
 									<label for="radio1">의사</label>
-									<select class="cmm_select">
+									<select class="cmm_select w120">
 									    <option value="">GH</option>
 									    <option value="">Semi GH</option>
 									    <option value="">CL</option>
@@ -186,35 +182,40 @@
 								</div>
 							</li>
 							<!-- 가입구분 -->
-							<li class="bx">
+							<li class="bx type_half">
 								<div class="title">
 									<strong>가입구분</strong>
 								</div>
 								<div class="cont">
-									<input type="text" class="text">
+									<input type="text" class="text w140">
 									@
-									<select class="cmm_select">
+									<select class="cmm_select w140">
 										<option value="">gmail.com</option>
 									</select>
+									<p class="txt_msg">* 아이디/비밀번호를 찾거나 알림을 받기 위해 필요합니다.</p>
 								</div>
 							</li>
 							<!-- 휴대폰번호 -->
-							<li class="bx">
+							<li class="bx type_half">
 								<div class="title">
 									<strong>휴대폰 번호</strong>
 								</div>
 								<div class="cont type_phone">
-									<select class="cmm_select">
+									<select class="cmm_select w100">
 									    <option value="">010</option>
 									    <option value="">011</option>
 									</select>
 									<input type="text" value="1234" class="text">
 									<input type="text" value="1234" class="text">
+									<p class="txt_msg">* 아이디/비밀번호를 찾거나 알림을 받기 위해 필요합니다.</p>
 								</div>
 							</li>
 						</ul>
 					</div>
-					<a href="#" class="btn_request">수정하기</a>
+					<div class="btn_area">
+						<a href="#" class="btn56 btn_cancel">취소</a>
+						<a href="#" class="btn56 btn_submit">수정하기</a>
+					</div>
 				</div>
 			</div>
 			<div class="bg_content_shadow"></div>
