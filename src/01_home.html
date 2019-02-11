@@ -11,6 +11,8 @@
 <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,700" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="css/hepahealth.css">
 <script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.parallx-scroll.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
 <script type="text/javascript" src="js/active.js"></script>
 </head>
 <body>
@@ -156,7 +158,33 @@
 		<!-- content -->
 		<div class="content">
 			<div class="section_spot">
-				<div class="spot" style="background:navy"></div>
+				<div class="roll_banner _rolling" data-rolling="false">
+					<div class="group_banner">
+						<div class="banner view" data-index="1">
+							<div class="bg_img" style="background-image:url(img/bg1.jpg)"></div>
+							<div class="txt_area">
+								<p><span class="txt">첫번째판</span></p>
+							</div>
+						</div>
+						<div class="banner" data-index="2">
+							<div class="bg_img" style="background-image:url(img/bg2.jpg)"></div>
+							<div class="txt_area">
+								<p><span class="txt">두번째판</span></p>
+							</div>
+						</div>
+						<div class="banner" data-index="3">
+							<div class="bg_img" style="background-image:url(img/bg3.jpg)"></div>
+							<div class="txt_area">
+								<p><span class="txt">세번째판</span></p>
+							</div>
+						</div>
+					</div>
+					<div class="btn_area _control">
+						<button class="btn_dot on"><span>1</span></button>
+						<button class="btn_dot"><span>2</span></button>
+						<button class="btn_dot"><span>3</span></button>
+					</div>
+				</div>
 				<div class="mov" style="background:gray;">
 					<div class="wrap_cont">
 						<div class="title_area">
@@ -177,7 +205,7 @@
 					<ul class="list_cloud">
 						<li>
 							<a href="#">
-								<div class="thmb"><div class="img" style="background-image:url(img/img_livercloud1.png)"></div></div>
+								<div class="thmb"><div class="img" style="background-image:url(img/img_livercloud1.png)"data-parallax='{"y" : -50}'></div></div>
 								<p>
 									소발디, 하보니 보험급여
 									세부인정기준 및 방법
@@ -186,7 +214,7 @@
 						</li>
 						<li>
 							<a href="#">
-								<div class="thmb"><div class="img" style="background-image:url(img/img_livercloud2.png)"></div></div>
+								<div class="thmb"><div class="img" style="background-image:url(img/img_livercloud2.png)"data-parallax='{"y" : -50}'></div></div>
 								<p>
 									Harvoni Master Brochure
 								</p>
@@ -194,7 +222,7 @@
 						</li>
 						<li>
 							<a href="#">
-								<div class="thmb"><div class="img" style="background-image:url(img/img_livercloud3.png)"></div></div>
+								<div class="thmb"><div class="img" style="background-image:url(img/img_livercloud3.png)"data-parallax='{"y" : -50}'></div></div>
 								<p>
 									베믈리디 Master Brochure
 								</p>
@@ -202,7 +230,7 @@
 						</li>
 						<li>
 							<a href="#">
-								<div class="thmb"><div class="img" style="background-image:url(img/img_livercloud4.png)"></div></div>
+								<div class="thmb"><div class="img" style="background-image:url(img/img_livercloud4.png)"data-parallax='{"y" : -50}'></div></div>
 								<p>
 									소발디, 하보니<br>
 									Real World Data

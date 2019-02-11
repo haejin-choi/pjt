@@ -1880,10 +1880,6 @@ textarea.textarea {
 	margin: 0 auto;
 }
 
-#wrap.home .section_spot .spot {
-	height: 1000px;
-}
-
 #wrap.home .section_spot .title_area {
 	position: absolute;
 	top: 75px;
@@ -2159,6 +2155,166 @@ textarea.textarea {
 	width: 122px;
 	height: 34px;
 	background-position: -200px 0px;
+}
+
+.roll_banner {
+	overflow: hidden;
+	position: relative;
+}
+
+.roll_banner .group_banner {
+	overflow: hidden;
+	position: relative;
+	height: 100%;
+}
+
+.roll_banner .group_banner .bg_img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	        background-size: cover;
+	background-position: 50% 50%;
+	background-color: #f5f6f7;
+	opacity: 0;
+	-webkit-transform: scale(1.2);
+	        transform: scale(1.2);
+	-webkit-transition: opacity 1s, -webkit-transform 7s linear;
+	transition: opacity 1s, -webkit-transform 7s linear;
+	transition: transform 7s linear, opacity 1s;
+	transition: transform 7s linear, opacity 1s, -webkit-transform 7s linear;
+}
+
+.roll_banner .group_banner .txt_area {
+	position: absolute;
+	width: 70%;
+	top: 50%;
+	right: 0;
+	left: 0;
+	min-width: 320px;
+	margin: 0 auto;
+	-webkit-transform: translateY(-50%);
+	        transform: translateY(-50%);
+}
+
+.roll_banner .group_banner .txt_area .txt {
+	position: absolute;
+	top: 0;
+	left: 0;
+	vertical-align: top;
+	-webkit-transition: all 1.5s;
+	transition: all 1.5s;
+	-webkit-transform: translateX(-70px);
+	        transform: translateX(-70px);
+	font-size: 50px;
+	line-height: 60px;
+	color: #fff;
+	opacity: 0;
+}
+
+.roll_banner .group_banner .banner {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+}
+
+.roll_banner .group_banner .banner a {
+	display: block;
+	height: 100%;
+}
+
+.roll_banner .group_banner .banner a:focus:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	border: 1px dashed #fff;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+.roll_banner .group_banner .banner.view {
+	visibility: visible;
+	z-index: 1;
+}
+
+.roll_banner .group_banner .banner.view .bg_img {
+	opacity: 1;
+}
+
+.roll_banner .group_banner .banner.view.on {
+	z-index: 2;
+}
+
+.roll_banner .group_banner .banner.view.on .bg_img {
+	-webkit-transform: scale(1);
+	        transform: scale(1);
+}
+
+.roll_banner .group_banner .banner.old {
+	z-index: 1 !important;
+}
+
+.roll_banner .group_banner .banner.view.leave .bg_img {
+	-webkit-transform: scale(1);
+	        transform: scale(1);
+}
+
+.roll_banner .group_banner .banner.on .txt_area .txt {
+	-webkit-transform: translateX(0);
+	        transform: translateX(0);
+	opacity: 1;
+}
+
+.roll_banner .group_banner .banner.on.leave .txt_area .txt {
+	-webkit-transform: translateX(70px);
+	        transform: translateX(70px);
+	opacity: 0;
+}
+
+.roll_banner .btn_area {
+	display: table;
+	position: relative;
+	bottom: 65px;
+	z-index: 10;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.roll_banner .btn_area .btn_dot {
+	width: 25px;
+	height: 25px;
+	border: 0;
+	font-size: 0;
+	vertical-align: top;
+	background: none;
+}
+
+.roll_banner .btn_area .btn_dot.on span {
+	width: 12px;
+	height: 12px;
+	background-color: #fff;
+}
+
+.roll_banner .btn_area .btn_dot span {
+	display: inline-block;
+	width: 8px;
+	height: 8px;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	-webkit-border-radius: 50%;
+	        border-radius: 50%;
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+.roll_banner .btn_area button + button {
+	margin-left: 14px;
 }
 
 #header_m .menu_wrap {

@@ -13,16 +13,22 @@ if(ua.search('mobile') == '-1'){
 $(document).ready(function(e) {
 	var win = $(window);
 	var doc = $(document);
+	var bgRolling = $('._rolling');
 
 	function resize(){
 		win.on('resize',function(e){
 			var winW = win.width();
+			var winH = win.height();
+
 			if(winW > 812){
 				var idx;
 				var posX;
 				var snbT = $('#wrap').attr('class');
 				var lnbMenu = $('#header .gnb .gnb_item');
 				var snbMenu = $('.snb .snb_menu');
+				bgRolling.css({
+					'height':winH
+				});
 				switch (snbT) {
 					case 'bridge':
 						idx = 0;
@@ -62,6 +68,11 @@ $(document).ready(function(e) {
 					default:
 					break;
 				}
+			}else{
+				var headerH = $('#header_m').height();
+				bgRolling.css({
+					'height':winH-headerH
+				});
 			}
 		});
 	}
@@ -248,6 +259,77 @@ $(document).ready(function(e) {
 			scrollStatus();
 		}
 	});
+
+	var _bannerTime = null;
+    var _bannerInnerTime1 = null;
+    var _bannerInnerTime2 = null;
+	function animateBanner() {
+	    var _b = $('._rolling'),
+			_control = _b.find('._control');
+	    _bannerTime = setInterval(function() {
+			_b.attr('data-rolling', 'true');
+			var _nowItem = _b.find('.banner.on'), _nextItem = _nowItem.next('.banner');
+			if(_nextItem.length == 0) {
+				_nextItem = _b.find('.banner[data-index="1"]');
+			}
+			_nextItem.addClass('view on');
+			_nowItem.removeClass('on');
+			_bannerInnerTime1 = setTimeout(function() {
+				_nowItem.addClass('stop').removeClass('view leave');
+				setTimeout(function() {
+					_nowItem.removeClass('stop');
+				}, 100);
+				_b.attr('data-rolling', 'false');
+			}, 1000);
+			_bannerInnerTime2 = setTimeout(function() {
+				if(_nextItem.hasClass('view on')) {
+					_nextItem.addClass('leave');
+				}
+			}, 7000);
+			_control.find('button').removeClass('on');
+			_control.find('.btn_dot').eq(_nextItem.attr('data-index')-1).addClass('on');
+	    }, 8500);
+	}
+	var _banner = $('._rolling');
+    var _start = $('._rolling .banner.view');
+    _start.addClass('on');
+    _bannerInnerTime2 = setTimeout(function() {
+        _start.addClass('leave');
+    }, 7000);
+    animateBanner();
+    $('._rolling .btn_dot').on('click', function() {
+		var self = $(this);
+        if(_banner.attr('data-rolling') == "false" && !self.hasClass('on')) {
+            _banner.attr('data-rolling', "true");
+            var _idx = self.index()+1;
+            var _selItem = _banner.find('.banner[data-index='+_idx+']');
+            var _nowItem = _banner.find('.banner.on');
+            _nowItem.addClass('old');
+            clearTimeout(_bannerInnerTime1);
+            clearTimeout(_bannerInnerTime2);
+            clearInterval(_bannerTime);
+            _bannerInnerTime1 = null;
+            _bannerInnerTime2 = null;
+            _bannerTime = null;
+            _selItem.removeClass('leave').addClass('view on');
+            _bannerInnerTime2 = setTimeout(function() {
+                if(!_banner.hasClass('stop')) {
+                    _selItem.addClass('leave');
+                }
+            }, 7000);
+            setTimeout(function() {
+                _nowItem.addClass('stop');
+                setTimeout(function() {
+                    _nowItem.removeClass('stop');
+                }, 100);
+                _selItem.siblings('.banner').removeClass('view on leave old');
+                _banner.attr('data-rolling', "false");
+            }, 1000);
+            animateBanner();
+            _banner.find('.btn_dot').removeClass('on');
+            self.addClass('on');
+        }
+    });
 
 	//TOWN
 	$('.select_btn').each(function(){
