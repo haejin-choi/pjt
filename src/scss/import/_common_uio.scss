@@ -483,6 +483,40 @@ textarea.textarea{
         text-align: center;
         line-height: 70px;
     }
-
+    .keyword_area{
+        position: relative;
+        float: left;
+        width: 164px;
+        margin-left: 5px;
+        .keyword_inner{
+            position: absolute;
+            top:0;
+            left:0;
+            right:0;
+            border: 2px solid $colorSkyblue;
+        }
+        strong{
+            display: block;
+            margin: 8px 0 0 0;
+            font-size: 16px;
+            color: $colorSkyblue;
+            text-align: center;
+        }
+        ul{
+            padding: 2px 18px 15px;
+        }
+        li{
+            font-size: 14px;
+            line-height: 24px;
+            color: #555;
+        }
+        a{
+            @include ells;
+            display: block;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
 
 }
