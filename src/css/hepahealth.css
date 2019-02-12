@@ -1107,6 +1107,50 @@ textarea.textarea {
 	line-height: 70px;
 }
 
+.search_area .keyword_area {
+	position: relative;
+	float: left;
+	width: 164px;
+	margin-left: 5px;
+}
+
+.search_area .keyword_area .keyword_inner {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	border: 2px solid #40abd8;
+}
+
+.search_area .keyword_area strong {
+	display: block;
+	margin: 8px 0 0 0;
+	font-size: 16px;
+	color: #40abd8;
+	text-align: center;
+}
+
+.search_area .keyword_area ul {
+	padding: 2px 18px 15px;
+}
+
+.search_area .keyword_area li {
+	font-size: 14px;
+	line-height: 24px;
+	color: #555;
+}
+
+.search_area .keyword_area a {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	display: block;
+}
+
+.search_area .keyword_area a:hover {
+	text-decoration: underline;
+}
+
 .section_top .visual_area {
 	height: 357px;
 	margin-bottom: -22px;
@@ -1814,6 +1858,7 @@ textarea.textarea {
 }
 
 .section_search .txt_search {
+	padding: 0 0 20px 0;
 	font-size: 20px;
 	color: #333;
 }
@@ -1821,6 +1866,41 @@ textarea.textarea {
 .section_search .txt_search strong {
 	font-size: 24px;
 	color: #cb2e3c;
+}
+
+.section_search .search_list ul {
+	border-top: 1px solid #333;
+	border-bottom: 1px solid #333;
+	margin-bottom: -20px;
+}
+
+.section_search .search_list li {
+	position: relative;
+	padding: 24px 35px;
+}
+
+.section_search .search_list li + li {
+	border-top: 1px solid #e8e8e8;
+}
+
+.section_search .search_list .item_link {
+	font-size: 18px;
+	font-weight: bold;
+	color: #2a7eca;
+}
+
+.section_search .search_list .item_text {
+	font-size: 16px;
+	line-height: 24px;
+	color: #707070;
+}
+
+.section_search .search_list .item_path {
+	position: absolute;
+	top: 15px;
+	right: 35px;
+	font-size: 14px;
+	color: #2a7eca;
 }
 
 .login {

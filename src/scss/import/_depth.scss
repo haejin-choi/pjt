@@ -629,11 +629,43 @@
 
 .section_search{
     .txt_search{
+        padding: 0 0 20px 0;
         font-size: 20px;
         color: #333;
         strong{
             font-size: 24px;
             color: $colorRed;
+        }
+    }
+    .search_list{
+        ul{
+            border-top: 1px solid #333;
+            border-bottom: 1px solid #333;
+            margin-bottom: -20px;
+        }
+        li{
+            position: relative;
+            padding: 24px 35px;
+            + li{
+                border-top: 1px solid #e8e8e8;
+            }
+        }
+        .item_link{
+            font-size: 18px;
+            font-weight: bold;
+            color: #2a7eca;
+        }
+        .item_text{
+            font-size: 16px;
+            line-height: 24px;
+            color: #707070;
+        }
+        .item_path{
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            font-size: 14px;
+            color: #2a7eca;
         }
     }
 }
