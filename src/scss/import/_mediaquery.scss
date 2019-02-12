@@ -65,4 +65,69 @@
             }
         }
     }
+    //LOGIN
+    .login{
+        overflow: hidden;
+        padding:0;
+        .content{
+            overflow: visible;
+            position: relative;
+            margin: 150px 30px 0;
+            border-radius: 20px;
+            .fr{
+                float: none;
+                width: auto;
+                padding: 30px 20px;
+            }
+            .fl{
+                height: auto;
+                padding: 0 0 30px;
+                border: 0;
+                border-top: 1px dashed #bababa;
+                border-radius: 0 0 20px 20px;
+                text-align: center;
+                .tit{
+                    margin-top: 20px;
+                    font-size: 28px;
+                }
+                .welcome_txt{
+                    display: none;
+                }
+                .welcome_list{
+                    margin: 0;
+                    li{
+                        font-size: 14px;
+                        &:before{
+                            display: none;
+                        }
+                    }
+                }
+            }
+            .img_doctor{
+                position: absolute;
+                top: 0;
+                right: 0;
+                left: 0;
+                margin: -110px auto 0;
+                padding: 0;
+                transform: scale(0.7);
+            }
+        }
+        .login_txt{
+            color: rgba(255,255,255,0.8);
+            font-size: 13px;
+            br{
+                display: none;
+            }
+        }
+        .login_footer{
+            position: static;
+            margin-top: 80px;
+            color: rgba(255,255,255,0.5);
+            text-align: center;
+            strong{
+                color: rgba(255,255,255,0.8);
+            }
+        }
+    }
 }
