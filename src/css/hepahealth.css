@@ -1830,11 +1830,14 @@ textarea.textarea {
 	padding-bottom: 120px;
 	-webkit-box-sizing: border-box;
 	        box-sizing: border-box;
+	background: #020a21 url(../img/bg_login.jpg) no-repeat 50% 100%;
+	-webkit-background-size: cover;
+	        background-size: cover;
 }
 
 .login .content {
 	overflow: hidden;
-	width: 920px;
+	max-width: 920px;
 	margin: 0 auto;
 	-webkit-border-radius: 10px;
 	        border-radius: 10px;
@@ -1842,10 +1845,9 @@ textarea.textarea {
 }
 
 .login .content .fl {
-	float: left;
-	width: 315px;
+	overflow: hidden;
 	height: 550px;
-	padding: 0 0 0 74px;
+	padding: 0 0 0 8%;
 	border-right: 1px dashed #bababa;
 	background: #f6f6f6;
 }
@@ -1899,8 +1901,11 @@ textarea.textarea {
 }
 
 .login .content .fr {
-	float: left;
-	width: 530px;
+	float: right;
+	width: 57%;
+	padding: 0 70px;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 }
 
 .login .content .img_doctor {
@@ -1915,8 +1920,9 @@ textarea.textarea {
 }
 
 .login .content .section_form {
-	width: 370px;
 	margin: 0 auto;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 }
 
 .login .content .section_form .wrap_input {
@@ -1956,8 +1962,9 @@ textarea.textarea {
 
 .login .content .section_id {
 	overflow: hidden;
-	width: 370px;
 	margin: 19px auto 0;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 }
 
 .login .content .section_id .btn_join {
@@ -2001,7 +2008,7 @@ textarea.textarea {
 }
 
 .login .login_txt {
-	margin-top: 35px;
+	margin: 35px 34px 0;
 	font-size: 13px;
 	color: rgba(255, 255, 255, 0.4);
 	line-height: 20px;
@@ -2010,11 +2017,12 @@ textarea.textarea {
 
 .login .login_footer {
 	position: absolute;
-	left: 50%;
+	right: 0;
 	bottom: 0;
-	width: 920px;
+	left: 0;
+	max-width: 920px;
 	height: 80px;
-	margin-left: -460px;
+	margin: 0 auto;
 	text-align: left;
 	font-size: 13px;
 	line-height: 16px;
@@ -2684,6 +2692,73 @@ textarea.textarea {
 	#footer .wrap_cont .footer_logo {
 		position: static;
 		margin-top: 15px;
+	}
+	.login {
+		overflow: hidden;
+		padding: 0;
+	}
+	.login .content {
+		overflow: visible;
+		position: relative;
+		margin: 150px 30px 0;
+		-webkit-border-radius: 20px;
+		        border-radius: 20px;
+	}
+	.login .content .fr {
+		float: none;
+		width: auto;
+		padding: 30px 20px;
+	}
+	.login .content .fl {
+		height: auto;
+		padding: 0 0 30px;
+		border: 0;
+		border-top: 1px dashed #bababa;
+		-webkit-border-radius: 0 0 20px 20px;
+		        border-radius: 0 0 20px 20px;
+		text-align: center;
+	}
+	.login .content .fl .tit {
+		margin-top: 20px;
+		font-size: 28px;
+	}
+	.login .content .fl .welcome_txt {
+		display: none;
+	}
+	.login .content .fl .welcome_list {
+		margin: 0;
+	}
+	.login .content .fl .welcome_list li {
+		font-size: 14px;
+	}
+	.login .content .fl .welcome_list li:before {
+		display: none;
+	}
+	.login .content .img_doctor {
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+		margin: -110px auto 0;
+		padding: 0;
+		-webkit-transform: scale(0.7);
+		        transform: scale(0.7);
+	}
+	.login .login_txt {
+		color: rgba(255, 255, 255, 0.8);
+		font-size: 13px;
+	}
+	.login .login_txt br {
+		display: none;
+	}
+	.login .login_footer {
+		position: static;
+		margin-top: 80px;
+		color: rgba(255, 255, 255, 0.5);
+		text-align: center;
+	}
+	.login .login_footer strong {
+		color: rgba(255, 255, 255, 0.8);
 	}
 }
 
