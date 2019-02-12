@@ -24,43 +24,47 @@ $(document).ready(function(e) {
 				var idx;
 				var posX;
 				var snbT = $('#wrap').attr('class');
-				var lnbMenu = $('#header .gnb .gnb_item');
+				var gnbMenu = $('#header .gnb .gnb_item');
 				var snbMenu = $('.snb .snb_menu');
+				var snbMenuItem = snbMenu.find('.item_menu_wrap').eq(0).find('.item_menu_link');
+				var snbMenuItemW = (snbMenuItem.outerWidth()-snbMenuItem.width())/2;
+				var snbMenuW = snbMenu.find('.item_menu_wrap').eq(0).width();
 				bgRolling.css({
 					'height':winH
 				});
 				switch (snbT) {
 					case 'bridge':
 						idx = 0;
-						posX = Math.floor(lnbMenu.eq(idx).find('span').offset().left-45);
+						posX = Math.floor(gnbMenu.eq(idx).find('span').offset().left-snbMenuItemW);
 						snbMenu.css({
 							'left':posX
 						});
 						break;
 					case 'video':
 						idx = 1;
-						posX = Math.floor(lnbMenu.eq(idx).find('span').offset().left-45);
+						posX = Math.floor(gnbMenu.eq(idx).find('span').offset().left-snbMenuItemW);
 						snbMenu.css({
 							'left':posX
 						});
 						break;
 					case 'cloud':
 						idx = 2;
-						posX = Math.floor(lnbMenu.eq(idx).find('span').offset().left-45);
+						posX = Math.floor(gnbMenu.eq(idx).find('span').offset().left-snbMenuItemW);
 						snbMenu.css({
 							'left':posX
 						});
+						console.log(gnbMenu.eq(idx).find('span').position().left);
 						break;
 					case 'town':
 						idx = 3;
-						posX = Math.floor(lnbMenu.eq(idx).find('span').offset().left-45);
+						posX = Math.floor(gnbMenu.eq(idx).find('span').offset().left-snbMenuItemW);
 						snbMenu.css({
 							'left':posX
 						});
 						break;
 					case 'contact':
 						idx = 4;
-						posX = Math.floor(lnbMenu.eq(idx).find('span').offset().left-snbMenu.width()+180);
+						posX = Math.floor(gnbMenu.eq(idx).find('span').offset().left-snbMenu.width()+snbMenuW);
 						snbMenu.css({
 							'left':posX
 						});
