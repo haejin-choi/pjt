@@ -54,7 +54,6 @@ $(document).ready(function(e) {
 						snbMenu.css({
 							'left':posX
 						});
-						console.log(gnbMenu.eq(idx).find('span').position().left);
 						break;
 					case 'town':
 						idx = 3;
