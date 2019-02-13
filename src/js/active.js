@@ -12,6 +12,7 @@ if(ua.search('mobile') == '-1'){
 
 $(document).ready(function(e) {
 	var win = $(window);
+	var html = $('html');
 	var doc = $(document);
 	var bgRolling = $('._rolling');
 
@@ -93,7 +94,23 @@ $(document).ready(function(e) {
 		var self = $(elm);
 		self.addClass('on').siblings().removeClass('on');
 	}
+	function layerPop(idx){
+		var lycommon = $('._lycommon');
+		if(idx == 0){
+			lycommon.hide();
+		}else{
+			lycommon.show();
+		}
+	}
 
+	$('._footItem2').on('click',function(e){
+		layerPop(1);
+		e.preventDefault();
+	});
+	$('._lyClose').on('click',function(e){
+		layerPop(0);
+		e.preventDefault();
+	});
 	//tabMenu
 	$('.tab a').on('click',function(e){
 		var self = $(this);
