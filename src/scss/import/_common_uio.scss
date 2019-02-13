@@ -338,6 +338,58 @@ textarea.textarea{
         input.text{
             &.w140{width:140px} //메일주소
         }
+        // 체크
+        .check_label{
+            margin-right: 48px;
+            color: #989898;
+            vertical-align: top;
+            font-size: 16px;
+            line-height: 22px;
+            &:before{
+                display: inline-block;
+                width: 18px;
+                height: 18px;
+                margin: 0 9px 0 0;
+                border: 2px solid #d9d9d9;
+                vertical-align: top;
+                background-position: 100px 100px;
+            }
+        }
+        input.checkbox{
+            display: none;
+            &:checked + .check_label{
+                color: #333;
+                &:before{
+                    @include get-icon-sprite(bg_check_on2, $sp_hepa);
+                    border: none;
+                }
+            }
+        }
+        // 라디오 
+        .radio_label{
+            margin-right: 18px;
+            color: #989898;
+            vertical-align: top;
+            font-size: 16px;
+            line-height: 22px;
+            &:before{
+                @include get-icon-sprite(bg_radio, $sp_hepa);
+                display: inline-block;
+                margin: 0 9px 0 0;
+                vertical-align: top;
+            }
+        }
+
+        input.radio{
+            display: none;
+            &:checked + .check_label{
+                color: #333;
+                &:before{
+                    @include get-icon-sprite(bg_radio_on, $sp_hepa);
+                }
+            }
+        }
+        
         .cmm_select{
             &.w100{width:100px} //휴대폰 셀렉트
             &.w120{width:120px} //의사구분

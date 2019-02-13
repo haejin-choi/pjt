@@ -158,18 +158,18 @@
 									<strong>가입구분</strong>
 								</div>
 								<div class="cont">
-									<input type="radio" id='radio1'>
-									<label for="radio1">의사</label>
+									<input type="radio" id='radio1' class="radio" checked="checked">
+									<label for="radio1" class="spim_bf radio_label">의사</label>
 									<select class="cmm_select w120">
 									    <option value="">GH</option>
 									    <option value="">Semi GH</option>
 									    <option value="">CL</option>
 									</select>
 
-									<input type="radio" id='radio2'>
-									<label for="radio2">TS</label>
-									<input type="radio" id='radio3'>
-									<label for="radio3">MKT</label>
+									<input type="radio" id='radio2' class="radio">
+									<label for="radio2" class="spim_bf radio_label">TS</label>
+									<input type="radio" id='radio3' class="radio">
+									<label for="radio3" class="spim_bf radio_label">MKT</label>
 								</div>
 							</li>
 							<!-- 병원검색 -->
@@ -208,6 +208,18 @@
 									<input type="text" value="1234" class="text">
 									<input type="text" value="1234" class="text">
 									<p class="txt_msg">* 아이디/비밀번호를 찾거나 알림을 받기 위해 필요합니다.</p>
+								</div>
+							</li>
+							<!-- 정보수신동의 -->
+							<li class="bx">
+								<div class="title">
+									<strong>정보 수신 동의</strong>
+								</div>
+								<div class="cont">
+									<input type="checkbox" checked="checked" class="checkbox" id="check1">
+									<label for="check1" class="spim_bf check_label">SMS/전화</label>
+									<input type="checkbox" class="checkbox" id="check2">
+									<label for="check2" class="spim_bf check_label">E-mail</label>
 								</div>
 							</li>
 						</ul>
