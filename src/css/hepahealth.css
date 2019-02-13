@@ -545,6 +545,10 @@ input.text {
 	vertical-align: top;
 }
 
+input.text[readonly] {
+	background: #faf9f7;
+}
+
 textarea.textarea {
 	width: 100%;
 	height: 200px;
@@ -937,28 +941,38 @@ textarea.textarea {
 }
 
 .table_area .half {
-	-webkit-box-flex: 1;
-	-webkit-flex: 1 1 0%;
-	        flex: 1 1 0%;
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: flex;
+	width: 0;
+	-webkit-box-flex: 1;
+	-webkit-flex-grow: 1;
+	        flex-grow: 1;
+	-webkit-flex-shrink: 1;
+	        flex-shrink: 1;
 }
 
 .table_area .title {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	width: 0;
 	-webkit-flex-basis: 190px;
 	        flex-basis: 190px;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
 	background: #faf9f7;
 }
 
 .table_area .title strong {
-	display: inline-block;
-	margin: 18px 0 18px 48px;
+	margin-left: 48px;
 	font-weight: normal;
-	vertical-align: top;
 }
 
 .table_area .cont {
+	width: 0;
+	padding: 18px;
 	-webkit-box-flex: 1;
 	-webkit-flex-grow: 1;
 	        flex-grow: 1;
@@ -968,6 +982,19 @@ textarea.textarea {
 	        flex-basis: auto;
 	position: relative;
 	background: #fff;
+}
+
+.table_area .cont .name, .table_area .cont .category {
+	display: inline-block;
+	margin: 5px 8px -5px 0;
+	vertical-align: middle;
+}
+
+.table_area .cont .category:before {
+	content: '|';
+	display: inline-block;
+	margin: 0 10px 0 -2px;
+	vertical-align: top;
 }
 
 .table_area .cont .fl {
@@ -980,12 +1007,17 @@ textarea.textarea {
 }
 
 .table_area .cont .txt_msg {
+	margin-top: 5px;
 	font-size: 13px;
 	color: #cb2e3c;
 }
 
 .table_area .cont input.text.w140 {
 	width: 140px;
+}
+
+.table_area .cont input.text.w50p {
+	width: 50%;
 }
 
 .table_area .cont .check_label {
@@ -1022,7 +1054,7 @@ textarea.textarea {
 
 .table_area .cont .radio_label {
 	display: inline-block;
-	margin-right: 18px;
+	margin: 8px 0 -8px 10px;
 	color: #989898;
 	vertical-align: top;
 }
@@ -1034,6 +1066,11 @@ textarea.textarea {
 	display: inline-block;
 	margin: 0 9px 0 0;
 	vertical-align: top;
+}
+
+.table_area .cont .radio_label:first-of-type {
+	margin-right: 10px;
+	margin-left: 0;
 }
 
 .table_area .cont input.radio {

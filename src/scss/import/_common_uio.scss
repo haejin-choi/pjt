@@ -12,6 +12,9 @@ input.text{
     color: #333;
     vertical-align: top;
 }
+input.text[readonly]{
+    background: #faf9f7;
+}
 textarea.textarea{
     width: 100%;
     height: 200px;
@@ -342,25 +345,41 @@ textarea.textarea{
         color: #333;
     }
     .half{
-        flex: 1 1 0%;
         display: flex;
+        width:0;
+        flex-grow:1;
+        flex-shrink: 1;
     }
     .title{
+        display: flex;
+        width: 0;
         flex-basis: 190px;
+        align-items: center;
         background: #faf9f7;
         strong{
-            display: inline-block;
-            margin: 18px 0 18px 48px;
+            margin-left: 48px;
             font-weight: normal;
-            vertical-align: top;
         }
     }
     .cont{
+        width: 0;
+        padding: 18px;
         flex-grow:1;
         flex-shrink: 1;
         flex-basis: auto;
         position: relative;
         background: #fff;
+        .name,.category{
+            display: inline-block;
+            margin: 5px 8px -5px 0;
+            vertical-align: middle;
+        }
+        .category:before{
+            content:'|';
+            display: inline-block;
+            margin: 0 10px 0 -2px;
+            vertical-align: top;
+        }
         .fl{
             float: left;
             margin-right: 10px;
@@ -369,11 +388,13 @@ textarea.textarea{
             overflow: hidden;
         }
         .txt_msg{
+            margin-top: 5px;
             font-size: 13px;
             color: $colorRed;
         }
         input.text{
             &.w140{width:140px} //메일주소
+            &.w50p{width:50%} //병원검색
         }
         // 체크
         .check_label{
@@ -404,7 +425,7 @@ textarea.textarea{
         // 라디오
         .radio_label{
             display: inline-block;
-            margin-right: 18px;
+            margin: 8px 0 -8px 10px;
             color: #989898;
             vertical-align: top;
             &:before{
@@ -412,6 +433,10 @@ textarea.textarea{
                 display: inline-block;
                 margin: 0 9px 0 0;
                 vertical-align: top;
+            }
+            &:first-of-type{
+                margin-right:10px;
+                margin-left: 0;
             }
         }
         input.radio{
@@ -423,7 +448,6 @@ textarea.textarea{
                 }
             }
         }
-
         .cmm_select{
             &.w100{width:100px} //휴대폰 셀렉트
             &.w120{width:120px} //의사구분
