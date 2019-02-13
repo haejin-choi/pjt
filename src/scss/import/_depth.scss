@@ -22,7 +22,8 @@
 .container .content{
     z-index: 10;
     position: relative;
-    width: 1200px;
+    min-width: $minWidth;
+    max-width: 1200px;
     padding: 40px 30px 120px;
     margin: 0 auto;
     box-sizing: border-box;
@@ -115,7 +116,7 @@
         padding-top: 50px;
     }
     .player_area{
-        width: 824px;
+        overflow: hidden;
         margin-top: 29px;
         .player_meta{
             height: 75px;
@@ -137,6 +138,7 @@
         float: right;
         width: 262px;
         height: 683px;
+        margin-left: 16px;
         padding:0 0 0 38px;
 
         background: #faf9f7;
@@ -215,7 +217,7 @@
        li{
            position: relative;
            float: left;
-           width: 285px;
+           width: 25%;
            margin-bottom: 70px;
            text-align: center;
        }
@@ -382,7 +384,7 @@
         overflow: hidden;
         li{
             float: left;
-            width: 285px;
+            width: 25%;
             height: 414px;
             text-align: center;
         }
@@ -514,9 +516,6 @@
     .request_area{
         margin-top: 35px;
         margin-bottom: 80px;
-        .text{
-            width: 580px;
-        }
         .visual_obj{
             position: absolute;
             top: -68px;

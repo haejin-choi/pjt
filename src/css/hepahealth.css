@@ -122,7 +122,7 @@ input::-ms-clear {
 
 #wrap {
 	position: relative;
-	min-width: 1200px;
+	min-width: 1024px;
 	width: 100%;
 	min-height: 100%;
 	padding-bottom: 105px;
@@ -201,7 +201,7 @@ input::-ms-clear {
 	z-index: 20;
 	position: relative;
 	max-width: 1720px;
-	min-width: 1200px;
+	min-width: 1024px;
 	height: 100px;
 	margin: 0 auto;
 	text-align: right;
@@ -377,7 +377,7 @@ input::-ms-clear {
 	height: 0;
 	background: #fff;
 	opacity: 0;
-	min-width: 1200px;
+	min-width: 1024px;
 	border-top: 1px solid #d6d7d5;
 }
 
@@ -388,8 +388,9 @@ input::-ms-clear {
 }
 
 #header .lnb .lnb_item {
-	float: left;
-	margin-left: 60px;
+	position: absolute;
+	top: 20px;
+	left: 20px;
 }
 
 #header .lnb .lnb_item p {
@@ -531,6 +532,7 @@ input::-ms-clear {
 }
 
 input.text {
+	width: 100%;
 	height: 40px;
 	margin: 0;
 	padding: 0 10px;
@@ -916,8 +918,17 @@ textarea.textarea {
 .table_area .cont {
 	display: table-cell;
 	position: relative;
-	padding: 18px 0 0 30px;
+	padding: 18px 30px 0;
 	background: #fff;
+}
+
+.table_area .cont .fl {
+	float: left;
+	margin-right: 10px;
+}
+
+.table_area .cont .text_area {
+	overflow: hidden;
 }
 
 .table_area .cont .txt_msg {
@@ -1011,7 +1022,6 @@ textarea.textarea {
 
 .table_area .cont .textarea {
 	display: block;
-	width: 864px;
 	height: 286px;
 	margin: 12px 0 20px;
 }
@@ -1041,7 +1051,10 @@ textarea.textarea {
 }
 
 .search_area {
+	position: relative;
+	height: 72px;
 	margin-bottom: 55px;
+	padding-right: 348px;
 }
 
 .search_area:after {
@@ -1065,8 +1078,6 @@ textarea.textarea {
 }
 
 .search_area .search_form {
-	float: left;
-	width: 790px;
 	height: 70px;
 	border: 1px solid #e0e0e0;
 }
@@ -1142,6 +1153,12 @@ textarea.textarea {
 	color: #989898;
 }
 
+.search_area .search_btn {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
 .search_area .btn_colored {
 	float: left;
 	overflow: hidden;
@@ -1174,7 +1191,7 @@ textarea.textarea {
 .search_area .keyword_area {
 	position: relative;
 	float: left;
-	width: 164px;
+	width: 168px;
 	margin-left: 5px;
 }
 
@@ -1239,7 +1256,8 @@ textarea.textarea {
 .container .content {
 	z-index: 10;
 	position: relative;
-	width: 1200px;
+	min-width: 1024px;
+	max-width: 1200px;
 	padding: 40px 30px 120px;
 	margin: 0 auto;
 	-webkit-box-sizing: border-box;
@@ -1344,7 +1362,7 @@ textarea.textarea {
 }
 
 .section_video .player_area {
-	width: 824px;
+	overflow: hidden;
 	margin-top: 29px;
 }
 
@@ -1370,6 +1388,7 @@ textarea.textarea {
 	float: right;
 	width: 262px;
 	height: 683px;
+	margin-left: 16px;
 	padding: 0 0 0 38px;
 	background: #faf9f7;
 }
@@ -1462,7 +1481,7 @@ textarea.textarea {
 .section_library .library_list li {
 	position: relative;
 	float: left;
-	width: 285px;
+	width: 25%;
 	margin-bottom: 70px;
 	text-align: center;
 }
@@ -1651,7 +1670,7 @@ textarea.textarea {
 
 .section_usefullink .usefullink_list li {
 	float: left;
-	width: 285px;
+	width: 25%;
 	height: 414px;
 	text-align: center;
 }
@@ -1800,10 +1819,6 @@ textarea.textarea {
 .section_request .request_area {
 	margin-top: 35px;
 	margin-bottom: 80px;
-}
-
-.section_request .request_area .text {
-	width: 580px;
 }
 
 .section_request .request_area .visual_obj {
@@ -2125,6 +2140,7 @@ textarea.textarea {
 
 .login .content .section_id .btn_save .label_save {
 	display: inline-block;
+	margin: 4px 0 -4px;
 	font-size: 14px;
 	color: #333;
 	line-height: 22px;
@@ -2780,9 +2796,27 @@ textarea.textarea {
 	opacity: 0;
 }
 
-@media all and (max-width: 1274px) {
+@media all and (max-width: 1300px) {
 	#header .lnb .lnb_menu .item_menu_wrap .item_menu {
 		font-size: 18px;
+	}
+	.snb .item_menu_wrap .item_menu_link {
+		padding: 0 15px;
+	}
+	.gnb, .lnb .lnb_menu {
+		margin-right: 20px;
+	}
+}
+
+@media all and (max-width: 1024px) {
+	#header .logo {
+		margin-left: 30px;
+	}
+	#header .gnb .gnb_item {
+		font-size: 22px;
+	}
+	#header .lnb .lnb_menu .item_menu_wrap .item_menu {
+		font-size: 17px;
 	}
 }
 
@@ -2839,12 +2873,13 @@ textarea.textarea {
 	}
 	.login {
 		overflow: hidden;
-		padding: 0;
+		padding: 0 30px;
 	}
 	.login .content {
 		overflow: visible;
 		position: relative;
-		margin: 150px 30px 0;
+		max-width: 400px;
+		margin: 150px auto 0;
 		-webkit-border-radius: 20px;
 		        border-radius: 20px;
 	}
@@ -2887,6 +2922,9 @@ textarea.textarea {
 		padding: 0;
 		-webkit-transform: scale(0.7);
 		        transform: scale(0.7);
+	}
+	.login .content .section_id {
+		padding: 0 18px;
 	}
 	.login .login_txt {
 		color: rgba(255, 255, 255, 0.8);

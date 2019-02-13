@@ -1,7 +1,28 @@
-@media all and (max-width:1274px){
+@media all and (max-width:1300px){
     #header{
         .lnb .lnb_menu .item_menu_wrap .item_menu{
             font-size: 18px;
+        }
+    }
+    .snb{
+        .item_menu_wrap .item_menu_link{
+            padding:0 15px;
+        }
+    }
+    .gnb,.lnb .lnb_menu{
+        margin-right: 20px;
+    }
+}
+@media all and (max-width:1024px){
+    #header{
+        .logo{
+            margin-left: 30px;
+        }
+        .gnb .gnb_item{
+            font-size: 22px;
+        }
+        .lnb .lnb_menu .item_menu_wrap .item_menu{
+            font-size: 17px;
         }
     }
 }
@@ -68,11 +89,12 @@
     //LOGIN
     .login{
         overflow: hidden;
-        padding:0;
+        padding:0 30px;
         .content{
             overflow: visible;
             position: relative;
-            margin: 150px 30px 0;
+            max-width: 400px;
+            margin: 150px auto 0;
             border-radius: 20px;
             .fr{
                 float: none;
@@ -111,6 +133,9 @@
                 margin: -110px auto 0;
                 padding: 0;
                 transform: scale(0.7);
+            }
+            .section_id{
+                padding: 0 18px;
             }
         }
         .login_txt{
