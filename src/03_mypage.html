@@ -115,71 +115,76 @@
 
 					<div class="mypage_area">
 						<ul class="table_area">
-							<!-- 아이디 -->
-							<li class="bx type_half">
-								<div class="title">
-									<strong>성명(아이디)</strong>
+							<!-- 아이디,현비번 -->
+							<li class="bx">
+								<div class="half">
+									<div class="title">
+										<strong>성명(아이디)</strong>
+									</div>
+									<div class="cont">
+										<input type="text" value="바른마음병원" class="text">
+										<p class="txt_msg">* 성명은 웹사이트의 아이디로 사용됩니다.</p>
+									</div>
 								</div>
-								<div class="cont">
-									<input type="text" value="바른마음병원" class="text">
-									<p class="txt_msg">* 성명은 웹사이트의 아이디로 사용됩니다.</p>
-								</div>
-							</li>
-							<!-- 현비번 -->
-							<li class="bx type_half">
-								<div class="title">
-									<strong>현재 비밀번호</strong>
-								</div>
-								<div class="cont">
-									<input type="password" class="text">
-									<p class="txt_msg">* 현재 비밀번호 확인이 되면 새 비밀번호로 변경 가능 합니다.</p>
-								</div>
-							</li>
-							<!-- 새비번 -->
-							<li class="bx type_half">
-								<div class="title">
-									<strong>새 비밀번호</strong>
-								</div>
-								<div class="cont">
-									<input type="password" class="text">
+								<div class="half">
+									<div class="title">
+										<strong>현재 비밀번호</strong>
+									</div>
+									<div class="cont">
+										<input type="password" class="text">
+										<p class="txt_msg">* 현재 비밀번호 확인이 되면 새 비밀번호로 변경 가능 합니다.</p>
+									</div>
 								</div>
 							</li>
-							<!-- 비번확인 -->
-							<li class="bx type_half">
-								<div class="title">
-									<strong>비밀번호 확인</strong>
+							<li class="bx">
+								<!-- 새비번 -->
+								<div class="half">
+									<div class="title">
+										<strong>새 비밀번호</strong>
+									</div>
+									<div class="cont">
+										<input type="password" class="text">
+									</div>
 								</div>
-								<div class="cont">
-									<input type="password" class="text">
+								<!-- 비번확인 -->
+								<div class="half">
+									<div class="title">
+										<strong>비밀번호 확인</strong>
+									</div>
+									<div class="cont">
+										<input type="password" class="text">
+									</div>
 								</div>
 							</li>
-							<!-- 면허번호 -->
-							<li class="bx type_half">
-								<div class="title">
-									<strong>면허번호</strong>
+							<li class="bx">
+								<!-- 면허번호 -->
+								<div class="half">
+									<div class="title">
+										<strong>면허번호</strong>
+									</div>
+									<div class="cont">
+										<input type="text" class="text" value="1234456">
+									</div>
 								</div>
-								<div class="cont">
-									<input type="text" class="text" value="1234456">
-								</div>
-							</li>
-							<!-- 가입구분 -->
-							<li class="bx type_half">
-								<div class="title">
-									<strong>가입구분</strong>
-								</div>
-								<div class="cont">
-									<input type="radio" id='radio1' class="radio" checked="checked">
-									<label for="radio1" class="spim_bf radio_label">의사</label>
-									<select class="cmm_select w120">
-									    <option value="">GH</option>
-									    <option value="">Semi GH</option>
-									    <option value="">CL</option>
-									</select>
+								<!-- 가입구분 -->
+								<div class="half">
+									<div class="title">
+										<strong>가입구분</strong>
+									</div>
+									<div class="cont">
+										<input type="radio" name="ra_bx" id='radio1' class="radio" checked="checked">
+										<label for="radio1" class="spim_bf radio_label">의사</label>
+										<select class="cmm_select w120">
+										    <option value="">GH</option>
+										    <option value="">Semi GH</option>
+										    <option value="">CL</option>
+										</select>
 
-									<input type="radio" id='radio2' class="radio">
-									<label for="radio2" class="spim_bf radio_label">TS</label>
-									<input type="radio" id='radio3' class="radio">
-									<label for="radio3" class="spim_bf radio_label">MKT</label>
+										<input type="radio" name="ra_bx" id='radio2' class="radio">
+										<label for="radio2" class="spim_bf radio_label">TS</label>
+										<input type="radio" name="ra_bx" id='radio3' class="radio">
+										<label for="radio3" class="spim_bf radio_label">MKT</label>
+									</div>
 								</div>
 							</li>
 							<!-- 병원검색 -->
@@ -191,37 +196,40 @@
 									<a href="#">병원검색</a>
 								</div>
 							</li>
-							<!-- 가입구분 -->
-							<li class="bx type_half">
-								<div class="title">
-									<strong>가입구분</strong>
+
+							<li class="bx">
+								<!-- 가입구분 -->
+								<div class="half">
+									<div class="title">
+										<strong>가입구분</strong>
+									</div>
+									<div class="cont">
+										<input type="text" class="text w140">
+										@
+										<select class="cmm_select w140">
+											<option value="">gmail.com</option>
+										</select>
+										<p class="txt_msg">* 아이디/비밀번호를 찾거나 알림을 받기 위해 필요합니다.</p>
+									</div>
 								</div>
-								<div class="cont">
-									<input type="text" class="text w140">
-									@
-									<select class="cmm_select w140">
-										<option value="">gmail.com</option>
-									</select>
-									<p class="txt_msg">* 아이디/비밀번호를 찾거나 알림을 받기 위해 필요합니다.</p>
-								</div>
-							</li>
-							<!-- 휴대폰번호 -->
-							<li class="bx type_half">
-								<div class="title">
-									<strong>휴대폰 번호</strong>
-								</div>
-								<div class="cont type_phone">
-									<select class="cmm_select w100">
-									    <option value="">010</option>
-									    <option value="">011</option>
-									</select>
-									<input type="text" value="1234" class="text">
-									<input type="text" value="1234" class="text">
-									<p class="txt_msg">* 아이디/비밀번호를 찾거나 알림을 받기 위해 필요합니다.</p>
+								<!-- 휴대폰번호 -->
+								<div class="half">
+									<div class="title">
+										<strong>휴대폰 번호</strong>
+									</div>
+									<div class="cont type_phone">
+										<select class="cmm_select w100">
+										    <option value="">010</option>
+										    <option value="">011</option>
+										</select>
+										<input type="text" value="1234" class="text">
+										<input type="text" value="1234" class="text">
+										<p class="txt_msg">* 아이디/비밀번호를 찾거나 알림을 받기 위해 필요합니다.</p>
+									</div>
 								</div>
 							</li>
 							<!-- 정보수신동의 -->
-							<li class="bx">
+							<li class="bx">
 								<div class="title">
 									<strong>정보 수신 동의</strong>
 								</div>

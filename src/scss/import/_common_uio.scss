@@ -333,33 +333,33 @@ textarea.textarea{
     text-align: left;
 
     .bx{
-        display: table;
-        table-layout: fixed;
+        display: flex;
         width: 100%;
         border-top: 1px solid #fff;
         border-bottom: 1px solid #e1e1e1;
         font-size: 16px;
+        line-height: 22px;
         color: #333;
-        &.type_half{
-            width: 50%;
-            float: left;
-        }
+    }
+    .half{
+        flex: 1 1 0%;
+        display: flex;
     }
     .title{
-        display: table-cell;
-        width: 140px;
-        height: 50px;
-        padding: 27px 0 0 58px;
+        flex-basis: 190px;
         background: #faf9f7;
-        vertical-align: top;
         strong{
+            display: inline-block;
+            margin: 18px 0 18px 48px;
             font-weight: normal;
+            vertical-align: top;
         }
     }
     .cont{
-        display: table-cell;
+        flex-grow:1;
+        flex-shrink: 1;
+        flex-basis: auto;
         position: relative;
-        padding: 18px 30px 0;
         background: #fff;
         .fl{
             float: left;
@@ -380,8 +380,6 @@ textarea.textarea{
             margin-right: 48px;
             color: #989898;
             vertical-align: top;
-            font-size: 16px;
-            line-height: 22px;
             &:before{
                 display: inline-block;
                 width: 18px;
@@ -407,8 +405,6 @@ textarea.textarea{
             margin-right: 18px;
             color: #989898;
             vertical-align: top;
-            font-size: 16px;
-            line-height: 22px;
             &:before{
                 @include get-icon-sprite(bg_radio, $sp_hepa);
                 display: inline-block;
@@ -416,7 +412,6 @@ textarea.textarea{
                 vertical-align: top;
             }
         }
-
         input.radio{
             display: none;
             &:checked + .check_label{
