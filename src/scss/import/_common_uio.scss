@@ -348,6 +348,7 @@ textarea.textarea{
         }
         // 체크
         .check_label{
+            display: inline-block;
             margin-right: 48px;
             color: #989898;
             vertical-align: top;
@@ -375,6 +376,7 @@ textarea.textarea{
         }
         // 라디오 
         .radio_label{
+            display: inline-block;
             margin-right: 18px;
             color: #989898;
             vertical-align: top;
@@ -387,10 +389,9 @@ textarea.textarea{
                 vertical-align: top;
             }
         }
-
         input.radio{
             display: none;
-            &:checked + .check_label{
+            &:checked + .radio_label{
                 color: #333;
                 &:before{
                     @include get-icon-sprite(bg_radio_on, $sp_hepa);

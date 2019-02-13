@@ -6,7 +6,7 @@ body, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, th, td, form, fi
 body, input, textarea, select, table, button, code {
 	font-family: 'Spoqa Han Sans',-apple-system,BlinkMacSystemFont,helvetica,Apple SD Gothic Neo,sans-serif;
 	font-size: 20px;
-	line-height: 1.6em;
+	line-height: 1.3em;
 }
 
 html {
@@ -941,6 +941,7 @@ textarea.textarea {
 }
 
 .table_area .cont .check_label {
+	display: inline-block;
 	margin-right: 48px;
 	color: #989898;
 	vertical-align: top;
@@ -974,6 +975,7 @@ textarea.textarea {
 }
 
 .table_area .cont .radio_label {
+	display: inline-block;
 	margin-right: 18px;
 	color: #989898;
 	vertical-align: top;
@@ -994,11 +996,11 @@ textarea.textarea {
 	display: none;
 }
 
-.table_area .cont input.radio:checked + .check_label {
+.table_area .cont input.radio:checked + .radio_label {
 	color: #333;
 }
 
-.table_area .cont input.radio:checked + .check_label:before {
+.table_area .cont input.radio:checked + .radio_label:before {
 	width: 22px;
 	height: 22px;
 	background-position: -226px -132px;
