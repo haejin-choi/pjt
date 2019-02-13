@@ -2076,6 +2076,7 @@ textarea.textarea {
 
 .login .content .section_id .btn_save .label_save {
 	display: inline-block;
+	margin: 4px 0 -4px;
 	font-size: 14px;
 	color: #333;
 	line-height: 22px;
@@ -2808,12 +2809,13 @@ textarea.textarea {
 	}
 	.login {
 		overflow: hidden;
-		padding: 0;
+		padding: 0 30px;
 	}
 	.login .content {
 		overflow: visible;
 		position: relative;
-		margin: 150px 30px 0;
+		max-width: 400px;
+		margin: 150px auto 0;
 		-webkit-border-radius: 20px;
 		        border-radius: 20px;
 	}
@@ -2856,6 +2858,9 @@ textarea.textarea {
 		padding: 0;
 		-webkit-transform: scale(0.7);
 		        transform: scale(0.7);
+	}
+	.login .content .section_id {
+		padding: 0 18px;
 	}
 	.login .login_txt {
 		color: rgba(255, 255, 255, 0.8);
