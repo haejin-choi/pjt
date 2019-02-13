@@ -377,6 +377,7 @@ textarea.textarea{
         }
         // 체크
         .check_label{
+            display: inline-block;
             margin-right: 48px;
             color: #989898;
             vertical-align: top;
@@ -402,6 +403,7 @@ textarea.textarea{
         }
         // 라디오
         .radio_label{
+            display: inline-block;
             margin-right: 18px;
             color: #989898;
             vertical-align: top;
@@ -414,7 +416,7 @@ textarea.textarea{
         }
         input.radio{
             display: none;
-            &:checked + .check_label{
+            &:checked + .radio_label{
                 color: #333;
                 &:before{
                     @include get-icon-sprite(bg_radio_on, $sp_hepa);
@@ -632,5 +634,73 @@ textarea.textarea{
         display: inline-block;
         max-width: 900px;
         margin: 120px 0;
+    }
+    .layer_content{
+        position: relative;
+        padding: 30px 48px 42px;
+        background: #fff;
+        text-align: left;
+    }
+    .title{
+        position: relative;
+        padding: 0 0 18px;
+        font-size: 24px;
+        color: #000;
+        border-bottom: 2px solid #000;
+        strong{
+            font-weight: normal;
+        }
+    }
+    .btn_close{
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        width: 10px;
+        height: 10px;
+        background: red;
+    }
+    .btn_area{
+        padding-top: 55px;
+        text-align: center;
+    }
+    .btn_submit{
+        display: inline-block;
+        min-width: 200px;
+        height: 50px;
+        border-radius: 25px;
+        background: #2377c2;
+        color: #fff;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 50px;
+    }
+    .term_layer{
+        box-sizing: border-box;
+        max-width: 900px;
+        .scroll_area{
+            overflow: hidden;
+            overflow-y: auto;
+            height: 640px;
+            padding-right: 25px;
+            margin: 40px 0 0 0;
+            font-size: 13px;
+            line-height: 24px;
+            .heading{
+                display: block;
+                color: #333;
+                font-size: 15px;
+                font-weight: bold;
+            }
+            .paragraph{
+                margin-bottom: 20px;
+            }
+            .indent{
+                padding-left: 10px;
+            }
+            .emphasis{
+                text-decoration: underline;
+                color: #2377c2;
+            }
+        }
     }
 }
