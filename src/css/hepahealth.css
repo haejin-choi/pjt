@@ -1262,6 +1262,88 @@ textarea.textarea {
 	margin: 120px 0;
 }
 
+.common_layer .layer_content {
+	position: relative;
+	padding: 30px 48px 42px;
+	background: #fff;
+	text-align: left;
+}
+
+.common_layer .title {
+	position: relative;
+	padding: 0 0 18px;
+	font-size: 24px;
+	color: #000;
+	border-bottom: 2px solid #000;
+}
+
+.common_layer .title strong {
+	font-weight: normal;
+}
+
+.common_layer .btn_close {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	width: 10px;
+	height: 10px;
+	background: red;
+}
+
+.common_layer .btn_area {
+	padding-top: 55px;
+	text-align: center;
+}
+
+.common_layer .btn_submit {
+	display: inline-block;
+	min-width: 200px;
+	height: 50px;
+	-webkit-border-radius: 25px;
+	        border-radius: 25px;
+	background: #2377c2;
+	color: #fff;
+	font-weight: bold;
+	font-size: 20px;
+	line-height: 50px;
+}
+
+.common_layer .term_layer {
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	max-width: 900px;
+}
+
+.common_layer .term_layer .scroll_area {
+	overflow: hidden;
+	overflow-y: auto;
+	height: 640px;
+	padding-right: 25px;
+	margin: 40px 0 0 0;
+	font-size: 13px;
+	line-height: 24px;
+}
+
+.common_layer .term_layer .scroll_area .heading {
+	display: block;
+	color: #333;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.common_layer .term_layer .scroll_area .paragraph {
+	margin-bottom: 20px;
+}
+
+.common_layer .term_layer .scroll_area .indent {
+	padding-left: 10px;
+}
+
+.common_layer .term_layer .scroll_area .emphasis {
+	text-decoration: underline;
+	color: #2377c2;
+}
+
 .section_top .visual_area {
 	height: 357px;
 	margin-bottom: -22px;
