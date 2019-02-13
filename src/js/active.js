@@ -11,6 +11,9 @@ if(ua.search('mobile') == '-1'){
 }
 
 $(document).ready(function(e) {
+	$('html').css({
+		'overflow':'hidden'
+	})
 	var win = $(window);
 	var doc = $(document);
 	var bgRolling = $('._rolling');
