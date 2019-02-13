@@ -109,6 +109,35 @@ textarea.textarea{
 }
 
 // 탭메뉴
+.tab_select{
+    position: relative;
+    height: 58px;
+    margin-bottom: 50px;
+    border: 1px solid #e0e0e0;
+    box-sizing: border-box;
+    select{
+        width: 100%;
+        height: 100%;
+        padding: 12px 12px;
+        border: 0;
+        color: #333;
+        appearance: none;
+        &::-ms-expand{
+            display: none;
+        }
+    }
+    &:after{
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 18px;
+        width: 0;
+        height: 0;
+        border: 5px solid #e0e0e0;
+        border-color: #e0e0e0 transparent transparent transparent;
+        transform: rotateY(-50%);
+    }
+}
 .tab{
     display: table;
     table-layout: fixed;

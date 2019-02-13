@@ -1,5 +1,8 @@
 @media all and (max-width:1300px){
     #header{
+        .logo{
+            margin-left: 30px;
+        }
         .lnb .lnb_menu .item_menu_wrap .item_menu{
             font-size: 18px;
         }
@@ -15,9 +18,6 @@
 }
 @media all and (max-width:1024px){
     #header{
-        .logo{
-            margin-left: 30px;
-        }
         .gnb .gnb_item{
             font-size: 22px;
         }
@@ -28,6 +28,7 @@
 }
 //mobile
 @media all and (max-width:812px){
+    .is_pc{display:none;}
     .is_mobile{display:block;}
     #wrap{
         min-width: inherit;
