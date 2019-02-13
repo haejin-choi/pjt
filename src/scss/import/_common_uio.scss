@@ -36,7 +36,7 @@ textarea.textarea{
     position:relative;
     border:1px solid #eaeaea;
     line-height: 38px;
-    vertical-align: top;
+    vertical-align: middle;
     .styledSelect {
         position:absolute;
         top:0;
@@ -704,7 +704,7 @@ textarea.textarea{
         .scroll_area{
             overflow: hidden;
             overflow-y: auto;
-            height: 640px;
+            max-height: 640px;
             padding-right: 25px;
             margin: 40px 0 0 0;
             font-size: 13px;

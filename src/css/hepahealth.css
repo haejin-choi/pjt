@@ -572,7 +572,7 @@ textarea.textarea {
 	position: relative;
 	border: 1px solid #eaeaea;
 	line-height: 38px;
-	vertical-align: top;
+	vertical-align: middle;
 }
 
 .cm_select .styledSelect {
@@ -1398,7 +1398,7 @@ textarea.textarea {
 .common_layer .term_layer .scroll_area {
 	overflow: hidden;
 	overflow-y: auto;
-	height: 640px;
+	max-height: 640px;
 	padding-right: 25px;
 	margin: 40px 0 0 0;
 	font-size: 13px;

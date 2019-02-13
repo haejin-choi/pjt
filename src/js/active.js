@@ -94,17 +94,20 @@ $(document).ready(function(e) {
 		var self = $(elm);
 		self.addClass('on').siblings().removeClass('on');
 	}
-	function layerPop(idx){
+	function layerPop(idx,name){
 		var lycommon = $('._lycommon');
+		var lycommonIdx = $('._lycommon[data-attr='+name+']').length;
 		if(idx == 0){
+			html.removeAttr('style');
 			lycommon.hide();
-		}else{
-			lycommon.show();
+		}else if(idx == 1 && lycommonIdx == 1){
+			html.css('overflow','hidden');
+			$('._lycommon[data-attr='+name+']').show();
 		}
 	}
-
-	$('._footItem2').on('click',function(e){
-		layerPop(1);
+	$('[data-attr="_lyPop"]').on('click',function(e){
+		var name = $(this).attr('class');
+		layerPop(1,name);
 		e.preventDefault();
 	});
 	$('._lyClose').on('click',function(e){
