@@ -27,7 +27,7 @@
     }
 }
 //mobile
-@media all and (max-width:812px){
+@media all and (max-width: $mobileWidth){
     .is_pc{display:none;}
     .is_mobile{display:block;}
     #wrap{

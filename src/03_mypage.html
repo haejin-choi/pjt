@@ -271,18 +271,41 @@
 	<!-- layerPopup -->
 	<div class="common_layer _lycommon" data-attr="_btSearchH">
 		<div class="wrap">
-			<div class="group term_layer">
+			<!-- 병원검색 -->
+			<div class="group hospital_layer">
 				<div class="layer_content">
 					<div class="title">
 						<strong>병원검색</strong>
-						<a href="#" class="btn_close _lyClose">닫기</a>
+						<a href="#" class="spim btn_close _lyClose">닫기</a>
 					</div>
-					<div class="scroll_area">
-						dsfalfk sjdlfjalskdjflkasdj fklasj flk j
+					<div class="search_hospital">
+						<p class="search_txt">정확한 지역 및 병원명을 입력해주세요.</p>
+						<div class="search_form">
+							<select class="cmm_select">
+								<option value="">시 선택</option>
+								<option value="">서울특별시</option>
+							</select>
+							<select class="cmm_select">
+								<option value="">구 선택</option>
+								<option value="">강남구강남구강남구강남구강남구강남구강남구강남구강남구</option>
+							</select>
+							<input type="text" placeholder="병원명 입력" class="text">
+							<a href="#" class="btn_search">검색</a>
+						</div>
+					</div>
+					<div class="result_hospital">
+						<p class="result_txt">서울시 강남구  <strong>삼성서울병원 내분비내과</strong></p>
+						<select class="cmm_select">
+							<option value="">분과를 선택해 주세요.</option>
+						</select>
+						<div class="result_area" style="height:230px;">
+							
+						</div>
 					</div>
 					<div class="btn_area">
 						<a href="#" class="btn_submit _lyClose">확인</a>
 					</div>
+
 				</div>
 			</div>
 		</div>

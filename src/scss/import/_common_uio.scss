@@ -37,22 +37,29 @@ textarea.textarea{
     border:1px solid #eaeaea;
     line-height: 38px;
     vertical-align: middle;
+    .cmm_select{
+        width: 100%;    
+    }
     .styledSelect {
+        overflow: hidden;
         position:absolute;
         top:0;
         right:0;
         bottom:0;
         left:0;
         background-color:#fff;
-        padding:0 10px;
+        padding:0 24px 0 10px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
     .styledSelect:after {
         content:"";
         position:absolute;
-        top:15px;
+        top:50%;
         right:15px;
         width:0;
         height:0;
+        margin-top: -3px;
         border:5px solid transparent;
         border-color:#bcbcbc transparent transparent transparent;
     }
@@ -70,8 +77,11 @@ textarea.textarea{
         background-color:#fff;
     }
     .options li {
+        overflow: hidden;
         padding: 0 10px;
         box-sizing: border-box;
+        white-space: nowrap;
+        text-overflow: ellipsis;
     }
     .options li:hover {
         background-color:#eee;
@@ -634,97 +644,4 @@ textarea.textarea{
         }
     }
 }
-//layer
-.common_layer{
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 2000;
-    background-color: rgba(0,0,0,0.3);
-    .wrap{
-        overflow: hidden;
-        overflow-y: auto;
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        text-align: center;
-    }
-    .group{
-        display: inline-block;
-        max-width: 900px;
-        margin: 120px 0;
-    }
-    .layer_content{
-        position: relative;
-        padding: 30px 48px 42px;
-        background: #fff;
-        text-align: left;
-    }
-    .title{
-        position: relative;
-        padding: 0 0 18px;
-        font-size: 24px;
-        color: #000;
-        border-bottom: 2px solid #000;
-        strong{
-            font-weight: normal;
-        }
-    }
-    .btn_close{
-        position: absolute;
-        top: 15px;
-        right: 15px;
-        width: 10px;
-        height: 10px;
-        background: red;
-    }
-    .btn_area{
-        padding-top: 55px;
-        text-align: center;
-    }
-    .btn_submit{
-        display: inline-block;
-        min-width: 200px;
-        height: 50px;
-        border-radius: 25px;
-        background: #2377c2;
-        color: #fff;
-        font-weight: bold;
-        font-size: 20px;
-        line-height: 50px;
-    }
-    .term_layer{
-        box-sizing: border-box;
-        max-width: 900px;
-        .scroll_area{
-            overflow: hidden;
-            overflow-y: auto;
-            max-height: 640px;
-            padding-right: 25px;
-            margin: 40px 0 0 0;
-            font-size: 13px;
-            line-height: 24px;
-            .heading{
-                display: block;
-                color: #333;
-                font-size: 15px;
-                font-weight: bold;
-            }
-            .paragraph{
-                margin-bottom: 20px;
-            }
-            .indent{
-                padding-left: 10px;
-            }
-            .emphasis{
-                text-decoration: underline;
-                color: #2377c2;
-            }
-        }
-    }
-}
+
