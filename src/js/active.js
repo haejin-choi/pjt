@@ -104,8 +104,16 @@ $(document).ready(function(e) {
 			$('._lycommon[data-attr='+name+']').show();
 		}
 	}
+	function nextToggle(elm){
+		var self = $(elm);
+		elm.next().toggle();
+	}
+	function parentToggle(elm,name){
+		var self = $(elm);
+		self.parent().toggleClass(name);
+	}
 	$('[data-attr="_lyPop"]').on('click',function(e){
-		var name = $(this).attr('class');
+		var name = $(this).attr('id');
 		layerPop(1,name);
 		e.preventDefault();
 	});
@@ -375,7 +383,7 @@ $(document).ready(function(e) {
 	//TOWN_faq
 	$('.section_faq .faq_list .item_q').on('click',function(e){
 		var self = $(this);
-		self.parent().toggleClass("open");
+		parentToggle(self,"open");
 		e.preventDefault();
 	});
 
@@ -402,11 +410,16 @@ $(document).ready(function(e) {
 	});
 
 	//CLOUD
+	$('#ly_email').on('click',function(e){
+		var self = $(this);
+		nextToggle(self);
+		e.preventDefault();
+	});
 
 	//MYPAGE
 	$('.section_mypage .list_visited .item_visited > a').on('click',function(e){
 		var self = $(this);
-		self.parent().toggleClass("open");
+		parentToggle(self,"open");
 		e.preventDefault();
 	});
 

@@ -1335,6 +1335,46 @@ textarea.textarea {
 	text-decoration: underline;
 }
 
+.layer_email {
+	display: none;
+	position: absolute;
+	top: 53px;
+	left: 0;
+	z-index: 100;
+	width: 375px;
+	padding: 15px;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	-webkit-border-radius: 4px;
+	        border-radius: 4px;
+	background-color: #40abd9;
+}
+
+.layer_email:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 60px;
+	width: 0;
+	height: 0;
+	margin-top: -14px;
+	border: 7px solid transparent;
+	border-color: transparent transparent #40abd9 transparent;
+}
+
+.layer_email .email_area {
+	position: relative;
+	padding-right: 60px;
+}
+
+.layer_email .email_area .btn_submit {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 60px;
+	text-align: center;
+}
+
 /* 레이어 */
 .common_layer {
 	display: none;
@@ -1629,7 +1669,13 @@ textarea.textarea {
 }
 
 .section_pi .btn_area {
-	overflow: hidden;
+	position: relative;
+}
+
+.section_pi .btn_area:after {
+	content: '';
+	display: block;
+	clear: both;
 }
 
 .section_pi .btn_area .fl {
@@ -1692,7 +1738,8 @@ textarea.textarea {
 }
 
 .section_video .btn_area {
-	padding-top: 50px;
+	position: relative;
+	margin-top: 50px;
 }
 
 .section_video .player_area {
@@ -1892,6 +1939,10 @@ textarea.textarea {
 .section_library .top_area {
 	position: relative;
 	padding-bottom: 40px;
+}
+
+.section_library .top_area .btn_area {
+	position: relative;
 }
 
 .section_library .top_area .select_area {
@@ -2208,6 +2259,15 @@ textarea.textarea {
 	text-align: center;
 }
 
+.section_mypage .list_visited .item_visited.open > a:after {
+	-webkit-transform: scale(-1);
+	        transform: scale(-1);
+}
+
+.section_mypage .list_visited .item_visited.open .list_url {
+	display: block;
+}
+
 .section_mypage .list_visited .item_visited > a {
 	display: block;
 	position: relative;
@@ -2229,6 +2289,10 @@ textarea.textarea {
 .section_mypage .list_visited .item_visited .date {
 	font-size: 21px;
 	color: #333;
+}
+
+.section_mypage .list_visited .list_url {
+	display: none;
 }
 
 .section_mypage .list_visited .list_url li {

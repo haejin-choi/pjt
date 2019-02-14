@@ -59,8 +59,12 @@
 // 1.브릿지 > 제품정보
 .section_pi{
     .btn_area{
-        overflow: hidden;
-
+        position: relative;
+        &:after{
+            content: '';
+            display: block;
+            clear: both;
+        }
         .fl{
             float: left;
         }
@@ -113,7 +117,8 @@
         overflow: hidden;
     }
     .btn_area{
-        padding-top: 50px;
+        position: relative;
+        margin-top: 50px;
     }
     .player_area{
         overflow: hidden;
@@ -281,6 +286,9 @@
    .top_area{
        position: relative;
        padding-bottom: 40px;
+       .btn_area{
+           position: relative;
+       }
        .select_area{
            position: absolute;
            top: -15px;
@@ -567,6 +575,16 @@
     }
     // 방문이력 리스트
     .list_visited{
+        .item_visited.open{
+            > a{
+                &:after{
+                    transform: scale(-1);
+                }
+            }
+            .list_url{
+                display: block;
+            }
+        }
         .item_visited{
             > a{
                 display: block;
@@ -588,6 +606,7 @@
             }
         }
         .list_url{
+            display: none;
             li{
                 +li{
                     border-top: 1px dashed #e1e1e1;
