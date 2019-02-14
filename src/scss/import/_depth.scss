@@ -575,13 +575,11 @@
                 border-bottom: 1px solid #666;
                 line-height: 78px;
                 &:after{
+                    @include get-icon-sprite(ico_toggle, $sp_hepa);
                     content: '';
                     position: absolute;
-                    top: 5px;
-                    right: 5px;
-                    width: 10px;
-                    height: 10px;
-                    background: red;
+                    top: 32px;
+                    right: 0;
                 }
             }
             .date{
@@ -602,6 +600,7 @@
                     margin: 0 13px 0 0;
                     border-radius: 50%;
                     background: #333;
+                    vertical-align: middle;
                 }
                 overflow: hidden;
                 padding: 0 0 0 40px;

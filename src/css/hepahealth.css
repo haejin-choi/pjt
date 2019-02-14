@@ -169,7 +169,7 @@ input::-ms-clear {
 #header.active .header_search .item_setting .ico_setting, #header.expanded .header_search .item_setting .ico_setting {
 	width: 17px;
 	height: 17px;
-	background-position: -172px -91px;
+	background-position: -172px -109px;
 }
 
 #header.active .snb, #header.expanded .snb {
@@ -304,7 +304,7 @@ input::-ms-clear {
 #header .layer_setting:before {
 	width: 20px;
 	height: 11px;
-	background-position: -172px -152px;
+	background-position: -21px -171px;
 	position: absolute;
 	top: 0;
 	right: 26px;
@@ -769,14 +769,14 @@ textarea.textarea {
 .ico_favorite {
 	width: 14px;
 	height: 14px;
-	background-position: -21px -171px;
+	background-position: -36px -192px;
 	margin: -2px 6px 2px 0;
 }
 
 .ico_email {
 	width: 20px;
 	height: 13px;
-	background-position: -172px -112px;
+	background-position: -172px -152px;
 	margin: -2px 6px 2px 0;
 }
 
@@ -992,6 +992,8 @@ textarea.textarea {
 	        flex-shrink: 1;
 	-webkit-flex-basis: auto;
 	        flex-basis: auto;
+	-webkit-align-self: center;
+	        align-self: center;
 	position: relative;
 	background: #fff;
 }
@@ -1032,10 +1034,16 @@ textarea.textarea {
 	width: 50%;
 }
 
+.table_area .cont .label_dr {
+	display: inline-block;
+	margin-right: 30px;
+}
+
 .table_area .cont .check_label {
 	display: inline-block;
-	margin-right: 48px;
+	margin-right: 10px;
 	color: #989898;
+	letter-spacing: -1px;
 	vertical-align: top;
 }
 
@@ -1043,7 +1051,7 @@ textarea.textarea {
 	display: inline-block;
 	width: 18px;
 	height: 18px;
-	margin: 0 9px 0 0;
+	margin: 0 7px 0 0;
 	border: 2px solid #d9d9d9;
 	vertical-align: top;
 	background-position: 100px 100px;
@@ -1909,7 +1917,7 @@ textarea.textarea {
 .section_faq .faq_list .item_q:before {
 	width: 14px;
 	height: 20px;
-	background-position: -307px -105px;
+	background-position: 0px -192px;
 	position: absolute;
 	top: 50px;
 	left: 60px;
@@ -1975,7 +1983,7 @@ textarea.textarea {
 .section_faq .faq_list .open .item_q:before {
 	width: 14px;
 	height: 20px;
-	background-position: 0px -192px;
+	background-position: -307px -105px;
 }
 
 .section_faq .faq_list .open .item_q:after {
@@ -2030,7 +2038,7 @@ textarea.textarea {
 .section_usefullink .usefullink_list .btn_border:after {
 	width: 7px;
 	height: 12px;
-	background-position: -39px -171px;
+	background-position: -54px -192px;
 	margin: -2px 0 2px 7px;
 }
 
@@ -2209,13 +2217,13 @@ textarea.textarea {
 }
 
 .section_mypage .list_visited .item_visited > a:after {
+	width: 24px;
+	height: 14px;
+	background-position: -172px -91px;
 	content: '';
 	position: absolute;
-	top: 5px;
-	right: 5px;
-	width: 10px;
-	height: 10px;
-	background: red;
+	top: 32px;
+	right: 0;
 }
 
 .section_mypage .list_visited .item_visited .date {
@@ -2245,6 +2253,7 @@ textarea.textarea {
 	-webkit-border-radius: 50%;
 	        border-radius: 50%;
 	background: #333;
+	vertical-align: middle;
 }
 
 .section_mypage .list_visited .list_url .item_time {
