@@ -146,7 +146,8 @@ textarea.textarea{
         right: 18px;
         width: 0;
         height: 0;
-        border: 5px solid #e0e0e0;
+        margin-top: -3px;
+        border: 7px solid #e0e0e0;
         border-color: #e0e0e0 transparent transparent transparent;
         transform: rotateY(-50%);
     }
@@ -651,6 +652,16 @@ textarea.textarea{
     }
 }
 //layer
+.dimmed_layer{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+}
 .layer_email{
     display: none;
     position: absolute;

@@ -34,12 +34,27 @@
         min-width: inherit;
         padding-bottom: 170px;
     }
-    #header{
+    #header,.bg_content_shadow,.path_area{
         display: none;
     }
     .container{
         .content{
             width: auto;
+            min-width: inherit;
+            padding: 40px 18px;
+        }
+    }
+    //COMMON UI
+    .layer_email{
+        width: 100%;
+
+    }
+    .dropdown{
+        width: 100%;
+    }
+    .btn_area{
+        [class^=btn_]{
+            margin-bottom: 10px;
         }
     }
     #wrap.home{
@@ -153,6 +168,81 @@
             text-align: center;
             strong{
                 color: rgba(255,255,255,0.8);
+            }
+        }
+    }
+    //BRIDGE
+    .section_pi{
+        .pi_txt{
+            padding: 30px 18px;
+        }
+        .btn_area{
+            .fl{
+                float: none;
+            }
+            .fr{
+                float: none;
+            }
+        }
+    }
+    //VIDEO
+    .section_video{
+        margin: 0;
+        .video_area{
+            float: none;
+            width: auto;
+            height: auto;
+            margin: 0;
+            padding: 0;
+            .scroll{
+                overflow: hidden;
+                overflow-x: auto;
+                height: auto;
+            }
+            .video_list{
+                width: auto;
+                white-space: nowrap;
+                font-size: 0;
+                line-height: 0;
+                li{
+                    display: inline-block;
+                    width: 202px;
+                    vertical-align: top;
+                }
+                li+li{
+                    margin: 0 0 0 20px;
+                }
+            }
+        }
+    }
+    //CLOUD
+    .section_library{
+        .library_list{
+            li{
+                width: 50%;
+                margin-bottom: 30px;
+                a{
+                    width: 160px;
+                }
+            }
+            .thumb_area{
+                margin-bottom: 0;
+                background: none;
+                .thumb_wrap{
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    &:after{
+                        display: none;
+                    }
+                }
+            }
+        }
+        .top_area{
+            .select_area{
+                position: static;
+                margin-top: 10px;
             }
         }
     }

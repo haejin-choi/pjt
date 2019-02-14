@@ -141,6 +141,8 @@
     }
     .video_area{
         float: right;
+        position: relative;
+        z-index: 2;
         width: 262px;
         height: 683px;
         margin-left: 16px;
@@ -235,15 +237,17 @@
            }
        }
        .thumb_area{
-           width: 230px;
-           height: 270px;
-           padding: 47px 0 0 0;
+           position: relative;
+           padding-top: 138%;
            margin-bottom: 30px;
            text-align: center;
            background: #f2f2f2;
            .thumb_wrap{
-               display: inline-block;
-               position: relative;
+               position: absolute;
+               top: 47px;
+               right: 27px;
+               bottom: 47px;
+               left: 27px;
                &:after{
                    content:'';
                    position: absolute;
@@ -257,6 +261,8 @@
            img{
                z-index: 5;
                position: relative;
+               width: 100%;
+               height: auto;
                vertical-align: top;
            }
        }

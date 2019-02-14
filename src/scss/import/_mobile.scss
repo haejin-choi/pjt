@@ -31,8 +31,6 @@
                     height: 3px;
                     color: transparent;
                     background-color: #141414;
-                    opacity: 1;
-                    transition: all 0.25s ease-in-out;
                 }
                 span.t{
                     top: 0;
@@ -51,11 +49,14 @@
     }
     .layer_menu{
         display: none;
-        position: absolute;
-        top: 60px;
+        position: fixed;
+        top: 0;
         left: 0;
-        z-index: 1000;
+        z-index: 2000;
         width: 100%;
+        padding-right: 60px;
+        box-sizing: border-box;
+        transform: translateX(-100%);
         .list_menu{
             background-color: #333;
             .menu{
@@ -111,25 +112,10 @@
         }
     }
     &.expanded{
-        .menu_wrap{
-            .menu{
-                >div{
-                    span.t{
-                        width: 0;
-                        opacity: 0;
-                    }
-                    span.m{
-                        transform: rotate(45deg);
-                    }
-                    span.m2{
-                        transform: rotate(-45deg);
-                    }
-                    span.b{
-                        width: 0;
-                        opacity: 0;
-                    }
-                }
-            }
+        .layer_menu{
+            display: block;
+            transition: transform 0.3s ease-in-out;
+            transform: translateX(0);
         }
     }
 }
