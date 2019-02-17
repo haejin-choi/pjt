@@ -107,52 +107,82 @@
 						</div>
 						<div class="is_pc tab">
 							<a href="03_mypage.html">회원정보수정</a>
-							<a href="#" class="on">최근 방문 이력</a>
-							<a href="03_3_mypage_bookmark.html">북마크</a>
+							<a href="03_2_mypage_visited.html">최근 방문 이력</a>
+							<a href="03_3_mypage_bookmark.html" class="on">북마크</a>
 							<a href="03_4_mypage_filelist.html">자료요청</a>
 						</div>
 					</div>
 
-					<div class="mypage_area">
-						<ul class="list_visited">
-							<li class="item_visited">
-								<a href="#" class="spim_af">
-									<em class="date">2018년 12월 17일 월요일</em>
-								</a>
-								<ul class="list_url">
-									<li>
-										<em class="item_time">오후 11:23</em>
-										<p class="item_path">Liver Bridge   >   About Us   >   We are</p>
-										<p class="item_url">http://www.hepahealth.co.kr/admin_member/member/regular_member.php</p>
-									</li>
-									<li>
-										<em class="item_time">오후 11:23</em>
-										<p class="item_path">Liver Bridge   >   About Us   >   We are</p>
-										<p class="item_url">http://www.hepahealth.co.kr/admin_member/member/regular_member.php</p>
-									</li>
-									<li>
-										<em class="item_time">오후 11:23</em>
-										<p class="item_path">Liver Bridge   >   About Us   >   We are</p>
-										<p class="item_url">http://www.hepahealth.co.kr/admin_member/member/regular_member.php</p>
-									</li>
-									<li>
-										<em class="item_time">오후 11:23</em>
-										<p class="item_path">Liver Bridge   >   About Us   >   We are</p>
-										<p class="item_url">http://www.hepahealth.co.kr/admin_member/member/regular_member.php</p>
-									</li>
-								</ul>
-							</li>
-							<li class="item_visited">
-								<a href="#" class="spim_af">
-									<em class="date">2018년 12월 17일 월요일</em>
-								</a>
-							</li>
-							<li class="item_visited">
-								<a href="#" class="spim_af">
-									<em class="date">2018년 12월 17일 월요일</em>
-								</a>
-							</li>
-						</ul>
+					<div class="bookmark_area">
+						<div class="inner">
+							<!-- 미리보기영역 -->
+							<div class="preview">
+								<div class="header_search">
+									<div class="item_search">
+										<label class="label_sch">Search</label>
+										<input type="text" class="input_label_sch">
+									</div>
+									<span class="item_link">LOGIN</span>
+									<span class="item_link">MY PAGE</span>
+									<span class="item_setting"><i class="spim ico_setting">설정</i></span>
+								</div>
+								<div class="spim_bf layer_setting">
+									<div class="wrap_setting">
+										<a href="#" class="item_setting archive"><i class="spim ico_archive"></i>Archive</a>
+										<a href="#" class="item_setting Library"><i class="spim ico_library"></i>Library</a>
+										<a href="#" class="item_setting visit"><i class="spim ico_phone"></i>담당자방문</a>
+										<a href="#" class="item_setting Product"><i class="spim ico_product"></i>Product</a>
+									</div>
+								</div>
+							</div>
+							<!-- 옵션선택영역 -->
+							<ul class="option_list">
+								<li>
+									<input type="checkbox" id="check1" checked>
+									<label for="check1" class="spim_bf">ABOUT US</label>
+								</li>
+								<li>
+									<input type="checkbox" id="check2">
+									<label for="check2" class="spim_bf">환자 교육용 자료</label>
+								</li>
+								<li>
+									<input type="checkbox" id="check3">
+									<label for="check3" class="spim_bf">제품정보</label>
+								</li>
+								<li>
+									<input type="checkbox" id="check4">
+									<label for="check4" class="spim_bf">FAQ</label>
+								</li>
+								<li>
+									<input type="checkbox" id="check5">
+									<label for="check5" class="spim_bf">HBV</label>
+								</li>
+								<li>
+									<input type="checkbox" id="check6">
+									<label for="check6" class="spim_bf">USEFUL LINK</label>
+								</li>
+								<li>
+									<input type="checkbox" id="check7">
+									<label for="check7" class="spim_bf">HCV</label>
+								</li>
+								<li>
+									<input type="checkbox" id="check8">
+									<label for="check8" class="spim_bf">담당자 방문 요청하기</label>
+								</li>
+								<li>
+									<input type="checkbox" id="check9">
+									<label for="check9" class="spim_bf">담당자 방문 요청하기</label>
+								</li>
+								<li>
+									<input type="checkbox" id="check10">
+									<label for="check10" class="spim_bf">담당자 방문 요청하기</label>
+								</li>
+								<li>
+									<input type="checkbox" id="check11">
+									<label for="check11" class="spim_bf">담당자 방문 요청하기</label>
+								</li>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -163,7 +193,7 @@
 		<div id="footer">
 			<div class="wrap_cont">
 				<div class="footer_items">
-					<a id="_footItem1" href="#" data-attr="_lyPop">개인정보취급방침</a><a id="_footItem2" href="#" data-attr="_lyPop">이용약관</a><a href="#">사이트맵</a>
+					<a href="#" class="_footItem1" data-attr="_lyPop">개인정보취급방침</a><a href="#" class="_footItem2" data-attr="_lyPop">이용약관</a><a href="#">사이트맵</a>
 				</div>
 				<p class="footer_copyright">Copyright © 2018 Gilead. All rights reserved.</p>
 				<div class="footer_logo">

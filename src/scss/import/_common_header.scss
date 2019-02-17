@@ -116,7 +116,7 @@
             .input_label_sch{
                 width: 90px;
                 height: 22px;
-                margin: 0 15px 0 0;
+                margin: 0 5px 0 0;
                 padding: 0;
                 box-sizing: border-box;
                 border: 0;
@@ -126,6 +126,13 @@
                 color: #fff;
                 vertical-align: bottom;
                 background: none;
+            }
+            .btn_search{
+                margin: 0 15px 0 0;
+                font-size: 13px;
+                line-height: 15px;
+                border:1px solid gray;
+                vertical-align: bottom;
             }
         }
         .item_link{

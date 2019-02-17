@@ -106,8 +106,8 @@ input::-ms-clear {
 	overflow: hidden;
 	color: transparent;
 	background: url("../img/sprite/sp_hepa.png") 0 0 no-repeat;
-	-webkit-background-size: 322px 212px;
-	background-size: 322px 212px;
+	-webkit-background-size: 322px 230px;
+	background-size: 322px 230px;
 	vertical-align: middle;
 	white-space: nowrap;
 }
@@ -169,7 +169,7 @@ input::-ms-clear {
 #header.active .header_search .item_setting .ico_setting, #header.expanded .header_search .item_setting .ico_setting {
 	width: 17px;
 	height: 17px;
-	background-position: -172px -109px;
+	background-position: -42px -189px;
 }
 
 #header.active .snb, #header.expanded .snb {
@@ -260,7 +260,7 @@ input::-ms-clear {
 #header .header_search .item_search .input_label_sch {
 	width: 90px;
 	height: 22px;
-	margin: 0 15px 0 0;
+	margin: 0 5px 0 0;
 	padding: 0;
 	-webkit-box-sizing: border-box;
 	        box-sizing: border-box;
@@ -271,6 +271,14 @@ input::-ms-clear {
 	color: #fff;
 	vertical-align: bottom;
 	background: none;
+}
+
+#header .header_search .item_search .btn_search {
+	margin: 0 15px 0 0;
+	font-size: 13px;
+	line-height: 15px;
+	border: 1px solid gray;
+	vertical-align: bottom;
 }
 
 #header .header_search .item_link {
@@ -289,7 +297,7 @@ input::-ms-clear {
 #header .header_search .item_setting .ico_setting {
 	width: 17px;
 	height: 17px;
-	background-position: 0px -171px;
+	background-position: -21px -189px;
 	margin: 2px 0 -2px;
 }
 
@@ -304,7 +312,7 @@ input::-ms-clear {
 #header .layer_setting:before {
 	width: 20px;
 	height: 11px;
-	background-position: -21px -171px;
+	background-position: -52px -171px;
 	position: absolute;
 	top: 0;
 	right: 26px;
@@ -763,21 +771,21 @@ textarea.textarea {
 .ico_download {
 	width: 14px;
 	height: 18px;
-	background-position: -18px -192px;
+	background-position: -18px -210px;
 	margin: -2px 6px 2px 0;
 }
 
 .ico_favorite {
 	width: 14px;
 	height: 14px;
-	background-position: -36px -192px;
+	background-position: -63px -189px;
 	margin: -2px 6px 2px 0;
 }
 
 .ico_email {
 	width: 20px;
 	height: 13px;
-	background-position: -172px -152px;
+	background-position: -28px -171px;
 	margin: -2px 6px 2px 0;
 }
 
@@ -1069,7 +1077,7 @@ textarea.textarea {
 .table_area .cont input.checkbox:checked + .check_label:before {
 	width: 22px;
 	height: 22px;
-	background-position: -252px -132px;
+	background-position: -172px -91px;
 	border: none;
 }
 
@@ -1083,7 +1091,7 @@ textarea.textarea {
 .table_area .cont .radio_label:before {
 	width: 22px;
 	height: 22px;
-	background-position: -271px -77px;
+	background-position: -200px -132px;
 	display: inline-block;
 	margin: 0 9px 0 0;
 	vertical-align: top;
@@ -1105,7 +1113,7 @@ textarea.textarea {
 .table_area .cont input.radio:checked + .radio_label:before {
 	width: 22px;
 	height: 22px;
-	background-position: -278px -132px;
+	background-position: -297px -77px;
 }
 
 .table_area .cont .cmm_select.w100 {
@@ -1170,7 +1178,7 @@ textarea.textarea {
 .search_area .ico_search {
 	width: 17px;
 	height: 17px;
-	background-position: -172px -131px;
+	background-position: 0px -189px;
 	margin: -1px 7px 1px 0;
 }
 
@@ -1986,7 +1994,7 @@ textarea.textarea {
 .section_faq .faq_list .item_q:before {
 	width: 14px;
 	height: 20px;
-	background-position: 0px -192px;
+	background-position: 0px -210px;
 	position: absolute;
 	top: 50px;
 	left: 60px;
@@ -2107,7 +2115,7 @@ textarea.textarea {
 .section_usefullink .usefullink_list .btn_border:after {
 	width: 7px;
 	height: 12px;
-	background-position: -54px -192px;
+	background-position: -81px -189px;
 	margin: -2px 0 2px 7px;
 }
 
@@ -2228,129 +2236,6 @@ textarea.textarea {
 	position: absolute;
 	top: -68px;
 	right: 100px;
-}
-
-.section_mypage .txt_mypage {
-	padding-bottom: 30px;
-	font-size: 20px;
-	color: #333;
-}
-
-.section_mypage .txt_mypage strong {
-	font-size: 16px;
-	color: #2377c2;
-	text-decoration: underline;
-}
-
-.section_mypage .txt_mypage em {
-	color: #2377c2;
-}
-
-.section_mypage .list_mypage {
-	padding-bottom: 25px;
-}
-
-.section_mypage .list_mypage li {
-	position: relative;
-	padding-left: 10px;
-	line-height: 26px;
-	font-size: 16px;
-	color: #333;
-}
-
-.section_mypage .list_mypage li:before {
-	content: '';
-	position: absolute;
-	top: 8px;
-	left: 0;
-	width: 2px;
-	height: 10px;
-	background: #cb2e3c;
-}
-
-.section_mypage .list_mypage strong {
-	text-decoration: underline;
-	color: #cb2e3c;
-}
-
-.section_mypage .btn_area {
-	text-align: center;
-}
-
-.section_mypage .list_visited .item_visited.open > a:after {
-	-webkit-transform: scale(-1);
-	        transform: scale(-1);
-}
-
-.section_mypage .list_visited .item_visited.open .list_url {
-	display: block;
-}
-
-.section_mypage .list_visited .item_visited > a {
-	display: block;
-	position: relative;
-	height: 78px;
-	border-bottom: 1px solid #666;
-	line-height: 78px;
-}
-
-.section_mypage .list_visited .item_visited > a:after {
-	width: 24px;
-	height: 14px;
-	background-position: -172px -91px;
-	content: '';
-	position: absolute;
-	top: 32px;
-	right: 0;
-}
-
-.section_mypage .list_visited .item_visited .date {
-	font-size: 21px;
-	color: #333;
-}
-
-.section_mypage .list_visited .list_url {
-	display: none;
-}
-
-.section_mypage .list_visited .list_url li {
-	overflow: hidden;
-	padding: 0 0 0 40px;
-	line-height: 68px;
-	font-size: 16px;
-	color: #333;
-	white-space: nowrap;
-}
-
-.section_mypage .list_visited .list_url li + li {
-	border-top: 1px dashed #e1e1e1;
-}
-
-.section_mypage .list_visited .list_url li:before {
-	content: '';
-	display: inline-block;
-	width: 4px;
-	height: 4px;
-	margin: 0 13px 0 0;
-	-webkit-border-radius: 50%;
-	        border-radius: 50%;
-	background: #333;
-	vertical-align: middle;
-}
-
-.section_mypage .list_visited .list_url .item_time {
-	display: inline-block;
-	vertical-align: top;
-}
-
-.section_mypage .list_visited .list_url .item_path {
-	display: inline-block;
-	vertical-align: top;
-}
-
-.section_mypage .list_visited .list_url .item_url {
-	display: inline-block;
-	vertical-align: top;
 }
 
 .section_search .txt_search {
@@ -2567,7 +2452,7 @@ textarea.textarea {
 .login .content .section_id .btn_save .label_save::before {
 	width: 22px;
 	height: 22px;
-	background-position: -281px -105px;
+	background-position: -278px -132px;
 	content: '';
 	display: inline-block;
 	margin: 0 9px 0 0;
@@ -2581,7 +2466,7 @@ textarea.textarea {
 .login .content .section_id .btn_save .check_save:checked + .label_save:before {
 	width: 22px;
 	height: 22px;
-	background-position: -297px -77px;
+	background-position: -226px -132px;
 }
 
 .login .login_txt {
@@ -2895,6 +2780,319 @@ textarea.textarea {
 	width: 122px;
 	height: 34px;
 	background-position: -200px 0px;
+}
+
+.section_mypage .txt_mypage {
+	padding-bottom: 30px;
+	font-size: 20px;
+	color: #333;
+}
+
+.section_mypage .txt_mypage strong {
+	font-size: 16px;
+	color: #2377c2;
+	text-decoration: underline;
+}
+
+.section_mypage .txt_mypage em {
+	color: #2377c2;
+}
+
+.section_mypage .list_mypage {
+	padding-bottom: 25px;
+}
+
+.section_mypage .list_mypage li {
+	position: relative;
+	padding-left: 10px;
+	line-height: 26px;
+	font-size: 16px;
+	color: #333;
+}
+
+.section_mypage .list_mypage li:before {
+	content: '';
+	position: absolute;
+	top: 8px;
+	left: 0;
+	width: 2px;
+	height: 10px;
+	background: #cb2e3c;
+}
+
+.section_mypage .list_mypage strong {
+	text-decoration: underline;
+	color: #cb2e3c;
+}
+
+.section_mypage .btn_area {
+	text-align: center;
+}
+
+.section_mypage .list_visited .item_visited.open > a:after {
+	-webkit-transform: scale(-1);
+	        transform: scale(-1);
+}
+
+.section_mypage .list_visited .item_visited.open .list_url {
+	display: block;
+}
+
+.section_mypage .list_visited .item_visited > a {
+	display: block;
+	position: relative;
+	height: 78px;
+	border-bottom: 1px solid #666;
+	line-height: 78px;
+}
+
+.section_mypage .list_visited .item_visited > a:after {
+	width: 24px;
+	height: 14px;
+	background-position: 0px -171px;
+	content: '';
+	position: absolute;
+	top: 32px;
+	right: 0;
+}
+
+.section_mypage .list_visited .item_visited .date {
+	font-size: 21px;
+	color: #333;
+}
+
+.section_mypage .list_visited .list_url {
+	display: none;
+}
+
+.section_mypage .list_visited .list_url li {
+	overflow: hidden;
+	padding: 0 0 0 40px;
+	line-height: 68px;
+	font-size: 16px;
+	color: #333;
+	white-space: nowrap;
+}
+
+.section_mypage .list_visited .list_url li + li {
+	border-top: 1px dashed #e1e1e1;
+}
+
+.section_mypage .list_visited .list_url li:before {
+	content: '';
+	display: inline-block;
+	width: 4px;
+	height: 4px;
+	margin: 0 13px 0 0;
+	-webkit-border-radius: 50%;
+	        border-radius: 50%;
+	background: #333;
+	vertical-align: middle;
+}
+
+.section_mypage .list_visited .list_url .item_time {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.section_mypage .list_visited .list_url .item_path {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.section_mypage .list_visited .list_url .item_url {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.bookmark_area {
+	min-height: 750px;
+	background: url(../img/bg_bookmark.jpg) 0 0 no-repeat;
+}
+
+.bookmark_area .inner {
+	width: 460px;
+	margin: 0 auto;
+}
+
+.bookmark_area .preview {
+	position: relative;
+	text-align: center;
+}
+
+.bookmark_area .header_search {
+	padding-top: 70px;
+	line-height: 23px;
+	color: rgba(255, 255, 255, 0.5);
+}
+
+.bookmark_area .header_search .item_search {
+	display: inline-block;
+	vertical-align: bottom;
+}
+
+.bookmark_area .header_search .item_search .label_sch {
+	display: inline-block;
+	margin-right: 5px;
+	font-size: 17px;
+	line-height: 19px;
+	vertical-align: bottom;
+}
+
+.bookmark_area .header_search .item_search .input_label_sch {
+	width: 90px;
+	height: 22px;
+	margin: 0 15px 0 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	border: 0;
+	border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+	font-size: 17px;
+	line-height: 19px;
+	color: #fff;
+	vertical-align: bottom;
+	background: none;
+}
+
+.bookmark_area .header_search .item_link {
+	display: inline-block;
+	margin-right: 15px;
+	font-size: 17px;
+	line-height: 19px;
+	vertical-align: bottom;
+}
+
+.bookmark_area .header_search .item_setting {
+	display: inline-block;
+	vertical-align: bottom;
+}
+
+.bookmark_area .header_search .item_setting .ico_setting {
+	width: 17px;
+	height: 17px;
+	background-position: -21px -189px;
+}
+
+.bookmark_area .layer_setting {
+	position: absolute;
+	top: 105px;
+	left: 50%;
+	width: 480px;
+	margin-left: -240px;
+	padding-top: 11px;
+}
+
+.bookmark_area .layer_setting:before {
+	width: 20px;
+	height: 11px;
+	background-position: -52px -171px;
+	position: absolute;
+	top: 0;
+	right: 63px;
+}
+
+.bookmark_area .layer_setting .wrap_setting {
+	overflow: hidden;
+	height: 118px;
+	padding: 0 20px;
+	-webkit-border-radius: 10px;
+	        border-radius: 10px;
+	-webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.13), -1px -1px 1px rgba(0, 0, 0, 0.13);
+	        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.13), -1px -1px 1px rgba(0, 0, 0, 0.13);
+	background: #fff;
+}
+
+.bookmark_area .layer_setting .item_setting {
+	position: relative;
+	float: left;
+	width: 110px;
+	margin: 25px 0 0 0;
+	-webkit-align-content: center;
+	        align-content: center;
+	color: #014592;
+	font-size: 15px;
+	text-align: center;
+}
+
+.bookmark_area .layer_setting .item_setting + .item_setting:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 66px;
+	border-left: 1px solid #efefef;
+}
+
+.bookmark_area .layer_setting .item_setting [class^=spim] {
+	display: block;
+	margin: 0 auto;
+}
+
+.bookmark_area .layer_setting .item_setting .ico_archive {
+	width: 23px;
+	height: 23px;
+	background-position: -228px -105px;
+}
+
+.bookmark_area .layer_setting .item_setting .ico_library {
+	width: 26px;
+	height: 22px;
+	background-position: -241px -77px;
+}
+
+.bookmark_area .layer_setting .item_setting .ico_phone {
+	width: 22px;
+	height: 23px;
+	background-position: -255px -105px;
+}
+
+.bookmark_area .layer_setting .item_setting .ico_product {
+	width: 24px;
+	height: 23px;
+	background-position: -200px -105px;
+}
+
+.bookmark_area .option_list {
+	overflow: hidden;
+	margin-top: 170px;
+}
+
+.bookmark_area .option_list li {
+	float: left;
+	width: 50%;
+}
+
+.bookmark_area .option_list input {
+	display: none;
+}
+
+.bookmark_area .option_list input:checked + label {
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.bookmark_area .option_list input:checked + label::before {
+	width: 22px;
+	height: 22px;
+	background-position: -252px -132px;
+}
+
+.bookmark_area .option_list label {
+	font-size: 18px;
+	color: #fff;
+	line-height: 50px;
+	vertical-align: top;
+	cursor: pointer;
+}
+
+.bookmark_area .option_list label::before {
+	width: 22px;
+	height: 22px;
+	background-position: -271px -77px;
+	margin: 13px 14px 0 0;
+	vertical-align: top;
 }
 
 .roll_banner {

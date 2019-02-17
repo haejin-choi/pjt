@@ -230,7 +230,7 @@ $(document).ready(function(e) {
 	}
 
 	//header
-	var gnbLayer = $('.layer_setting');
+	var gnbLayer = $('#header .layer_setting');
 	$('.header_search .item_setting').each(function(){
 		var self = $(this);
 		self.click(function(e){
