@@ -402,19 +402,24 @@
 .section_faq{
     .faq_list{
         .item_q:before{
-            display: none;
+            position: static;
+            float: left;
+            display: inline-block;
         }
         .item_q{
-            padding: 20px 30px 20px 15px;
+            padding: 20px 15px;
             font-size: 15px;
+            line-height: 20px;
             &:after{
-                right: 5px;
+                display: none;
             }
             .title{
                 padding-left: 0;
             }
             .cate{
-                display: none;
+                &:after{
+                    display: none;
+                }
             }
         }
         .item_a{
@@ -434,13 +439,15 @@
         li{
             float: left;
             width: 25%;
-            height: 414px;
+            min-height: 414px;
             text-align: center;
+            box-sizing: border-box;
         }
         .bx_area{
             display: inline-block;
             width: 240px;
             vertical-align: top;
+            padding-bottom: 30px;
         }
         .logo_area{
             display: table-cell;
@@ -470,9 +477,8 @@
     .usefullink_list{
         li{
             width: 50%;
-            height: 315px;
+            min-height: 315px;
             padding: 0 5px;
-            box-sizing: border-box;
         }
         .bx_area{
             width: auto;
@@ -488,6 +494,7 @@
         .title{
             margin-top: 11px;
             font-size: 15px;
+            letter-spacing: -0.2px;
         }
     }
 }

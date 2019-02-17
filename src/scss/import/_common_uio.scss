@@ -37,6 +37,7 @@ textarea.textarea{
     border:1px solid #eaeaea;
     line-height: 38px;
     vertical-align: middle;
+    box-sizing: border-box;
     .cmm_select{
         width: 100%;
     }
@@ -501,6 +502,14 @@ textarea.textarea{
     }
     .cont{
         padding: 10px;
+        .fl{
+            float: none;
+            margin-bottom: 5px;
+            margin-right: 0;
+            .cm_select{
+                width: 49%;
+            }
+        }
         .cmm_select.w278{ //소속병원
             width: 200px;
         }
@@ -693,38 +702,36 @@ textarea.textarea{
     padding-right: 0;
     text-align: right;
     .search_form{
-        height: 58px;
+        height: 45px;
         text-align: left;
         .search_select{
-            width: 110px;
+            width: 100px;
             .select_btn{
                 padding-left: 15px;
-                line-height: 58px;
+                line-height: 45px;
             }
             .select_layer{
-                top: 58px;
+                top: 45px;
                 .select_layer_opt{
                     padding-left: 15px;
                 }
             }
         }
         .search_input .search_input_form{
+            height: 43px;
             padding: 0 10px;
-            margin-top: 3px;
+            margin-top: 0;
         }
     }
     .btn_border{
         display: none;
     }
     .search_btn{
-        position: static;
-        display: inline-block;
-        margin-top: 10px;
         .btn_colored{
-            width: 130px;
-            height: 50px;
+            width: 85px;
+            height: 47px;
             font-size: 16px;
-            line-height: 50px;
+            line-height: 45px;
         }
     }
 }

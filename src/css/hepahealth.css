@@ -621,6 +621,8 @@ textarea.textarea {
 	border: 1px solid #eaeaea;
 	line-height: 38px;
 	vertical-align: middle;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 }
 
 .cm_select .cmm_select {
@@ -1207,6 +1209,14 @@ textarea.textarea {
 	.table_area .cont {
 		padding: 10px;
 	}
+	.table_area .cont .fl {
+		float: none;
+		margin-bottom: 5px;
+		margin-right: 0;
+	}
+	.table_area .cont .fl .cm_select {
+		width: 49%;
+	}
 	.table_area .cont .cmm_select.w278 {
 		width: 200px;
 	}
@@ -1434,39 +1444,35 @@ textarea.textarea {
 		text-align: right;
 	}
 	.search_area .search_form {
-		height: 58px;
+		height: 45px;
 		text-align: left;
 	}
 	.search_area .search_form .search_select {
-		width: 110px;
+		width: 100px;
 	}
 	.search_area .search_form .search_select .select_btn {
 		padding-left: 15px;
-		line-height: 58px;
+		line-height: 45px;
 	}
 	.search_area .search_form .search_select .select_layer {
-		top: 58px;
+		top: 45px;
 	}
 	.search_area .search_form .search_select .select_layer .select_layer_opt {
 		padding-left: 15px;
 	}
 	.search_area .search_form .search_input .search_input_form {
+		height: 43px;
 		padding: 0 10px;
-		margin-top: 3px;
+		margin-top: 0;
 	}
 	.search_area .btn_border {
 		display: none;
 	}
-	.search_area .search_btn {
-		position: static;
-		display: inline-block;
-		margin-top: 10px;
-	}
 	.search_area .search_btn .btn_colored {
-		width: 130px;
-		height: 50px;
+		width: 85px;
+		height: 47px;
 		font-size: 16px;
-		line-height: 50px;
+		line-height: 45px;
 	}
 }
 
@@ -2210,19 +2216,22 @@ textarea.textarea {
 
 @media all and (max-width: 812px) {
 	.section_faq .faq_list .item_q:before {
-		display: none;
+		position: static;
+		float: left;
+		display: inline-block;
 	}
 	.section_faq .faq_list .item_q {
-		padding: 20px 30px 20px 15px;
+		padding: 20px 15px;
 		font-size: 15px;
+		line-height: 20px;
 	}
 	.section_faq .faq_list .item_q:after {
-		right: 5px;
+		display: none;
 	}
 	.section_faq .faq_list .item_q .title {
 		padding-left: 0;
 	}
-	.section_faq .faq_list .item_q .cate {
+	.section_faq .faq_list .item_q .cate:after {
 		display: none;
 	}
 	.section_faq .faq_list .item_a {
@@ -2240,14 +2249,17 @@ textarea.textarea {
 .section_usefullink .usefullink_list li {
 	float: left;
 	width: 25%;
-	height: 414px;
+	min-height: 414px;
 	text-align: center;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 }
 
 .section_usefullink .usefullink_list .bx_area {
 	display: inline-block;
 	width: 240px;
 	vertical-align: top;
+	padding-bottom: 30px;
 }
 
 .section_usefullink .usefullink_list .logo_area {
@@ -2280,10 +2292,8 @@ textarea.textarea {
 @media all and (max-width: 812px) {
 	.section_usefullink .usefullink_list li {
 		width: 50%;
-		height: 315px;
+		min-height: 315px;
 		padding: 0 5px;
-		-webkit-box-sizing: border-box;
-		        box-sizing: border-box;
 	}
 	.section_usefullink .usefullink_list .bx_area {
 		width: auto;
@@ -2299,6 +2309,7 @@ textarea.textarea {
 	.section_usefullink .usefullink_list .title {
 		margin-top: 11px;
 		font-size: 15px;
+		letter-spacing: -0.2px;
 	}
 }
 
@@ -3813,6 +3824,7 @@ textarea.textarea {
 		height: auto;
 		margin: 0;
 		padding: 0;
+		background: none;
 	}
 	.section_video .video_area .scroll {
 		overflow: hidden;
