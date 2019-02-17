@@ -48,15 +48,67 @@
         }
     }
     .layer_menu{
-        display: none;
         position: fixed;
         top: 0;
         left: 0;
         z-index: 2000;
         width: 100%;
+        height: 100%;
         padding-right: 60px;
         box-sizing: border-box;
+        transition: transform 0.3s ease-in-out;
         transform: translateX(-100%);
+        .slide_menu{
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+        }
+        .member_wrap{
+            padding: 25px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-image:(linear-gradient(left, rgba(17,80,153,1) 0%, rgba(19,65,115,1) 100%));
+            .info_area{
+                margin-bottom: 15px;
+            }
+            .btn_area{
+                display: table;
+                table-layout: fixed;
+                width: 100%;
+                text-align: center;
+                .inner{
+                    display: table-cell;
+                    vertical-align: top;
+                }
+                .inner+.inner .item{
+                    border-left: 0;
+                }
+                .item{
+                    display: block;
+                    border: 1px solid rgba(255,255,255,0.4);
+                    line-height: 34px;
+                    color: rgba(255,255,255,0.4);
+                }
+            }
+            .setting_area{
+                display: table;
+                table-layout: fixed;
+                width: 100%;
+                margin-top: 20px;
+                text-align: center;
+                .inner{
+                    display: table-cell;
+                    vertical-align: top;
+                }
+                .item{
+                    display: block;
+                    width: 60px;
+                    margin: 0 auto;
+                }
+            }
+        }
         .list_menu{
             background-color: #333;
             .menu{
@@ -110,11 +162,36 @@
                 }
             }
         }
+        .btn_close{
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            width: 50px;
+            height: 50px;
+            padding: 15px 12px;
+            box-sizing: border-box;
+            div{
+                position: relative;
+                font-size: 0;
+                color: transparent;
+                &:before,&:after{
+                    content: '';
+                    position: absolute;
+                    top: 8px;
+                    left: 0;
+                    width: 100%;
+                    height: 3px;
+                    background-color: #fff;
+                    transform: rotate(45deg);
+                }
+                &:after{
+                    transform: rotate(135deg);
+                }
+            }
+        }
     }
     &.expanded{
         .layer_menu{
-            display: block;
-            transition: transform 0.3s ease-in-out;
             transform: translateX(0);
         }
     }
