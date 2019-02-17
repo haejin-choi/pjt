@@ -36,7 +36,6 @@ $(document).ready(function(e) {
 		win.on('resize',function(e){
 			var winW = win.width();
 			var winH = win.height();
-
 			if(winW > 812){
 				var idx;
 				var posX;
@@ -45,7 +44,8 @@ $(document).ready(function(e) {
 				var snbMenu = $('.snb .snb_menu');
 				var snbMenuItem = snbMenu.find('.item_menu_wrap').eq(0).find('.item_menu_link');
 				var snbMenuItemW = (snbMenuItem.outerWidth()-snbMenuItem.width())/2;
-				var snbMenuW = snbMenu.find('.item_menu_wrap').eq(0).width();
+				var snbMenuW = snbMenu.find('.item_menu_wrap').eq(1).width();
+				$('#header_m .layer_menu .btn_close').trigger('click');
 				bgRolling.css({
 					'height':winH
 				});

@@ -157,7 +157,7 @@ function sassPipe(build) {
 
 	return lazypipe()
 		.pipe(sass, {
-				outputStyle: 'expanded',
+				outputStyle: 'compressed',
 				indentType: 'tab',
 				indentWidth: 1
 			})
