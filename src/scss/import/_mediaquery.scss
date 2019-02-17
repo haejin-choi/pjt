@@ -34,7 +34,9 @@
         min-width: inherit;
         padding-bottom: 170px;
     }
-    #header,.bg_content_shadow,.path_area{
+    #header .wrap_cont,
+    .bg_content_shadow,
+    .path_area{
         display: none;
     }
     .container{
@@ -221,9 +223,18 @@
             li{
                 width: 50%;
                 margin-bottom: 30px;
+                box-sizing: border-box;
+                padding: 0 5px;
                 a{
-                    width: 160px;
+                    display: block;
+                    width: auto;
                 }
+            }
+            .title{
+                font-size: 14px;
+            }
+            .date{
+                font-size: 13px;
             }
             .thumb_area{
                 margin-bottom: 0;

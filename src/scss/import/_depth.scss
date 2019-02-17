@@ -19,6 +19,12 @@
         }
     }
 }
+@media all and (max-width: $mobileWidth){
+    .section_top{
+        display: none;
+    }
+}
+
 .container .content{
     z-index: 10;
     position: relative;
@@ -324,10 +330,11 @@
             &:after{
                 content: '';
                 position: absolute;
-                top: 50px;
+                top: 50%;
                 right: 20px;
                 width: 10px;
                 height: 10px;
+                margin-top: -10px;
                 border: 2px solid #ccc;
                 border-width: 2px 2px 0 0;
                 transform: rotate(-45deg) scale(-1);
@@ -390,6 +397,34 @@
             }
         }
     }
+}
+@media all and (max-width: $mobileWidth){
+.section_faq{
+    .faq_list{
+        .item_q:before{
+            display: none;
+        }
+        .item_q{
+            padding: 20px 30px 20px 15px;
+            font-size: 15px;
+            &:after{
+                right: 5px;
+            }
+            .title{
+                padding-left: 0;
+            }
+            .cate{
+                display: none;
+            }
+        }
+        .item_a{
+            padding: 50px 15px 50px;
+            p{
+                font-size: 14px;
+            }
+        }
+    }
+}
 }
 
 // 4.타운 > 링크모음
@@ -474,7 +509,7 @@
     .info_area{
         position: relative;
         margin: 0 auto 81px;
-        width: 720px;
+        max-width: 720px;
         padding:  50px 0;
         border: 1px solid #eaeaea;
         border-top: 0;
@@ -544,6 +579,44 @@
         vertical-align: top;
     }
 }
+@media all and (max-width: $mobileWidth){
+.section_contact{
+    > img{
+        width: 120px;
+    }
+    .tit{
+        font-size: 25px; 
+        margin-top: 15px;
+    }
+    .info_area{
+        width: auto;
+        padding: 25px 0;
+        margin-bottom: 40px;
+        font-size: 15px;
+        &:after{
+            display: none;
+        }
+        
+        li{
+            padding: 10px 20px;
+            line-height: 20px;
+        }
+        strong{
+            display: block;
+            padding-bottom: 5px;
+            font-weight: bold;
+            &:after{
+                display: none;
+            }
+        }
+        p{
+            padding-left: 0;
+            font-size: 14px;
+        }
+    }
+}
+}
+
 
 // 5.contact > 방문요청
 .section_request{
@@ -565,6 +638,20 @@
         }
     }
 }
+@media all and (max-width: $mobileWidth){
+.section_request{
+    .txt_request{
+        font-size: 15px;
+        line-height: 21px;
+        text-align: left;
+        font-weight: normal;
+    }
+    .request_area .visual_obj{
+        display: none;
+    }
+}
+}
+
 
 .section_search{
     .txt_search{
