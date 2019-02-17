@@ -30,6 +30,9 @@
 @media all and (max-width: $mobileWidth){
     .is_pc{display:none;}
     .is_mobile{display:block;}
+    body{
+        overflow-x: hidden;
+    }
     #wrap{
         min-width: inherit;
         padding-bottom: 170px;
