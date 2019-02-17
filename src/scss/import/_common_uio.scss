@@ -380,7 +380,6 @@ textarea.textarea{
         flex-basis: auto;
         align-self: center;
         position: relative;
-        background: #fff;
         .name,.category{
             display: inline-block;
             margin: 5px 8px -5px 0;
@@ -482,6 +481,43 @@ textarea.textarea{
             }
         }
     }
+}
+@media all and (max-width: $mobileWidth){
+.table_area{
+    .bx{
+        font-size: 15px;
+        background: #faf9f7;
+        &.mobile_wide{
+            flex-direction: column;
+            .title{
+                width: 100%;
+                flex-basis: auto;
+                strong{
+                    margin-top: 17px;
+                }
+            }
+            .cont{width: 100%;box-sizing: border-box}
+        }
+    }
+    .cont{
+        padding: 10px;
+        .cmm_select.w278{ //소속병원
+            width: 200px;
+        }
+        .cmm_select.w100{ //휴대폰 앞자리
+            width: 70px;
+        }
+        &.type_phone .text{ //휴대폰 두번째,세번째폼
+            width: 61px; 
+        }
+    }
+    .title{
+        flex-basis: 115px;
+        strong{
+            margin-left: 15px;
+        }
+    }
+}
 }
 
 //button
@@ -651,6 +687,49 @@ textarea.textarea{
         }
     }
 }
+@media all and (max-width: $mobileWidth){
+.search_area{
+    height: auto;
+    padding-right: 0;
+    text-align: right;
+    .search_form{
+        height: 58px;
+        text-align: left;
+        .search_select{
+            width: 110px;
+            .select_btn{
+                padding-left: 15px;
+                line-height: 58px;
+            }
+            .select_layer{
+                top: 58px;
+                .select_layer_opt{
+                    padding-left: 15px;
+                }
+            }
+        }
+        .search_input .search_input_form{
+            padding: 0 10px;
+            margin-top: 3px;
+        }
+    }
+    .btn_border{
+        display: none;
+    }
+    .search_btn{
+        position: static;
+        display: inline-block;
+        margin-top: 10px;
+        .btn_colored{
+            width: 130px;
+            height: 50px;
+            font-size: 16px;
+            line-height: 50px;
+        }
+    }
+}
+}
+
 //layer
 .dimmed_layer{
     display: none;
