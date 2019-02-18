@@ -161,6 +161,14 @@ textarea.textarea{
     border:1px solid #e0e0e0;
     box-sizing: border-box;
     background: #fbfbfb;
+    &.type_half{
+        overflow: hidden;
+        display: block;
+        a{
+            float: left;
+            width: 50%
+        }
+    }
     a{
         display: table-cell;
         position: relative;

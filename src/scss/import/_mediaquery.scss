@@ -28,7 +28,7 @@
 }
 //mobile
 @media all and (max-width: $mobileWidth){
-    .is_pc{display:none;}
+    .is_pc{display:none!important;}
     .is_mobile{display:block;}
     #wrap{
         min-width: inherit;
