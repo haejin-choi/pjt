@@ -4,6 +4,7 @@
     .txt_mypage{
         padding-bottom: 30px;
         font-size: 20px;
+        line-height: 30px;
         color: #333;
         strong{
             font-size: 16px;
@@ -106,6 +107,38 @@
             .item_url{
                 display: inline-block;
                 vertical-align: top;
+            }
+        }
+    }
+    // 4.자료요청
+    .mypage_area{
+        .tit{
+            font-size: 20px;
+        }
+    }
+    .tb_filelist{
+        table-layout: fixed;
+        width: 100%;
+        margin-top: 20px;
+        border: 2px solid #767676;
+        border-width: 2px 0;
+        thead{
+            th{
+                padding: 12px 0;
+                font-size: 16px;
+                color: #333;
+            }
+        }
+        tbody{
+            tr:first-child td{
+                border-top: 1px solid #8f8f8f;
+            }
+            td{
+                padding: 8px 0;
+                border-top: 1px solid #eaeaea;
+                font-size: 14px;
+                color: #4c4c4c;
+                text-align: center;
             }
         }
     }
@@ -254,5 +287,3 @@
         }
     }
 }
-
-

@@ -40,6 +40,10 @@ textarea.textarea{
     box-sizing: border-box;
     .cmm_select{
         width: 100%;
+        &.w100{width:100px} //휴대폰 셀렉트
+        &.w120{width:120px} //의사구분
+        &.w140{width:140px} //메일주소
+        &.w278{width:278px} //시구,구분선택
     }
     .styledSelect {
         overflow: hidden;
@@ -465,12 +469,6 @@ textarea.textarea{
                 }
             }
         }
-        .cmm_select{
-            &.w100{width:100px} //휴대폰 셀렉트
-            &.w120{width:120px} //의사구분
-            &.w140{width:140px} //메일주소
-            &.w278{width:278px} //시구,구분선택
-        }
         .textarea{
             display: block;
             height: 286px;
@@ -517,7 +515,7 @@ textarea.textarea{
             width: 70px;
         }
         &.type_phone .text{ //휴대폰 두번째,세번째폼
-            width: 61px; 
+            width: 61px;
         }
     }
     .title{
