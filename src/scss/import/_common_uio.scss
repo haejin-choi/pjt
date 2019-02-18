@@ -54,6 +54,7 @@ textarea.textarea{
         left:0;
         background-color:#fff;
         padding:0 24px 0 10px;
+        text-align: left;
         text-overflow: ellipsis;
         white-space: nowrap;
     }
@@ -85,6 +86,7 @@ textarea.textarea{
         overflow: hidden;
         padding: 0 10px;
         box-sizing: border-box;
+        text-align: left;
         white-space: nowrap;
         text-overflow: ellipsis;
     }
