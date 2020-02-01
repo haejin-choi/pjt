@@ -34,8 +34,9 @@
         .wrap_cont{ 
             max-width: $contentWidth;
             margin: 0 auto;
-            padding: 80px 43px;
+            padding: 80px 0;
             box-sizing: border-box;
+            background: green;
         }
         h3{
             margin: 0 auto;
@@ -109,5 +110,7 @@
 
         }
     }
-
+    #grid *{
+        box-sizing: border-box;
+    }
 }
