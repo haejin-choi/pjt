@@ -31,20 +31,18 @@
         }
     }
     .section_home{
-        &.type_colored{
-            background: #f5f5f5;
-        }
-        .wrap_cont{
+        .wrap_cont{ 
             max-width: $contentWidth;
             margin: 0 auto;
             padding: 80px 43px;
             box-sizing: border-box;
         }
         h3{
-            margin: 0 17px;
+            margin: 0 auto;
             font-size: 36px;
             font-weight: bold;
             color: #000;
+            text-align: center;
         }
     }
     //
@@ -86,111 +84,30 @@
             font-size: 20px;
             line-height: 30px;
             align-self: center;
-            align-items: center;
+            align-items: center; 
         }
     }
 
-    //
-    .cont_bridge{
-        position: relative;
+    .list_mid{
         overflow: hidden;
-        margin: 35px 17px 0;
-
-        .bridge_img{
-            float: right;
-            overflow: hidden;
-            position: relative;
-            width: 60%;
-            margin-left: 35px;
-            padding-top: 35%;
-            .img{
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 120%;
-                background-size: cover;
-                background-repeat: no-repeat;
-                background-position: 0 50%;
-            }
-        }
-        .bridge_txt{
-            margin-bottom: 50px;
-            font-size: 20px;
-            line-height: 36px;
-            color: #000;
-        }
-        .more_link{
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            font-size: 20px;
-            color: #134071;
-            text-decoration: underline;
-        }
-    }
-
-    //
-    .cont_guide{
-        overflow: hidden;
-        padding: 0 17px;
-        .list_guide{
+        .mid_item{
             float: left;
-            width: 60%;
-            margin-top: 35px;
-            li{
+            width: 33.3%;
+            
+            box-sizing: border-box;
+        }
+        .board_head{
+            overflow: hidden;
+            .title{
                 float: left;
-                width: 40%;
-                font-size: 20px;
-                line-height: 30px;
-                text-align: center;
-                p{
-                    padding: 25px 0;
-                }
-                a{
-                    display: block;
-                    &:hover{
-                        .img{
-                            transform: scale(1.1);
-                        }
-                    }
-                }
-                .thmb{
-                    overflow: hidden;
-                    position: relative;
-                    padding-top: 128%;
-                    .img{
-                        position: absolute;
-                        top: 0;
-                        right: 0;
-                        bottom: 0;
-                        left: 0;
-                        background-size: cover;
-                        background-repeat: no-repeat;
-                        background-position: 0 50%;
-                        transition: transform 0.5s;
-                    }
-                }
             }
-            li+li{
-                margin-left: 7%;
+            .date{
+                float: right;
             }
         }
-        .list_banner{
-            overflow: hidden;
-            text-align: right;
+        .board_desc{
 
-            .item_banner{
-                display: inline-block;
-                margin-top: 30px;
-                &:first-child{
-                    margin-top: 0;
-                }
-                img{
-                    width: 100%;
-                    height: auto;
-                }
-            }
         }
     }
+
 }

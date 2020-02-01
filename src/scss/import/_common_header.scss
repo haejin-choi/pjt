@@ -31,18 +31,6 @@
                 color: #101a34;
             }
         }
-        .header_search{
-            color:#a5a7ad;
-            .item_search .input_label_sch{
-                border-color: #878c99;
-                color: #000;
-            }
-            .item_setting{
-                .ico_setting{
-                    @include get-icon-sprite(ico_home_setting_dark, $sp_hepa);
-                }
-            }
-        }
         .snb{
             border-top: 1px solid #ebebeb;
         }
