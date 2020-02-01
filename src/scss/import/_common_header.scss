@@ -63,17 +63,17 @@
     }
     .gnb{
         overflow: hidden;
-        display: table;
+        display: flex;
         table-layout: fixed;
-        width: 40%;
+        width: 72%;
         float: right;
         padding-top: 40px;
         vertical-align: top;
         white-space: nowrap;
         font-size: 0;
         .gnb_item{
-            width: 20%;
-            display: table-cell;
+            display: flex;
+            flex: 1;
             font-size: 20px;
             line-height: 60px;
             font-weight: bold;
@@ -191,56 +191,6 @@
             }
             .ico_product{
                 @include get-icon-sprite(ico_gnb_product, $sp_hepa);
-            }
-        }
-    }
-    .lnb{
-        overflow: hidden;
-        position: relative;
-        z-index: 10;
-        height: 0;
-        background: #fff;
-        opacity: 0;
-        min-width: $minWidth;
-        border-top: 1px solid #d6d7d5;
-        .wrap_lnb_cont{
-            overflow: hidden;
-            max-width: $contentWidth;
-            margin: 0 auto;
-        }
-        .lnb_item{
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            p{
-                font-size: 16px;
-                color: #333;
-                line-height: 26px;
-            }
-        }
-        .lnb_menu{
-            float: right;
-            display: table;
-            table-layout: fixed;
-            width: 73.3%;
-            border-right: 1px solid #d6d7d5;
-            .item_menu_wrap{
-                display: table-cell;
-                width: 20%;
-                height: 220px;
-                padding-top: 30px;
-                border-left: 1px solid #d6d7d5;
-                .item_menu{
-                    display: block;
-                    text-align: center;
-                    font-size: 20px;
-                    font-weight: bold;
-                    line-height: 50px;
-                    color: #101a34;
-                    &:hover{
-                        color: $colorBlue;
-                    }
-                }
             }
         }
     }
@@ -388,7 +338,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    height: 105px;
+    height: 200px;
     background-color: #444;
     .wrap_cont{
         position: relative;
@@ -415,16 +365,13 @@
             }
         }
     }
+    .footer_items2{
+        font-size: 13px;
+        line-height: 15px;
+        color: #fff;
+    }
     .footer_copyright{
         font-size: 13px;
         color: #fff;
-    }
-    .footer_logo{
-        position: absolute;
-        top:0;
-        right: 60px;
-        .ico_footer_logo{
-            @include get-icon-sprite(ico_footer_logo, $sp_hepa);
-        }
     }
 }
