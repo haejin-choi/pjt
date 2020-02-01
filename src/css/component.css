@@ -10,6 +10,7 @@
 	float: left;
 	padding: 27px;
 	width: 25%;
+	box-sizing: border-box;
 	opacity: 0;
 }
 

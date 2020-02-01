@@ -47,7 +47,7 @@ $(document).ready(function(e) {
 				var snbMenuW = snbMenu.find('.item_menu_wrap').eq(1).width();
 				$('#header_m .layer_menu .btn_close').trigger('click');
 				bgRolling.css({
-					'height':winH
+					'height': 900
 				});
 				switch (snbT) {
 					case 'bridge':
