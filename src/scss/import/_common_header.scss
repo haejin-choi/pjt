@@ -21,23 +21,29 @@
     }
     &.active{
         box-shadow: 0px 0px 22px 7px rgba(0,0,0,0.18);
-        .logo{
-            .ico_logo{
-                @include get-icon-sprite(ico_home_logo_dark, $sp_hepa);
-            }
-        }
         .snb{
             border-top: 1px solid #ebebeb;
         }
     }
-    .logo{
+    .logo_area{
         float: left;
         height: 100px;
         margin-left: 60px;
-        padding-top: 34px;
+        padding-top: 25px;
         box-sizing: border-box;
+        .logo{
+            float: left;
+        }
         .ico_logo{
-            @include get-icon-sprite(ico_home_logo, $sp_hepa);
+            @include get-icon-sprite(ico_home_logo1, $sp_hepa);
+            vertical-align: top;
+        }
+        .ico_logo2{
+            @include get-icon-sprite(ico_home_logo2, $sp_hepa);
+            vertical-align: top;
+        }
+        .ico_logo3{
+            @include get-icon-sprite(ico_home_logo3, $sp_hepa);
             vertical-align: top;
         }
     }
@@ -52,8 +58,6 @@
     }
     .gnb{
         overflow: hidden;
-        width: 72%;
-        float: right;
         padding-top: 20px;
         vertical-align: top;
         white-space: nowrap;
@@ -64,7 +68,7 @@
             margin-left: 35px;
             font-size: 20px;
             line-height: 60px;
-            font-weight: bold;
+            font-weight: 700;
             color: #3a466a;
             text-align: center;
             vertical-align: top;
