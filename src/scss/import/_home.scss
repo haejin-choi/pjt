@@ -57,6 +57,33 @@
             
             box-sizing: border-box;
         }
+        .thumb{
+            position: relative;
+        }
+        .menu_name1{
+            @include get-icon-sprite(ico_txt1_1, $sp_hepa);
+            position: absolute;
+            left: 270px;
+            top: 168px;
+        }
+        .menu_name1_kr{
+            @include get-icon-sprite(ico_txt1_2, $sp_hepa);
+            position: absolute;
+            left: 270px;
+            top: 270px;
+        }
+        .menu_name2{
+            @include get-icon-sprite(ico_txt2_1, $sp_hepa);
+            position: absolute;
+            left: 270px;
+            top: 168px;
+        }
+        .menu_name2_kr{
+            @include get-icon-sprite(ico_txt2_2, $sp_hepa);
+            position: absolute;
+            left: 270px;
+            top: 270px;
+        }
         .board_head{
             overflow: hidden;
             .title{
