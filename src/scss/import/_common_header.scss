@@ -72,19 +72,20 @@
             color: #3a466a;
             text-align: center;
             vertical-align: top;
+            opacity: .9;
+            &:before{
+                content: '';
+                position: absolute; bottom: 2px; left: 50%; width: 0; height: 3px; background-color: #3a466a; opacity: .1;transition: 0.4s;
+            }
             &:hover{
+                opacity: 1;
                 &:before{
-                    content: '';
-                    position: absolute;
-                    right: 0;
-                    bottom: 0;
-                    left: 0;
-                    height: 2px;
-                    background-color: #3a466a;
+                    width: 100%; transition: 0.4s; left: 0;opacity: 1;
                 }
             }
         }
     }
+
     .header_search{
         position: absolute;
         top: 11px;
