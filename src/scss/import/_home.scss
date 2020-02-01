@@ -60,11 +60,43 @@
         .thumb{
             position: relative;
         }
+        .fade-in-fwd {
+            -webkit-animation: fade-in-fwd 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+                    animation: fade-in-fwd 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+        }
+        @-webkit-keyframes fade-in-fwd {
+            0% {
+              -webkit-transform: translateY(-50px);
+                      transform: translateY(-50px);
+              opacity: 0;
+            }
+            100% {
+              -webkit-transform: translateY(0);
+                      transform: translateY(0);
+              opacity: 1;
+            }
+          }
+          @keyframes fade-in-fwd {
+            0% {
+              -webkit-transform: translateY(-50px);
+                      transform: translateY(-50px);
+              opacity: 0;
+            }
+            100% {
+              -webkit-transform: translateY(0);
+                      transform: translateY(0);
+              opacity: 1;
+            }
+          }
+          
         .menu_name1{
             @include get-icon-sprite(ico_txt1_1, $sp_hepa);
             position: absolute;
             left: 270px;
             top: 168px;
+            &.active{
+
+            }
         }
         .menu_name1_kr{
             @include get-icon-sprite(ico_txt1_2, $sp_hepa);
