@@ -12,7 +12,6 @@
     position: fixed;
     z-index: 1000;
     width: 100%;
-    border-bottom: 1px solid rgba(68,68,68,.5);
     transition: all 0.3s linear;
     font-family: 'Lato', sans-serif;
     &:after{
@@ -20,25 +19,16 @@
         display: block;
         clear: both;
     }
-    &.active,&.expanded{
+    &.active{
+        box-shadow: 0px 0px 22px 7px rgba(0,0,0,0.18);
         .logo{
             .ico_logo{
                 @include get-icon-sprite(ico_home_logo_dark, $sp_hepa);
             }
         }
-        .gnb{
-            .gnb_item{
-                color: #101a34;
-            }
-        }
         .snb{
             border-top: 1px solid #ebebeb;
         }
-    }
-    &.expanded{
-        overflow: hidden;
-        overflow-x: auto;
-        background-color: #fff !important;
     }
     .logo{
         float: left;
@@ -62,25 +52,32 @@
     }
     .gnb{
         overflow: hidden;
-        display: flex;
-        table-layout: fixed;
         width: 72%;
         float: right;
-        padding-top: 40px;
+        padding-top: 20px;
         vertical-align: top;
         white-space: nowrap;
         font-size: 0;
         .gnb_item{
-            display: flex;
-            flex: 1;
+            display: inline-block;
+            position: relative;
+            margin-left: 35px;
             font-size: 20px;
             line-height: 60px;
             font-weight: bold;
-            color: #fff;
+            color: #3a466a;
             text-align: center;
             vertical-align: top;
             &:hover{
-                color: $colorBlue;
+                &:before{
+                    content: '';
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    height: 2px;
+                    background-color: #3a466a;
+                }
             }
         }
     }
@@ -135,61 +132,6 @@
             .ico_setting{
                 @include get-icon-sprite(ico_home_setting, $sp_hepa);
                 margin: 2px 0 -2px;
-            }
-        }
-    }
-    .layer_setting{
-        display: none;
-        position: absolute;
-        top: 38px;
-        right: 32px;
-        padding-top: 11px;
-        &:before{
-            @include get-icon-sprite(ico_gnb_arr, $sp_hepa);
-            position: absolute;
-            top: 0;
-            right: 26px;
-        }
-        .wrap_setting{
-            overflow: hidden;
-            height: 70px;
-            border-radius: 10px;
-            box-shadow: 1px 1px 1px rgba(0,0,0,0.13),-1px -1px 1px rgba(0,0,0,0.13);
-            background: #fff;
-        }
-        .item_setting{
-            position: relative;
-            float: left;
-            width: 65px;
-            margin: 15px 0 0 0;
-            align-content: center;
-            color: #014592;
-            font-size: 11px;
-            text-align: center;
-            + .item_setting:before{
-                content: '';
-                position: absolute;
-                top:0;
-                left:0;
-                width:0;
-                height: 39px;
-                border-left: 1px solid #efefef;
-            }
-            [class^=spim]{
-                display: block;
-                margin:0 auto;
-            }
-            .ico_archive{
-                @include get-icon-sprite(ico_gnb_archive, $sp_hepa);
-            }
-            .ico_library{
-                @include get-icon-sprite(ico_gnb_library, $sp_hepa);
-            }
-            .ico_phone{
-                @include get-icon-sprite(ico_gnb_phone, $sp_hepa);
-            }
-            .ico_product{
-                @include get-icon-sprite(ico_gnb_product, $sp_hepa);
             }
         }
     }
