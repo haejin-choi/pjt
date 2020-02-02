@@ -41,6 +41,7 @@ $(document).ready(function(e) {
 	//scrollStatus
 	function scrollStatus(){
 		var docTop = doc.scrollTop();
+		//header
 		if(docTop >= 0){
 			header.removeClass('active');
 			header.css({
@@ -75,7 +76,19 @@ $(document).ready(function(e) {
                 'background-color' : 'rgba(255,255,255,1)'
             });
 		}
+
+		//Content
+		var contImg = $(".list_mid");
+		var contImgTop = contImg.offset().top;
+		var winH = win.height();
+		console.log(winH, contImgTop);
+		if(contImgTop < winH){
+			contImg.addClass("active");
+		}else if(contImgTop+100 <= winH+docTop){
+			contImg.addClass("active");
+		}
 	}
+	scrollStatus();
 
 	//HOME
 	doc.on('scroll',function(){

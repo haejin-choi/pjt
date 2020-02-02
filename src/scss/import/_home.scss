@@ -34,7 +34,7 @@
         &.colored{
             background: gray;
         }
-        .wrap_cont{ 
+        .wrap_cont{
             max-width: $contentWidth;
             margin: 0 auto;
             padding: 80px 0;
@@ -44,25 +44,35 @@
             margin: 0 auto;
             font-size: 36px;
             font-weight: bold;
-            color: #000;
+            color: #202f5b;
             text-align: center;
         }
     }
 
     .list_mid{
         overflow: hidden;
+        &.active{
+            .fade-in-fwd{
+                -webkit-animation: fade-in-fwd 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+                        animation: fade-in-fwd 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+            }
+            .menu_name1{
+                -webkit-animation: fade-in-fwd2 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+                        animation: fade-in-fwd2 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+            }
+            .menu_name1_kr{
+                -webkit-animation: fade-in-fwd2 0.1s 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+                        animation: fade-in-fwd2 0.1s 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+            }
+        }
         .mid_item{
             float: left;
             width: 33.3%;
-            
+
             box-sizing: border-box;
         }
         .thumb{
             position: relative;
-        }
-        .fade-in-fwd {
-            -webkit-animation: fade-in-fwd 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-                    animation: fade-in-fwd 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
         }
         @-webkit-keyframes fade-in-fwd {
             0% {
@@ -88,7 +98,31 @@
               opacity: 1;
             }
           }
-          
+          @-webkit-keyframes fade-in-fwd2 {
+              0% {
+                -webkit-transform: translateY(50px);
+                        transform: translateY(50px);
+                opacity: 0;
+              }
+              100% {
+                -webkit-transform: translateY(0);
+                        transform: translateY(0);
+                opacity: 1;
+              }
+            }
+            @keyframes fade-in-fwd2 {
+              0% {
+                -webkit-transform: translateY(50px);
+                        transform: translateY(50px);
+                opacity: 0;
+              }
+              100% {
+                -webkit-transform: translateY(0);
+                        transform: translateY(0);
+                opacity: 1;
+              }
+            }
+
         .menu_name1{
             @include get-icon-sprite(ico_txt1_1, $sp_hepa);
             position: absolute;
@@ -140,11 +174,11 @@
             &:before{
                 content: '';
                 position: absolute;
-                top: 6px;
-                right: 6px;
-                bottom: 6px;
-                left: 6px;
-                border: 4px solid #fff;
+                top: 15px;
+                right: 15px;
+                bottom: 15px;
+                left: 15px;
+                border: 10px solid #fff;
             }
         }
     }
@@ -156,7 +190,8 @@
             right: 0;
             bottom: 0;
             top: 0;
-            background: rgba(0,0,0,.5);
+            padding: 0 60px;
+            background: rgba(58,70,106,.8);
             align-items: center;
             justify-content: center;
         }
