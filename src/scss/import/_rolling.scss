@@ -3,6 +3,9 @@
     position:relative;
     height:900px;
     .swiper-wrapper{
+        .slide{
+            overflow: hidden;
+        }
         .bg_img {
         	position:absolute;
         	top:0;

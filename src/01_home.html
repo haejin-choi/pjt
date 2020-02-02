@@ -48,7 +48,7 @@
 					<div class="swiper-wrapper">
 						<div class="swiper-slide slide">
 							<div class="bg_img">
-								<video id="video_player" width="1920" height="100%" loop autoplay="true" muted="none">
+								<video id="video_player" width="1920" height="100%" loop autoplay="true" muted="muted">
 									<source src="./mov/mov1.mp4" type="video/mp4">
 								</video>
 							</div>
@@ -206,6 +206,7 @@
 		//slider
 		var video = $("#video_player")[0];
 		var swiper = new Swiper('.swiper-container', {
+			loop: true,
 			navigation: {
 				nextEl: '.swiper-button-next',
 				prevEl: '.swiper-button-prev',
@@ -216,7 +217,8 @@
 			},
 			on: {
 	    		slideChange: function () {
-		      		if (this.activeIndex === 0){
+		      		if (this.activeIndex === 1){
+						console.log("first");
 						video.play();
 					}else{
 						//첫번째장이 아닐때
