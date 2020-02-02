@@ -8,7 +8,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
 <title>홈</title>
+<link rel="stylesheet" type="text/css" href="./css/swiper.min.css">
+<link rel="stylesheet" type="text/css" href="css/component.css" />
 <link rel="stylesheet" type="text/css" href="css/hepahealth.css">
+
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/swiper.min.js"></script>
 <script type="text/javascript" src="js/jquery.parallx-scroll.js"></script>
@@ -16,8 +19,6 @@
 <script type="text/javascript" src="js/active.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Lato:700|Open+Sans&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" type="text/css" href="./css/swiper.min.css">
-<link rel="stylesheet" type="text/css" href="css/component.css" />
 <script src="js/modernizr.custom.js"></script>
 </head>
 <body>
@@ -61,8 +62,8 @@
 						</div>
 					</div>
 					<div class="swiper-pagination"></div>
-					<div class="swiper-button-next btn_next"><img src="./img/btn_next.png" width="77" height="123" alt="다음"></div>
-					<div class="swiper-button-prev btn_prev"><img src="./img/btn_prev.png" width="77" height="123" alt="이전"></div>
+					<div class="swiper-button-next btn_next"><i class="spim ico_btn">다음</i></div>
+					<div class="swiper-button-prev btn_prev"><i class="spim ico_btn">이전</i></div>
 				</div>
 
 				<!-- <div class="roll_banner _rolling">
@@ -366,6 +367,8 @@
 			},
 			on: {
 	    		slideChange: function () {
+					var a = $(this).find(video);
+					console.log(a.length);
 		      		if (this.activeIndex === 1){
 						console.log("first");
 						video.play();
