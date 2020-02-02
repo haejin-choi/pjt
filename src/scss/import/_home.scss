@@ -321,6 +321,9 @@
             color: #474747;
         }
     }
+    .sns_wrap{
+        overflow: hidden;
+    }
     #grid *{
         box-sizing: border-box;
     }
@@ -349,7 +352,7 @@
             right: 0;
             bottom: 0;
             top: 0;
-            padding: 0 60px;
+            padding: 0 50px;
             background: rgba(58,70,106,.8);
             align-items: center;
             justify-content: center;

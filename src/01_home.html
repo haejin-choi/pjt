@@ -183,7 +183,7 @@
 			<div class="section_home">
 				<div class="wrap_cont">
 					<h3>S N S</h3>
-					<div>
+					<div class="sns_wrap">
 						<ul class="grid effect-2" id="grid">
 							<li>
 								<a href="#" class="tile">
@@ -396,10 +396,11 @@
 			</div>
 		</div>
 	</div>
-
+	<div id="mobile" class="mobile"><img src="./img/tmp_mobile.jpg" width="375" height="3650" alt=""></div>
 	<script>
+	var video = $("#video_player")[0];
+	if(ua.search('mobile') == '-1'){
 		//slider
-		var video = $("#video_player")[0];
 		var swiper = new Swiper('.swiper-container', {
 			loop: true,
 			navigation: {
@@ -421,6 +422,9 @@
 	    		}
 	  		}
 		});
+	}else{
+		video.pause();
+	}
 	</script>
 	<script src="js/masonry.pkgd.min.js"></script>
 	<script src="js/imagesloaded.js"></script>

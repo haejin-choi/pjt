@@ -1,0 +1,6 @@
+#mobile{display: none}
+#mobile img{width: 100%;height: auto;}
+@media only screen and (max-width: 768px) {
+    #wrap{display: none}
+    #mobile{display: block}
+}
