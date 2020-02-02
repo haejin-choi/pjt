@@ -49,6 +49,43 @@
         }
         .story_wrap{
             position: relative;
+            @-webkit-keyframes fadeInUp {
+                0% {
+                    opacity: 0;
+                    -webkit-transform: translateY(40px);
+                }
+            
+                100% {
+                    opacity: 1;
+                    -webkit-transform: translateY(0);
+                }
+            }
+            
+            @keyframes fadeInUp {
+                0% {
+                    opacity: 0;
+                    transform: translateY(40px);
+                }
+            
+                100% {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+            
+            &.active .cont_area{
+                -webkit-animation-duration: 1s;
+                animation-duration: 1s;
+                -webkit-animation-fill-mode: both;
+                animation-fill-mode: both;
+                -webkit-animation-name: fadeInUp;
+	            animation-name: fadeInUp;
+                opacity: 1;
+                + .cont_area{
+                    animation-delay: 0.5s;
+                -webkit-animation-delay: 0.5s;
+                }
+            }
             .tab_area{
                 position: absolute;
                 top: -40px;
@@ -78,10 +115,33 @@
                         display: block;
                     }
                 }
+                
+                @keyframes borderMotion{
+                0%{transform:scaleX(0)}
+                100%{transform:scaleX(1)}
+                }
+                @-webkit-keyframes borderMotion{
+                0%{-webkit-transform:scaleX(0)}
+                100%{-webkit-transform:scaleX(1)}
+                }
+                
                 .cont_area{
+                    overflow: hidden;
                     float: left;
                     position: relative;
+                    width: 773px;
+                    height: 550px;
                     box-shadow: 0px 31px 68px -15px rgba(0,0,0,0.2);
+                    &:hover{
+                        .img{
+                            transform:scale(1.05,1.05);
+                            -webkit-transform:scale(1.05,1.05);
+                        }
+                        .txt2:before{
+                            animation:borderMotion 0.45s ease-in-out forwards;
+                            -webkit-animation:borderMotion 0.45s ease-in-out forwards;
+                        }
+                    }
                     &.tab2{
                         float: right;
                         margin-top: 104px;
@@ -91,7 +151,10 @@
                         }
                     }
                     .img{
-
+                        transition-timing-function:ease-in-out;
+                        -webkit-transition-timing-function:ease-in-out;
+                        transition-duration:0.5s;
+                        -webkit-transition-duration:0.5s
                     }
                     .txt{
                         position: absolute;
@@ -109,8 +172,8 @@
                             content: '';
                             position: absolute;
                             bottom: 0;
-                            right: 0;
                             left: 0;
+                            right: 0;
                             height: 10px;
                             background-color: #fff;
                         }

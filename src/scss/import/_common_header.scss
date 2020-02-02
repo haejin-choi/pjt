@@ -55,6 +55,15 @@
         margin: 0 auto;
         text-align: right;
     }
+        
+        @keyframes borderMotion{
+        0%{transform:scaleX(0)}
+        100%{transform:scaleX(1)}
+        }
+        @-webkit-keyframes borderMotion{
+        0%{-webkit-transform:scaleX(0)}
+        100%{-webkit-transform:scaleX(1)}
+        }
     .gnb{
         overflow: hidden;
         padding: 20px 40px 0 0;
