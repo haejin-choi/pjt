@@ -1,11 +1,8 @@
 // 홈
 @import url('https://fonts.googleapis.com/css?family=Lato:700|Open+Sans&display=swap');
+
 #wrap.home{
-    .content{
-
-    }
     .section_spot{
-
         .wrap_cont{
             position: relative;
             max-width: $contentWidth;
@@ -37,12 +34,13 @@
         .wrap_cont{
             max-width: $contentWidth;
             margin: 0 auto;
-            padding: 80px 0;
             box-sizing: border-box;
         }
         h3{
             margin: 0 auto;
-            font-size: 36px;
+            padding: 130px 0 0 0;
+            font-size: 59px;
+            line-height: 59px;
             font-weight: bold;
             color: #202f5b;
             text-align: center;
@@ -51,6 +49,8 @@
 
     .list_mid{
         overflow: hidden;
+        padding-top: 150px;
+        padding-bottom: 120px;
         &.active{
             .fade-in-fwd{
                 -webkit-animation: fade-in-fwd 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
@@ -150,6 +150,9 @@
             left: 270px;
             top: 270px;
         }
+        .board_item + .board_item{
+            margin-top: 65px;
+        }
         .board_head{
             overflow: hidden;
             font-family: 'Open Sans', sans-serif;
@@ -166,6 +169,7 @@
             }
         }
         .board_desc{
+            margin-top: 20px;
             font-size: 15px;
             color: #474747;
         }
