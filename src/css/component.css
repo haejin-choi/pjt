@@ -48,8 +48,8 @@
 .grid.effect-2 li.animate {
 	-webkit-transform: translateY(200px);
 	transform: translateY(200px);
-	-webkit-animation: moveUp 0.65s ease forwards;
-	animation: moveUp 0.65s ease forwards;
+	-webkit-animation: moveUp 0.7s ease forwards;
+	animation: moveUp 0.7s ease forwards;
 }
 
 @-webkit-keyframes moveUp {
