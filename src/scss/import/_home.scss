@@ -61,8 +61,20 @@
                         animation: fade-in-fwd2 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
             }
             .menu_name1_kr{
-                -webkit-animation: fade-in-fwd2 0.1s 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-                        animation: fade-in-fwd2 0.1s 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+                -webkit-animation: fade-in-fwd2 0.8s 300ms cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+                        animation: fade-in-fwd2 0.8s 300ms cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+            }
+            .fade-in-fwd2{
+                -webkit-animation: fade-in-fwd 0.8s 350ms cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+                        animation: fade-in-fwd 0.8s 350ms cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+            }
+            .menu_name2{
+                -webkit-animation: fade-in-fwd2 0.8s 360ms cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+                        animation: fade-in-fwd2 0.8s 360ms cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+            }
+            .menu_name2_kr{
+                -webkit-animation: fade-in-fwd2 0.8s 500ms cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+                        animation: fade-in-fwd2 0.8s 500ms cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
             }
         }
         .mid_item{
