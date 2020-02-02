@@ -18,11 +18,11 @@
         	background-color:#f5f6f7;
             video{
                 position: absolute;
-                top: 0;
+                top: 50%;
                 left: 50%;
-                width: auto;
-                height: 100%;
-                transform: translateX(-50%);
+                width: 100%;
+                height: auto;
+                transform: translate(-50%,-50%);
             }
         }
     }
