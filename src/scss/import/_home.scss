@@ -164,9 +164,15 @@
 
         }
     }
+    .section_more{
+        text-align: center;
+        padding-bottom: 100px;
+    }
     .more_button{
-        border: 1px solid red;
-        margin: 0 auto;
-
+        display: inline-block;
+        vertical-align: top;
+    }
+    .icon_more{
+        @include get-icon-sprite(ico_more, $sp_hepa);
     }
 }
