@@ -1,5 +1,5 @@
 // 홈
-@import url('https://fonts.googleapis.com/css?family=Lato:700|Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700,900|Open+Sans:400,600,700,800&display=swap');
 
 #wrap.home{
     .section_spot{
@@ -39,9 +39,10 @@
         h3{
             margin: 0 auto;
             padding: 130px 0 0 0;
+            font-family: 'Lato', sans-serif;
             font-size: 59px;
             line-height: 59px;
-            font-weight: bold;
+            font-weight: 900;
             color: #202f5b;
             text-align: center;
         }
@@ -49,7 +50,7 @@
             position: relative;
             .tab_area{
                 position: absolute;
-                top: -10px;
+                top: -40px;
                 right: 0px;
                 font-family: 'Lato', sans-serif;
                 font-size: 25px;
@@ -66,7 +67,54 @@
                 }
             }
             .group_tab{
+                .cont{
+                    display: none;
+                    padding: 120px 0 140px;
+                    &:after{
+                        @include clear;
+                    }
+                    &.is_show{
+                        display: block;
+                    }
+                }
+                .cont_area{
+                    float: left;
+                    position: relative;
+                    box-shadow: 0px 31px 68px -15px rgba(0,0,0,0.2);
+                    &.tab2{
+                        float: right;
+                        margin-top: 104px;
+                        .txt{
+                            left: auto;
+                            right: 90px;
+                        }
+                    }
+                    .img{
 
+                    }
+                    .txt{
+                        position: absolute;
+                        top: 140px;
+                        left: 90px;
+                        font-size: 59px;
+                        line-height: 100px;
+                        color: #fff;
+                        letter-spacing: -5px;
+                    }
+                    .txt2{
+                        top: 215px;
+                        font-weight: bold;
+                        &:before{
+                            content: '';
+                            position: absolute;
+                            bottom: 0;
+                            right: 0;
+                            left: 0;
+                            height: 10px;
+                            background-color: #fff;
+                        }
+                    }
+                }
             }
         }
     }
