@@ -86,7 +86,7 @@
 #footer{
     overflow: hidden;
     height: 200px;
-    background-color: #3a466a;
+    background-color: #2a2e37;
     .wrap_cont{
         display: flex;
         height: 100%;
@@ -101,7 +101,7 @@
         width:0;
         height: 13px;
         margin: 1px 11px 0 12px;
-        border-left: 1px solid rgba(255,255,255,.4);
+        border-left: 1px solid rgba(255,255,255,.3);
     }
     .footer_items{
         overflow: hidden;
@@ -109,11 +109,10 @@
         flex-direction: row;
         align-items: center;
         font-size: 15px;
-        color: rgba(255,255,255,.4);
+        color: rgba(255,255,255,.3);
         a{
             float: left;
             font-size: 15px;
-            color: rgba(255,255,255,.4);
         }
     }
     .sns{
