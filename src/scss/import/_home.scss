@@ -152,15 +152,22 @@
         }
         .board_head{
             overflow: hidden;
-            .title{
+            font-family: 'Open Sans', sans-serif;
+            .tit{
                 float: left;
+                font-size: 27px;
+                color: #222;
+                font-weight: bold;
             }
             .date{
                 float: right;
+                font-size: 15px;
+                color: #474747;
             }
         }
         .board_desc{
-
+            font-size: 15px;
+            color: #474747;
         }
     }
     #grid *{
