@@ -373,3 +373,18 @@
         @include get-icon-sprite(ico_more, $sp_bene);
     }
 }
+.link_home{
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 160px;
+    height: 100px;
+    margin-left: -700px;
+}
+.sample{
+    position: absolute;
+    top:0;
+    left: 50%;
+    transform: translateX(-50%);
+}
