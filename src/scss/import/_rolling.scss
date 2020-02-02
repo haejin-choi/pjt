@@ -62,7 +62,7 @@
         }
     }
     .ico_btn{
-        @include get-icon-sprite(ico_arr, $sp_hepa);
+        @include get-icon-sprite(ico_arr, $sp_bene);
         margin: 100px 50px;
     }
     .btn_next,.btn_prev{

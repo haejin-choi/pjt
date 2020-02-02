@@ -12,13 +12,11 @@
 
 .spim,
 .spim_bf:before,
-.spim_af:after{@include get-sprite($sp_hepa)}
+.spim_af:after{@include get-sprite($sp_bene)}
 .spim_bf:before,
 .spim_af:after{content:''}
 
 @import "import/_common_header"; // 공통헤더
-@import "import/_common_uio"; // 공통요소(페이징,버튼,경로)
-
 @import "import/_home"; // 홈
 
 @import "import/_rolling"; // 롤링배너

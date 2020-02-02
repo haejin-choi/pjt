@@ -54,25 +54,25 @@
                     opacity: 0;
                     -webkit-transform: translateY(40px);
                 }
-            
+
                 100% {
                     opacity: 1;
                     -webkit-transform: translateY(0);
                 }
             }
-            
+
             @keyframes fadeInUp {
                 0% {
                     opacity: 0;
                     transform: translateY(40px);
                 }
-            
+
                 100% {
                     opacity: 1;
                     transform: translateY(0);
                 }
             }
-            
+
             &.active .cont_area{
                 -webkit-animation-duration: 1s;
                 animation-duration: 1s;
@@ -115,7 +115,7 @@
                         display: block;
                     }
                 }
-                
+
                 @keyframes borderMotion{
                 0%{transform:scaleX(0)}
                 100%{transform:scaleX(1)}
@@ -124,7 +124,7 @@
                 0%{-webkit-transform:scaleX(0)}
                 100%{-webkit-transform:scaleX(1)}
                 }
-                
+
                 .cont_area{
                     overflow: hidden;
                     float: left;
@@ -272,7 +272,7 @@
             }
 
         .menu_name1{
-            @include get-icon-sprite(ico_txt1_1, $sp_hepa);
+            @include get-icon-sprite(ico_txt1_1, $sp_bene);
             position: absolute;
             left: 270px;
             top: 168px;
@@ -281,19 +281,19 @@
             }
         }
         .menu_name1_kr{
-            @include get-icon-sprite(ico_txt1_2, $sp_hepa);
+            @include get-icon-sprite(ico_txt1_2, $sp_bene);
             position: absolute;
             left: 270px;
             top: 270px;
         }
         .menu_name2{
-            @include get-icon-sprite(ico_txt2_1, $sp_hepa);
+            @include get-icon-sprite(ico_txt2_1, $sp_bene);
             position: absolute;
             left: 270px;
             top: 168px;
         }
         .menu_name2_kr{
-            @include get-icon-sprite(ico_txt2_2, $sp_hepa);
+            @include get-icon-sprite(ico_txt2_2, $sp_bene);
             position: absolute;
             left: 270px;
             top: 270px;
@@ -370,6 +370,6 @@
         vertical-align: top;
     }
     .icon_more{
-        @include get-icon-sprite(ico_more, $sp_hepa);
+        @include get-icon-sprite(ico_more, $sp_bene);
     }
 }
