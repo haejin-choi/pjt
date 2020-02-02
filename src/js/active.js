@@ -83,9 +83,10 @@ $(document).ready(function(e) {
 		var contStory = $(".story_wrap");
 		var contStoryTop = contStory.offset().top;
 		var winH = win.height();
-		if(contImgTop < winH){
+
+		if(contImgTop+400 < winH){
 			contImg.addClass("active");
-		}else if(contImgTop+100 <= winH+docTop){
+		}else if(contImgTop+400 <= winH+docTop){
 			contImg.addClass("active");
 		}
 		if(contStoryTop < winH){
