@@ -1,5 +1,5 @@
 // 홈
-
+@import url('https://fonts.googleapis.com/css?family=Lato:700|Open+Sans&display=swap');
 #wrap.home{
     .content{
 
@@ -171,6 +171,8 @@
         .cont{
             display: none;
             color: #fff;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: bold;
             &:before{
                 content: '';
                 position: absolute;
