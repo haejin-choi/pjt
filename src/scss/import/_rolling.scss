@@ -61,15 +61,35 @@
             margin-left: 14px;
         }
     }
+    .ico_btn{
+        @include get-icon-sprite(ico_arr, $sp_hepa);
+        margin: 100px 50px;
+    }
     .btn_next,.btn_prev{
         position: absolute;
         top: 50%;
+        margin-top: -140px;
         z-index: 2000;
     }
     .btn_next{
-        right: 30px;
+        right: 0;
     }
     .btn_prev{
-        left: 30px;
+        left: 0;
+        .ico_btn{
+            transform: scaleX(-1);
+        }
     }
+    .swiper-pagination-bullet{
+        width: 18px;
+        height: 18px;
+        background-color: #fff;
+        opacity: 0.5;
+    }
+    .swiper-pagination-bullet-active{
+        opacity: 1;
+    }
+}
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{
+    bottom: 60px;
 }
