@@ -47,19 +47,20 @@
 				<div class="swiper-container">
 					<div class="swiper-wrapper">
 						<div class="swiper-slide slide">
+							<div class="bg_img">
+								<video id="video_player" width="1920" height="100%" loop autoplay="true" muted="none">
+									<source src="./mov/mov1.mp4" type="video/mp4">
+								</video>
+							</div>
+						</div>
+						<div class="swiper-slide slide">
 							<div class="bg_img" style="background-image:url(img/bg1.jpg)"></div>
 						</div>
 						<div class="swiper-slide slide">
 							<div class="bg_img" style="background-image:url(img/bg2.jpg)"></div>
 						</div>
-						<div class="swiper-slide slide">
-							<div class="bg_img">
-								<video id="video_player" width="1920" height="100%" autoplay>
-									<source src="./mov/mov1.mp4" type="video/mp4">
-								</video>
-							</div>
-						</div>
 					</div>
+					<div class="swiper-pagination"></div>
 					<div class="swiper-button-next btn_next"><img src="./img/btn_next.png" width="77" height="123" alt="다음"></div>
 					<div class="swiper-button-prev btn_prev"><img src="./img/btn_prev.png" width="77" height="123" alt="이전"></div>
 				</div>
@@ -192,27 +193,26 @@
 
 	<script>
 		//slider
+		var video = $("#video_player")[0];
 		var swiper = new Swiper('.swiper-container', {
 			navigation: {
 				nextEl: '.swiper-button-next',
 				prevEl: '.swiper-button-prev',
 			},
+			pagination: {
+				el: '.swiper-pagination',
+    			type: 'bullets',
+			},
 			on: {
-	    	slideChange: function () {
-				if (this.activeIndex == 2){
-					console.log("aa");
-					$("#video_player")[0].play();
-				}
-				//슬라이드가 변경될때마다 로그
-	      		if ((this.activeIndex + 1) === this.slides.length){
-					//마지막장일때
-					console.log(this.activeIndex);
-				}else{
-					//마지막장이 아닐때
-					console.log(this.activeIndex);
-				}
-	    	}
-	  	}
+	    		slideChange: function () {
+		      		if (this.activeIndex === 0){
+						video.play();
+					}else{
+						//첫번째장이 아닐때
+						video.pause();
+					}
+	    		}
+	  		}
 		});
 	</script>
 	<script src="js/masonry.pkgd.min.js"></script>

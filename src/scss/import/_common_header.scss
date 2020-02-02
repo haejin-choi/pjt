@@ -28,7 +28,7 @@
     .logo_area{
         float: left;
         height: 100px;
-        margin-left: 60px;
+        margin-left: 40px;
         padding-top: 25px;
         box-sizing: border-box;
         .logo{
@@ -58,7 +58,7 @@
     }
     .gnb{
         overflow: hidden;
-        padding-top: 20px;
+        padding: 20px 40px 0 0;
         vertical-align: top;
         white-space: nowrap;
         font-size: 0;
@@ -214,68 +214,6 @@
                 text-decoration: underline;
             }
         }
-    }
-}
-@media all and (max-width: $mobileWidth){
-.snb{
-    position: static;
-    .snb_menu{
-        position: static;
-        display: table;
-        table-layout: fixed;
-        width: 100%;
-        .item_menu_wrap{
-            display: table-cell;
-            .item_menu_link{
-                font-size: 17px;
-                &::after{
-                    display: none;
-                }
-            }
-            .item_menu_link.on{
-                position: relative;
-                &::before{
-                    content: '';
-                    position: absolute;
-                    width: 100%;
-                    left:0;
-                    bottom:0;
-                    border-bottom: 3px solid $colorBlue;
-                }
-            }
-        }
-    }
-}
-}
-#wrap.bridge{
-    .visual_area{
-        background: red;
-    }
-}
-#wrap.video{
-    .visual_area{
-        background: orange;
-    }
-}
-#wrap.cloud{
-    .visual_area{
-        background: gold;
-    }
-}
-#wrap.town{
-    .visual_area{
-        background: green;
-
-    }
-}
-#wrap.contact{
-    .visual_area{
-        background: purple;
-    }
-}
-#wrap.mypage{
-    .visual_area{
-        background: blue;
     }
 }
 #footer{
